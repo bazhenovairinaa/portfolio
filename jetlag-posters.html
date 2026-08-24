@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posters JET LAG — Bazhenova Irina</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        body, html {
+            width: 100%;
+            min-height: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #FFFFFF;
+            color: #111111;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- HEADER --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 35px 0;
+            z-index: 100;
+            background-color: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid #F2F2F2;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .header-title {
+            font-size: 22px;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            color: #111111;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .header-subtitle {
+            font-size: 13px;
+            color: #777777;
+            font-weight: 400;
+            letter-spacing: -0.2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 15px;
+            font-weight: 400;
+            color: #111111;
+            text-decoration: none;
+            letter-spacing: -0.2px;
+            position: relative;
+            padding-bottom: 2px;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            opacity: 1;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #111111;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        /* --- MAIN CONTAINER --- */
+        main {
+            padding: 160px 40px 100px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #777777;
+            text-decoration: none;
+            margin-bottom: 40px;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #111111;
+        }
+
+        .project-header {
+            margin-bottom: 50px;
+        }
+
+        .project-title {
+            font-size: 42px;
+            font-weight: 400;
+            letter-spacing: -1.2px;
+            line-height: 1.15;
+            color: #111111;
+            margin-bottom: 35px;
+        }
+
+        .project-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            padding: 25px 0;
+            border-top: 1px solid #EEEEEE;
+            border-bottom: 1px solid #EEEEEE;
+        }
+
+        .meta-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #888888;
+            margin-bottom: 8px;
+        }
+
+        .meta-value {
+            font-size: 15px;
+            color: #111111;
+            font-weight: 400;
+        }
+
+        .meta-value.nowrap {
+            white-space: nowrap;
+        }
+
+        /* --- BRIEF SECTION --- */
+        .project-brief {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin: 60px 0 70px 0;
+            padding: 40px;
+            background-color: #FAFAFA;
+            border-radius: 4px;
+        }
+
+        .brief-card {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .brief-tag {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #777777;
+            font-weight: 600;
+        }
+
+        .brief-title {
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: -0.4px;
+            color: #111111;
+        }
+
+        .brief-text {
+            font-size: 15px;
+            line-height: 1.65;
+            color: #444444;
+            font-weight: 300;
+        }
+
+        .narrative-block {
+            margin: 60px 0;
+            padding: 35px 40px;
+            border-left: 2px solid #111111;
+            background-color: #FFFFFF;
+        }
+
+        .narrative-title {
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: -0.3px;
+            margin-bottom: 12px;
+            color: #111111;
+        }
+
+        .narrative-text {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #555555;
+            font-weight: 300;
+        }
+
+        .slides-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .slide-item {
+            width: 100%;
+            background-color: #F8F9FA;
+            overflow: hidden;
+            border-radius: 2px;
+        }
+
+        .slide-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* --- FOOTER NAVIGATION --- */
+        .project-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 100px;
+            padding-top: 40px;
+            border-top: 1px solid #EEEEEE;
+        }
+
+        .nav-project-btn {
+            text-decoration: none;
+            color: #111111;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-project-btn:hover {
+            opacity: 0.6;
+        }
+
+        .nav-project-btn.next {
+            align-items: flex-end;
+        }
+
+        footer {
+            padding: 50px 40px;
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            align-items: center;
+            border-top: 1px solid #EEEEEE;
+            background-color: #FFFFFF;
+        }
+
+        .footer-link {
+            font-size: 15px;
+            font-weight: 400;
+            color: #111111;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-link:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 900px) {
+            .project-meta-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            .meta-value.nowrap {
+                white-space: normal;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header { padding: 24px 0; }
+            .header-container { padding: 0 24px; }
+            main { padding: 120px 24px 60px 24px; }
+            .project-title { font-size: 30px; }
+            .project-brief { grid-template-columns: 1fr; gap: 30px; padding: 24px; }
+            .narrative-block { padding: 24px; margin: 40px 0; }
+            .slides-gallery { gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="index.html" class="header-title">
+            Bazhenova Irina
+            <span class="header-subtitle">Multidisciplinary Designer</span>
+        </a>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link">3D Carousel</a>
+            <a href="works.html" class="nav-link active">Works</a>
+            <a href="Bazhenova_Irina_CV.pdf" target="_blank" class="nav-link">CV</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <a href="works.html" class="back-link">← Back to Selected Works</a>
+
+    <div class="project-header">
+        <h1 class="project-title">Posters JET LAG</h1>
+        
+        <div class="project-meta-grid">
+            <div>
+                <div class="meta-label">Client</div>
+                <div class="meta-value nowrap">HSE Art and Design School</div>
+            </div>
+            <div>
+                <div class="meta-label">Year</div>
+                <div class="meta-value">2023</div>
+            </div>
+            <div>
+                <div class="meta-label">Category</div>
+                <div class="meta-value">Graphics & Posters</div>
+            </div>
+            <div>
+                <div class="meta-label">Role</div>
+                <div class="meta-value">Poster Design / Art Direction</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BRIEF & CONCEPT -->
+    <section class="project-brief">
+        <div class="brief-card">
+            <span class="brief-tag">01 / Concept & Purpose</span>
+            <h2 class="brief-title">Intergalactic Adaptation Series</h2>
+            <p class="brief-text">
+                JET LAG is a speculative adaptation center designed for settlers arriving from different planets and galaxies. The center supports migrants through essential acclimatization stages: adapting to natural environmental conditions, mastering local culture and language, and overcoming psychological transition barriers.
+            </p>
+        </div>
+
+        <div class="brief-card">
+            <span class="brief-tag">02 / Poster Module Execution</span>
+            <h2 class="brief-title">Diverse Series & High-Contrast Visual Syntax</h2>
+            <p class="brief-text">
+                Developed within the Poster Design Module at HSE Art and Design School, the project features multiple distinct poster series—exploring welcome greetings for new arrivals, psychological milestones of unity, planetary orbital arrival calendars, and environmental acclimation diagrams.
+            </p>
+        </div>
+    </section>
+
+    <!-- GALLERY (ALL 9 SLIDES) -->
+    <section class="slides-gallery" id="slidesGallery">
+        
+        <!-- SERIES 1: WELCOME PROTOCOLS (SLIDES 1-2) -->
+        <div class="slide-item"><img src="jetlag-posters_works/1.jpg" alt="Posters JET LAG Slide 1 - Welcome Protocols"></div>
+        <div class="slide-item"><img src="jetlag-posters_works/2.jpg" alt="Posters JET LAG Slide 2 - Outdoor Desert Billboard"></div>
+
+        <div class="narrative-block">
+            <h3 class="narrative-title">01 / Welcome Protocols & Deep Space Banners</h3>
+            <p class="narrative-text">
+                Introducing extraterrestrial arrivals to the adaptation center. High-contrast typography paired with deep space textures and planetary spheres sets an inviting tone across desert billboards and arrival terminals.
+            </p>
+        </div>
+
+        <!-- SERIES 2: PSYCHOLOGICAL MESH & HANDS (SLIDES 3-4) -->
+        <div class="slide-item"><img src="jetlag-posters_works/3.jpg" alt="Posters JET LAG Slide 3 - Adoption Agreement Freedom Unity"></div>
+        <div class="slide-item"><img src="jetlag-posters_works/4.jpg" alt="Posters JET LAG Slide 4 - Desert Wrinkled Poster Mockup"></div>
+
+        <div class="narrative-block">
+            <h3 class="narrative-title">02 / Psychological Unity & Stippled Gesture</h3>
+            <p class="narrative-text">
+                Translating trust, adoption, agreement, freedom, and unity into high-contrast stippled hand gestures—symbolizing the emotional bridge built between distinct galactic species during acclimatization.
+            </p>
+        </div>
+
+        <!-- SERIES 3: GREETINGS & ARRIVAL CALENDARS (SLIDES 5-8) -->
+        <div class="slide-item"><img src="jetlag-posters_works/5.jpg" alt="Posters JET LAG Slide 5 - Good Morning Evening Night Alien"></div>
+        <div class="slide-item"><img src="jetlag-posters_works/6.jpg" alt="Posters JET LAG Slide 6 - Metro Billboard Mockup"></div>
+        <div class="slide-item"><img src="jetlag-posters_works/7.jpg" alt="Posters JET LAG Slide 7 - Arriving Gliese, Cancri E, HD 209458"></div>
+        <div class="slide-item"><img src="jetlag-posters_works/8.jpg" alt="Posters JET LAG Slide 8 - Planetary Arrival Stand Mockup"></div>
+
+        <div class="narrative-block">
+            <h3 class="narrative-title">03 / Greeting Cycles & Planetary Orbital Arrival Calendars</h3>
+            <p class="narrative-text">
+                Greeting travelers across Andromeda M31 and Messier M74/M90 galaxies with specialized time-zone banners, paired with detailed planetary arrival calendars tracking orbital days for Gliese 875 D, Cancri E, and HD 209458.
+            </p>
+        </div>
+
+        <!-- SERIES 4: INTEGRATION DIAGRAMS (SLIDE 9) -->
+        <div class="slide-item"><img src="jetlag-posters_works/9.jpg" alt="Posters JET LAG Slide 9 - Integration Acclimation Association Billboard"></div>
+
+    </section>
+
+    <!-- NAVIGATION -->
+    <nav class="project-navigation">
+        <a href="media-xoxo.html" class="nav-project-btn">
+            <span class="meta-label">← Previous Project</span>
+            <span>Media XOXO</span>
+        </a>
+        <a href="revision.html" class="nav-project-btn next">
+            <span class="meta-label">Next Project →</span>
+            <span>Identity for Revision</span>
+        </a>
+    </nav>
+</main>
+
+<footer>
+    <a href="index.html" class="footer-link">3D Carousel</a>
+    <a href="works.html" class="footer-link">Works / Visual Artifacts</a>
+    <a href="Bazhenova_Irina_CV.pdf" target="_blank" class="footer-link">CV</a>
+</footer>
+
+</body>
+</html>
