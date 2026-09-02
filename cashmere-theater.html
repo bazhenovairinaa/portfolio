@@ -66,7 +66,7 @@
 
         .nav-links {
             display: flex;
-            gap: 40px;
+            gap: 32px;
             align-items: center;
         }
 
@@ -99,6 +99,42 @@
 
         .nav-link:hover::after, .nav-link.active::after {
             width: 100%;
+        }
+
+        /* --- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ --- */
+        .lang-switch {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            letter-spacing: -0.2px;
+            margin-left: 8px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            padding: 0;
+            font-family: inherit;
+            font-size: 14px;
+            color: #888888;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            color: #111111;
+        }
+
+        .lang-btn.active {
+            color: #111111;
+            font-weight: 500;
+        }
+
+        .lang-divider {
+            color: #CCCCCC;
+            font-size: 12px;
+            user-select: none;
         }
 
         main {
@@ -306,6 +342,7 @@
             .project-brief { grid-template-columns: 1fr; gap: 30px; padding: 24px; }
             .narrative-block { padding: 24px; margin: 40px 0; }
             .slides-gallery { gap: 20px; }
+            .nav-links { gap: 20px; }
         }
     </style>
 </head>
@@ -314,39 +351,45 @@
 <header>
     <div class="header-container">
         <a href="index.html" class="header-title">
-            Bazhenova Irina
-            <span class="header-subtitle">Multidisciplinary Designer</span>
+            <span class="lang" data-en="Bazhenova Irina" data-ru="Баженова Ирина">Bazhenova Irina</span>
+            <span class="header-subtitle lang" data-en="Multidisciplinary Designer" data-ru="Мультидисциплинарный дизайнер">Multidisciplinary Designer</span>
         </a>
         <nav class="nav-links">
-            <a href="index.html" class="nav-link">3D Carousel</a>
-            <a href="works.html" class="nav-link active">Works</a>
-            <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link">CV</a>
+            <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
+            <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
+            <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
+            
+            <div class="lang-switch">
+                <button type="button" class="lang-btn active" data-lang-set="en">EN</button>
+                <span class="lang-divider">/</span>
+                <button type="button" class="lang-btn" data-lang-set="ru">RU</button>
+            </div>
         </nav>
     </div>
 </header>
 
 <main>
-    <a href="works.html" class="back-link">← Back to Selected Works</a>
+    <a href="works.html" class="back-link lang" data-en="← Back to Selected Works" data-ru="← Назад ко всем работам">← Back to Selected Works</a>
 
     <div class="project-header">
-        <h1 class="project-title">Packaging for the Cashmere Theater</h1>
+        <h1 class="project-title lang" data-en="Packaging for the Cashmere Theater" data-ru="Упаковка для театра «Кашемир»">Packaging for the Cashmere Theater</h1>
         
         <div class="project-meta-grid">
             <div>
-                <div class="meta-label">Client</div>
-                <div class="meta-value nowrap">Cashmere Theater (Moscow)</div>
+                <div class="meta-label lang" data-en="Client" data-ru="Клиент">Client</div>
+                <div class="meta-value nowrap lang" data-en="Cashmere Theater (Moscow)" data-ru="Театр «Кашемир» (Москва)">Cashmere Theater (Moscow)</div>
             </div>
             <div>
-                <div class="meta-label">Year</div>
+                <div class="meta-label lang" data-en="Year" data-ru="Год">Year</div>
                 <div class="meta-value">2025</div>
             </div>
             <div>
-                <div class="meta-label">Category</div>
-                <div class="meta-value">Packaging</div>
+                <div class="meta-label lang" data-en="Category" data-ru="Категория">Category</div>
+                <div class="meta-value lang" data-en="Packaging" data-ru="Упаковка">Packaging</div>
             </div>
             <div>
-                <div class="meta-label">Role</div>
-                <div class="meta-value">Art Direction, 3D Modeling & Project Lead</div>
+                <div class="meta-label lang" data-en="Role" data-ru="Роль">Role</div>
+                <div class="meta-value lang" data-en="Art Direction, 3D Modeling & Project Lead" data-ru="Арт-дирекшн, 3D-моделирование, лид проекта">Art Direction, 3D Modeling & Project Lead</div>
             </div>
         </div>
     </div>
@@ -354,17 +397,21 @@
     <!-- BRIEF & CONCEPT -->
     <section class="project-brief">
         <div class="brief-card">
-            <span class="brief-tag">01 / Context & Challenge</span>
-            <h2 class="brief-title">Design-Tsekh Hackathon Sprint</h2>
-            <p class="brief-text">
+            <span class="brief-tag lang" data-en="01 / Context & Challenge" data-ru="01 / Контекст и задача">01 / Context & Challenge</span>
+            <h2 class="brief-title lang" data-en="Design-Tsekh Hackathon" data-ru="Хакатон «Дизайн-цех»">Design-Tsekh Hackathon</h2>
+            <p class="brief-text lang"
+               data-en="Developed as part of the &ldquo;Design-Tsekh&rdquo; hackathon — an intensive 2-day team sprint. The task was to create an interactive premium gift gastro-box packaging concept for the private Cashmere Theater in Moscow, designed to set the audience's mood for a cultural evening even before the performance begins."
+               data-ru="Разработано в рамках хакатона «Дизайн-цех» — интенсивного двухдневного командного спринта. Задачей было создать интерактивную премиальную подарочную упаковку для гастробокса частного театра «Кашемир» в Москве, настраивающую зрителя на атмосферу спектакля еще до прихода в зал.">
                 Developed as part of the "Design-Tsekh" hackathon — an intensive 2-day team sprint. The task was to create an interactive premium gift gastro-box packaging concept for the private Cashmere Theater in Moscow, designed to set the audience's mood for a cultural evening even before the performance begins.
             </p>
         </div>
 
         <div class="brief-card">
-            <span class="brief-tag">02 / Core Concept & Solution</span>
-            <h2 class="brief-title">Theater Begins with Anticipation</h2>
-            <p class="brief-text">
+            <span class="brief-tag lang" data-en="02 / Core Concept & Solution" data-ru="02 / Концепция и решение">02 / Core Concept & Solution</span>
+            <h2 class="brief-title lang" data-en="Theater Begins with Anticipation" data-ru="Театр начинается с предвкушения">Theater Begins with Anticipation</h2>
+            <p class="brief-text lang"
+               data-en="The packaging is not merely a box, but a carefully curated emotional journey across three sequential stages: <strong>Invitation — Anticipation — Aftertaste</strong>. Through a structured ritual of tactile touchpoints, printed inserts, and gastro-sets, the audience is guided into the production's atmosphere long before stepping into the hall."
+               data-ru="Упаковка представляет собой не просто коробку, а продуманный сценарий погружения из трех последовательных стадий: <strong>Приглашение — Предвкушение — Послевкусие</strong>. Через тактильные контакты, полиграфические вкладыши и гастрономические сеты зритель входит в контекст постановки задолго до первого звонка.">
                 The packaging is not merely a box, but a carefully curated emotional journey across three sequential stages: <strong>Invitation — Anticipation — Aftertaste</strong>. Through a structured ritual of tactile touchpoints, printed inserts, and gastro-sets, the audience is guided into the production's atmosphere long before stepping into the hall.
             </p>
         </div>
@@ -380,8 +427,10 @@
 
         <!-- NARRATIVE BLOCK 1 -->
         <div class="narrative-block">
-            <h3 class="narrative-title">Entrance into Experience & Guided Ritual</h3>
-            <p class="narrative-text">
+            <h3 class="narrative-title lang" data-en="Entrance into Experience & Guided Ritual" data-ru="Погружение в спектакль и сценарий распаковки">Entrance into Experience & Guided Ritual</h3>
+            <p class="narrative-text lang"
+               data-en="The box is designed for the theatergoer an hour before the performance, easing them into the atmosphere of the evening. The preparation begins with an instruction card on the gift bag detailing the route and guidelines. Inside, accompanying brochures placed between trays gradually immerse the guest in the production's mood."
+               data-ru="Бокс рассчитан на распаковку за час до спектакля, плавно настраивая зрителя на вечер. Ритуал начинается с карточки-инструкции на ручке пакета с маршрутом до театра. Внутри слои гастробокса разделены буклетами, которые поэтапно раскрывают настроение предстоящей постановки.">
                 The box is designed for the theatergoer an hour before the performance, easing them into the atmosphere of the evening. The preparation begins with an instruction card on the gift bag detailing the route and guidelines. Inside, accompanying brochures placed between trays gradually immerse the guest in the production's mood.
             </p>
         </div>
@@ -394,8 +443,10 @@
 
         <!-- NARRATIVE BLOCK 2 -->
         <div class="narrative-block">
-            <h3 class="narrative-title">Gastro-Sets & Sensory Engagement</h3>
-            <p class="narrative-text">
+            <h3 class="narrative-title lang" data-en="Gastro-Sets & Sensory Engagement" data-ru="Гастросеты и мультисенсорное восприятие">Gastro-Sets & Sensory Engagement</h3>
+            <p class="narrative-text lang"
+               data-en="Individual gastro-sets add deeper narrative context, enhancing perception and emotional engagement. The guest's mindset is prepared through a guided ritual combining curated flavors with brief textual prompts. This allows the theater to engage not just with the stage, but directly with the audience's senses."
+               data-ru="Гастрономическое наполнение дополняет сюжет постановки, усиливая эмоциональный отклик через рецепторы вкуса. Вкус каждого сета синхронизирован с короткими текстовыми ремарками, превращая ужин перед спектаклем в интерактивный пролог к действию на сцене.">
                 Individual gastro-sets add deeper narrative context, enhancing perception and emotional engagement. The guest's mindset is prepared through a guided ritual combining curated flavors with brief textual prompts. This allows the theater to engage not just with the stage, but directly with the audience's senses.
             </p>
         </div>
@@ -407,8 +458,10 @@
 
         <!-- NARRATIVE BLOCK 3 -->
         <div class="narrative-block">
-            <h3 class="narrative-title">Room for Growth: Eco-Friendly Cycle</h3>
-            <p class="narrative-text">
+            <h3 class="narrative-title lang" data-en="Room for Growth: Eco-Friendly Cycle" data-ru="Зона роста: экологичный замкнутый цикл">Room for Growth: Eco-Friendly Cycle</h3>
+            <p class="narrative-text lang"
+               data-en="The concept incorporates fully recyclable packaging. After the performance, guests drop the used packaging into a branded recycling container in the foyer. The theater manages the recycling process with clear messaging on the bin: <em>'Thank you — this will be recycled.'</em>"
+               data-ru="Конструкция бокса выполнена из перерабатываемых материалов. После окончания спектакля зритель может оставить пустую упаковку в брендированном контейнере в фойе театра с благодарственной фразой: <em>«Спасибо — это пойдет на переработку»</em>.">
                 The concept incorporates fully recyclable packaging. After the performance, guests drop the used packaging into a branded recycling container in the foyer. The theater manages the recycling process with clear messaging on the bin: <em>"Thank you — this will be recycled."</em>
             </p>
         </div>
@@ -427,21 +480,51 @@
     <!-- NAVIGATION -->
     <nav class="project-navigation">
         <a href="itd-workshop.html" class="nav-project-btn">
-            <span class="meta-label">← Previous Project</span>
-            <span>Identity for I.T.D. Acting Workshop</span>
+            <span class="meta-label lang" data-en="← Previous Project" data-ru="← Предыдущий проект">← Previous Project</span>
+            <span class="lang" data-en="Identity for I.T.D. Acting Workshop" data-ru="Айдентика актерской мастерской «И Т.Д.»">Identity for I.T.D. Acting Workshop</span>
         </a>
         <a href="monkey-buffet.html" class="nav-project-btn next">
-            <span class="meta-label">Next Project →</span>
-            <span>Identity for Monkey Buffet Festival</span>
+            <span class="meta-label lang" data-en="Next Project →" data-ru="Следующий проект →">Next Project →</span>
+            <span class="lang" data-en="Identity for Monkey Buffet Festival" data-ru="Айдентика фестиваля Monkey Buffet">Identity for Monkey Buffet Festival</span>
         </a>
     </nav>
 </main>
 
 <footer>
-    <a href="index.html" class="footer-link">3D Carousel</a>
-    <a href="works.html" class="footer-link">Works / Visual Artifacts</a>
-    <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="footer-link">CV</a>
+    <a href="index.html" class="footer-link lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</a>
+    <a href="works.html" class="footer-link lang" data-en="Works / Visual Artifacts" data-ru="Работы / Визуальные артефакты">Works / Visual Artifacts</a>
+    <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="footer-link lang" data-en="CV" data-ru="Резюме">CV</a>
 </footer>
+
+<script>
+    // --- ПЕРЕКЛЮЧЕНИЕ ЯЗЫКА ---
+    const langButtons = document.querySelectorAll('[data-lang-set]');
+    const translatableElements = document.querySelectorAll('.lang');
+
+    function updateLanguage(lang) {
+        translatableElements.forEach(el => {
+            const text = el.getAttribute(`data-${lang}`);
+            if (text) el.innerHTML = text;
+        });
+
+        langButtons.forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-lang-set') === lang);
+        });
+
+        localStorage.setItem('selected_language', lang);
+        document.documentElement.lang = lang;
+    }
+
+    langButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetLang = btn.getAttribute('data-lang-set');
+            updateLanguage(targetLang);
+        });
+    });
+
+    const initialLang = localStorage.getItem('selected_language') || 'en';
+    updateLanguage(initialLang);
+</script>
 
 </body>
 </html>

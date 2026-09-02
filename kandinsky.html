@@ -67,7 +67,7 @@
 
         .nav-links {
             display: flex;
-            gap: 40px;
+            gap: 32px;
             align-items: center;
         }
 
@@ -102,6 +102,42 @@
             width: 100%;
         }
 
+        /* --- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ --- */
+        .lang-switch {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            letter-spacing: -0.2px;
+            margin-left: 8px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            padding: 0;
+            font-family: inherit;
+            font-size: 14px;
+            color: #888888;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            color: #111111;
+        }
+
+        .lang-btn.active {
+            color: #111111;
+            font-weight: 500;
+        }
+
+        .lang-divider {
+            color: #CCCCCC;
+            font-size: 12px;
+            user-select: none;
+        }
+
         /* --- MAIN CONTAINER --- */
         main {
             padding: 160px 40px 100px 40px;
@@ -118,6 +154,7 @@
             text-decoration: none;
             margin-bottom: 40px;
             transition: color 0.3s ease;
+            white-space: nowrap;
         }
 
         .back-link:hover {
@@ -142,6 +179,7 @@
             font-weight: 400;
             letter-spacing: -1.2px;
             line-height: 1.15;
+            text-wrap: balance;
         }
 
         /* EXACT HIGHLIGHTER MARKER LINE STYLE MATCHING SCREENSHOT 2 */
@@ -184,6 +222,7 @@
             font-size: 15px;
             color: #111111;
             font-weight: 400;
+            text-wrap: pretty;
         }
 
         .meta-value.nowrap {
@@ -220,6 +259,7 @@
             font-weight: 400;
             letter-spacing: -0.4px;
             color: #111111;
+            text-wrap: balance;
         }
 
         .brief-text {
@@ -227,6 +267,7 @@
             line-height: 1.65;
             color: #444444;
             font-weight: 300;
+            text-wrap: pretty;
         }
 
         /* --- NARRATIVE BLOCKS BETWEEN SLIDES --- */
@@ -243,6 +284,7 @@
             letter-spacing: -0.3px;
             margin-bottom: 12px;
             color: #111111;
+            text-wrap: balance;
         }
 
         .narrative-text {
@@ -250,6 +292,7 @@
             line-height: 1.7;
             color: #555555;
             font-weight: 300;
+            text-wrap: pretty;
         }
 
         .slides-gallery {
@@ -347,6 +390,7 @@
             .narrative-block { padding: 24px; margin: 40px 0; }
             .slides-gallery { gap: 20px; }
             .slide-row-2col { grid-template-columns: 1fr; gap: 20px; }
+            .nav-links { gap: 20px; }
         }
     </style>
 </head>
@@ -355,64 +399,74 @@
 <header>
     <div class="header-container">
         <a href="index.html" class="header-title">
-            Bazhenova Irina
-            <span class="header-subtitle">Multidisciplinary Designer</span>
+            <span class="lang" data-en="Bazhenova Irina" data-ru="Баженова Ирина">Bazhenova Irina</span>
+            <span class="header-subtitle lang" data-en="Multidisciplinary Designer" data-ru="Мультидисциплинарный дизайнер">Multidisciplinary Designer</span>
         </a>
         <nav class="nav-links">
-            <a href="index.html" class="nav-link">3D Carousel</a>
-            <a href="works.html" class="nav-link active">Works</a>
-            <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link">CV</a>
+            <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
+            <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
+            <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
+            
+            <div class="lang-switch">
+                <button type="button" class="lang-btn active" data-lang-set="en">EN</button>
+                <span class="lang-divider">/</span>
+                <button type="button" class="lang-btn" data-lang-set="ru">RU</button>
+            </div>
         </nav>
     </div>
 </header>
 
 <main>
-    <a href="works.html" class="back-link">← Back to Selected Works</a>
+    <a href="works.html" class="back-link lang" data-en="← Back to Selected Works" data-ru="← Назад ко&nbsp;всем работам">← Back to Selected Works</a>
 
     <div class="project-header">
         <div class="project-title-wrapper">
-            <h1 class="project-title">Posters Kandinsky 160</h1>
+            <h1 class="project-title lang" data-en="Posters Kandinsky 160" data-ru="Плакаты Кандинский 160">Posters Kandinsky 160</h1>
             
-            <!-- HIGHLIGHTER MARKER STRIPE MATCHING SECOND SCREENSHOT EXACTLY -->
+            <!-- HIGHLIGHTER MARKER STRIPE -->
             <div class="title-award-badge">
-                <span>Golden Bee International Poster Biennale Finalist:</span><br>
-                <span>Selected for the official exhibition program in Moscow, Autumn 2026</span>
+                <span class="lang" data-en="Golden Bee International Poster Biennale Finalist:" data-ru="Финалист биеннале «Золотая пчела»:">Golden Bee International Poster Biennale Finalist:</span><br>
+                <span class="lang" data-en="Selected for the official exhibition program in Moscow, Autumn 2026" data-ru="Отобрано в&nbsp;официальную программу выставки в&nbsp;Москве, осень 2026">Selected for the official exhibition program in Moscow, Autumn 2026</span>
             </div>
         </div>
         
         <div class="project-meta-grid">
             <div>
-                <div class="meta-label">Client</div>
-                <div class="meta-value nowrap">HSE Art and Design School / Poster Lab</div>
+                <div class="meta-label lang" data-en="Client" data-ru="Клиент">Client</div>
+                <div class="meta-value nowrap lang" data-en="HSE Art and Design School / Poster Lab" data-ru="Школа дизайна НИУ&nbsp;ВШЭ / Лаборатория плаката">HSE Art and Design School / Poster Lab</div>
             </div>
             <div>
-                <div class="meta-label">Year</div>
+                <div class="meta-label lang" data-en="Year" data-ru="Год">Year</div>
                 <div class="meta-value">2026</div>
             </div>
             <div>
-                <div class="meta-label">Category</div>
-                <div class="meta-value">Poster & Exhibition Design</div>
+                <div class="meta-label lang" data-en="Category" data-ru="Категория">Category</div>
+                <div class="meta-value lang" data-en="Poster & Exhibition Design" data-ru="Плакат и&nbsp;выставочный дизайн">Poster & Exhibition Design</div>
             </div>
             <div>
-                <div class="meta-label">Role</div>
-                <div class="meta-value">Graphic Design</div>
+                <div class="meta-label lang" data-en="Role" data-ru="Роль">Role</div>
+                <div class="meta-value lang" data-en="Graphic Design" data-ru="Графический дизайн">Graphic Design</div>
             </div>
         </div>
     </div>
 
     <section class="project-brief">
         <div class="brief-card">
-            <span class="brief-tag">01 / Context & Competition</span>
-            <h2 class="brief-title">Wassily Kandinsky 160th Anniversary</h2>
-            <p class="brief-text">
+            <span class="brief-tag lang" data-en="01 / Context & Competition" data-ru="01 / Контекст и&nbsp;конкурс">01 / Context & Competition</span>
+            <h2 class="brief-title lang" data-en="Wassily Kandinsky 160th Anniversary" data-ru="160 лет Василию Кандинскому">Wassily Kandinsky 160th Anniversary</h2>
+            <p class="brief-text lang"
+               data-en="Created as part of the Poster Lab course at HSE Art and Design School to commemorate the 160th anniversary of Wassily Kandinsky. The posters were designed for the prestigious International Poster Biennale 'Golden Bee' call for entries."
+               data-ru="Проект создан в&nbsp;рамках Лаборатории плаката Школы дизайна НИУ&nbsp;ВШЭ к&nbsp;160-летию со&nbsp;дня рождения Василия Кандинского. Плакаты разработаны для открытого конкурса Международной биеннале плаката «Золотая пчела».">
                 Created as part of the Poster Lab course at HSE Art and Design School to commemorate the 160th anniversary of Wassily Kandinsky. The posters were designed for the prestigious International Poster Biennale "Golden Bee" call for entries.
             </p>
         </div>
 
         <div class="brief-card">
-            <span class="brief-tag">02 / Solution & Concept</span>
-            <h2 class="brief-title">Rational Grid vs. Irrational Form</h2>
-            <p class="brief-text">
+            <span class="brief-tag lang" data-en="02 / Solution & Concept" data-ru="02 / Решение и&nbsp;концепция">02 / Solution & Concept</span>
+            <h2 class="brief-title lang" data-en="Rational Grid vs. Irrational Form" data-ru="Рациональная сетка против иррациональной формы">Rational Grid vs. Irrational Form</h2>
+            <p class="brief-text lang"
+               data-en="The visual logic is rooted in a deconstruction of Kandinsky's late period. A geometric grid serves as a symbol of rational order, which undergoes dramatic physical deformation under the influence of irrational color dynamics, rhythmic lines, and expressive shapes."
+               data-ru="Визуальная логика основана на&nbsp;деконструкции позднего периода творчества Кандинского. Геометрическая сетка выступает символом рационального порядка, который претерпевает сильную деформацию под влиянием иррациональной динамики цвета, ритмичных линий и&nbsp;экспрессивных форм.">
                 The visual logic is rooted in a deconstruction of Kandinsky's late period. A geometric grid serves as a symbol of rational order, which undergoes dramatic physical deformation under the influence of irrational color dynamics, rhythmic lines, and expressive shapes.
             </p>
         </div>
@@ -430,8 +484,10 @@
         <div class="slide-item"><img src="kandinsky_works/4.jpg" alt="Kandinsky Poster Urban Mockup"></div>
 
         <div class="narrative-block">
-            <h3 class="narrative-title">Structural Deformation & Musical Synesthesia</h3>
-            <p class="narrative-text">
+            <h3 class="narrative-title lang" data-en="Structural Deformation & Musical Synesthesia" data-ru="Структурная деформация и&nbsp;музыкальная синестезия">Structural Deformation & Musical Synesthesia</h3>
+            <p class="narrative-text lang"
+               data-en="The grid structure, initially disciplined and rational, folds and fractures across the canvas. Typography and organic lines interrupt the pattern, creating a graphic score that echoes Kandinsky’s philosophy of visual music: 'Color is the keyboard, the eyes are the hammers, the soul is the piano with many strings.'"
+               data-ru="Структура сетки, изначально строгая и&nbsp;рациональная, изгибается и&nbsp;ломается на&nbsp;плоскости листа. Типографика и&nbsp;пластичные линии вторгаются в&nbsp;паттерн, формируя графическую партитуру в&nbsp;духе синестетической философии Кандинского: «Цвет — это клавиша, глаз — молоточек, душа — многострунный рояль».">
                 The grid structure, initially disciplined and rational, folds and fractures across the canvas. Typography and organic lines interrupt the pattern, creating a graphic score that echoes Kandinsky’s philosophy of visual music: "Color is the keyboard, the eyes are the hammers, the soul is the piano with many strings."
             </p>
         </div>
@@ -442,21 +498,51 @@
 
     <nav class="project-navigation">
         <a href="tsaritsyno.html" class="nav-project-btn">
-            <span class="meta-label">← Previous Project</span>
-            <span>Merch for Tsaritsyno</span>
+            <span class="meta-label lang" data-en="← Previous Project" data-ru="← Предыдущий проект">← Previous Project</span>
+            <span class="lang" data-en="Merch for Tsaritsyno" data-ru="Мерч для Царицыно">Merch for Tsaritsyno</span>
         </a>
         <a href="epistola.html" class="nav-project-btn next">
-            <span class="meta-label">Next Project →</span>
-            <span>Typeface & Identity Epistola</span>
+            <span class="meta-label lang" data-en="Next Project →" data-ru="Следующий проект →">Next Project →</span>
+            <span class="lang" data-en="Typeface & Identity Epistola" data-ru="Шрифт и&nbsp;айдентика Epistola">Typeface & Identity Epistola</span>
         </a>
     </nav>
 </main>
 
 <footer>
-    <a href="index.html" class="footer-link">3D Carousel</a>
-    <a href="works.html" class="footer-link">Works / Visual Artifacts</a>
-    <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="footer-link">CV</a>
+    <a href="index.html" class="footer-link lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</a>
+    <a href="works.html" class="footer-link lang" data-en="Works / Visual Artifacts" data-ru="Работы / Визуальные артефакты">Works / Visual Artifacts</a>
+    <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="footer-link lang" data-en="CV" data-ru="Резюме">CV</a>
 </footer>
+
+<script>
+    // --- ПЕРЕКЛЮЧЕНИЕ ЯЗЫКА ---
+    const langButtons = document.querySelectorAll('[data-lang-set]');
+    const translatableElements = document.querySelectorAll('.lang');
+
+    function updateLanguage(lang) {
+        translatableElements.forEach(el => {
+            const text = el.getAttribute(`data-${lang}`);
+            if (text) el.innerHTML = text;
+        });
+
+        langButtons.forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-lang-set') === lang);
+        });
+
+        localStorage.setItem('selected_language', lang);
+        document.documentElement.lang = lang;
+    }
+
+    langButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetLang = btn.getAttribute('data-lang-set');
+            updateLanguage(targetLang);
+        });
+    });
+
+    const initialLang = localStorage.getItem('selected_language') || 'en';
+    updateLanguage(initialLang);
+</script>
 
 </body>
 </html>

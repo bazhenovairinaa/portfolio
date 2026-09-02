@@ -67,7 +67,7 @@
 
         .nav-links {
             display: flex;
-            gap: 40px;
+            gap: 32px;
             align-items: center;
         }
 
@@ -102,6 +102,42 @@
             width: 100%;
         }
 
+        /* --- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ --- */
+        .lang-switch {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            letter-spacing: -0.2px;
+            margin-left: 8px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            padding: 0;
+            font-family: inherit;
+            font-size: 14px;
+            color: #888888;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            color: #111111;
+        }
+
+        .lang-btn.active {
+            color: #111111;
+            font-weight: 500;
+        }
+
+        .lang-divider {
+            color: #CCCCCC;
+            font-size: 12px;
+            user-select: none;
+        }
+
         /* --- MAIN CONTAINER --- */
         main {
             padding: 160px 40px 100px 40px;
@@ -118,6 +154,7 @@
             text-decoration: none;
             margin-bottom: 40px;
             transition: color 0.3s ease;
+            white-space: nowrap;
         }
 
         .back-link:hover {
@@ -134,6 +171,7 @@
             letter-spacing: -1.2px;
             line-height: 1.15;
             margin-bottom: 35px;
+            text-wrap: balance;
         }
 
         .project-meta-grid {
@@ -157,6 +195,7 @@
             font-size: 15px;
             color: #111111;
             font-weight: 400;
+            text-wrap: pretty;
         }
 
         .meta-value.nowrap {
@@ -193,6 +232,7 @@
             font-weight: 400;
             letter-spacing: -0.4px;
             color: #111111;
+            text-wrap: balance;
         }
 
         .brief-text {
@@ -200,8 +240,10 @@
             line-height: 1.65;
             color: #444444;
             font-weight: 300;
+            text-wrap: pretty;
         }
 
+        /* --- NARRATIVE BLOCKS --- */
         .narrative-block {
             margin: 60px 0;
             padding: 35px 40px;
@@ -215,6 +257,7 @@
             letter-spacing: -0.3px;
             margin-bottom: 12px;
             color: #111111;
+            text-wrap: balance;
         }
 
         .narrative-text {
@@ -222,6 +265,7 @@
             line-height: 1.7;
             color: #555555;
             font-weight: 300;
+            text-wrap: pretty;
         }
 
         .slides-gallery {
@@ -310,6 +354,7 @@
             .project-brief { grid-template-columns: 1fr; gap: 30px; padding: 24px; }
             .narrative-block { padding: 24px; margin: 40px 0; }
             .slides-gallery { gap: 20px; }
+            .nav-links { gap: 20px; }
         }
     </style>
 </head>
@@ -318,129 +363,168 @@
 <header>
     <div class="header-container">
         <a href="index.html" class="header-title">
-            Bazhenova Irina
-            <span class="header-subtitle">Multidisciplinary Designer</span>
+            <span class="lang" data-en="Bazhenova Irina" data-ru="Баженова Ирина">Bazhenova Irina</span>
+            <span class="header-subtitle lang" data-en="Multidisciplinary Designer" data-ru="Мультидисциплинарный дизайнер">Multidisciplinary Designer</span>
         </a>
         <nav class="nav-links">
-            <a href="index.html" class="nav-link">3D Carousel</a>
-            <a href="works.html" class="nav-link active">Works</a>
-            <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link">CV</a>
+            <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
+            <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
+            <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
+            
+            <div class="lang-switch">
+                <button type="button" class="lang-btn active" data-lang-set="en">EN</button>
+                <span class="lang-divider">/</span>
+                <button type="button" class="lang-btn" data-lang-set="ru">RU</button>
+            </div>
         </nav>
     </div>
 </header>
 
 <main>
-    <a href="works.html" class="back-link">← Back to Selected Works</a>
+    <a href="works.html" class="back-link lang" data-en="← Back to Selected Works" data-ru="← Назад ко&nbsp;всем работам">← Back to Selected Works</a>
 
     <div class="project-header">
-        <h1 class="project-title">AR motion graphics Science inside human</h1>
+        <h1 class="project-title lang" data-en="AR motion graphics Science inside human" data-ru="AR-моушн «Наука внутри нас»">AR motion graphics Science inside human</h1>
         
         <div class="project-meta-grid">
             <div>
-                <div class="meta-label">Client</div>
-                <div class="meta-value nowrap">HSE Art and Design School</div>
+                <div class="meta-label lang" data-en="Client" data-ru="Клиент">Client</div>
+                <div class="meta-value nowrap lang" data-en="HSE Art and Design School" data-ru="Школа дизайна НИУ&nbsp;ВШЭ">HSE Art and Design School</div>
             </div>
             <div>
-                <div class="meta-label">Year</div>
+                <div class="meta-label lang" data-en="Year" data-ru="Год">Year</div>
                 <div class="meta-value">2025</div>
             </div>
             <div>
-                <div class="meta-label">Category</div>
-                <div class="meta-value">AR & Motion Graphics</div>
+                <div class="meta-label lang" data-en="Category" data-ru="Категория">Category</div>
+                <div class="meta-value lang" data-en="AR & Motion Graphics" data-ru="AR и&nbsp;моушн-дизайн">AR & Motion Graphics</div>
             </div>
             <div>
-                <div class="meta-label">Role</div>
-                <div class="meta-value">AR Design / Motion / 3D</div>
+                <div class="meta-label lang" data-en="Role" data-ru="Роль">Role</div>
+                <div class="meta-value lang" data-en="AR Design / Motion / 3D" data-ru="AR-дизайн / Моушн / 3D">AR Design / Motion / 3D</div>
             </div>
         </div>
     </div>
 
-    <!-- BRIEF & CONCEPT -->
     <section class="project-brief">
         <div class="brief-card">
-            <span class="brief-tag">01 / Concept & Purpose</span>
-            <h2 class="brief-title">Chemistry Beyond Textbook Formulas</h2>
-            <p class="brief-text">
+            <span class="brief-tag lang" data-en="01 / Concept & Purpose" data-ru="01 / Идея и&nbsp;контекст">01 / Concept & Purpose</span>
+            <h2 class="brief-title lang" data-en="Chemistry Inside Us" data-ru="Химия человеческого тела">Chemistry Inside Us</h2>
+            <p class="brief-text lang"
+               data-en="Chemical reactions are more than textbook formulas — they shape our physical state, mood, and perception. Inside the body, atomic processes run every second, quietly maintaining life."
+               data-ru="Химические реакции — это больше чем формулы из&nbsp;учебника. Они формируют наше самочувствие, настроение и&nbsp;восприятие. Внутри тела каждую секунду идут непрерывные процессы на&nbsp;атомарном уровне, поддерживающие жизнь.">
                 Every chemical reaction in the world is far more than an abstract equation—it directly shapes our surroundings, moods, and biological states. Inside the human body, continuous atomic processes unfold every second, sustaining vital functions and defining physical well-being.
             </p>
         </div>
 
         <div class="brief-card">
-            <span class="brief-tag">02 / Mechanics & Execution</span>
-            <h2 class="brief-title">Augmented Poster Motion System</h2>
-            <p class="brief-text">
+            <span class="brief-tag lang" data-en="02 / Mechanics & Format" data-ru="02 / Механика и&nbsp;формат">02 / Mechanics & Format</span>
+            <h2 class="brief-title lang" data-en="Augmented Poster Series" data-ru="Серия постеров с&nbsp;AR-слоем">Augmented Poster Series</h2>
+            <p class="brief-text lang"
+               data-en="The project visualizes molecular reactions by&nbsp;combining printed posters with augmented reality (AR). The static graphics serve as&nbsp;a&nbsp;base, while mobile tracking brings the processes to&nbsp;life in&nbsp;motion."
+               data-ru="Проект объясняет микробиологические процессы через серию печатных плакатов с&nbsp;дополненной реальностью (AR). Статичный лист служит триггером, поверх которого через камеру телефона запускается анимированный слой.">
                 Designed to explain chemistry at the atomic level, the project links dynamic motion graphics with a series of physical posters through Augmented Reality (AR) tracking, bridging microscopic human biology with spatial digital experience.
             </p>
         </div>
     </section>
 
-    <!-- GALLERY & NARRATIVE BLOCKS -->
     <section class="slides-gallery" id="slidesGallery">
         
-        <!-- SLIDES 1–4 -->
         <div class="slide-item"><img src="science-inside-human_works/1.jpg" alt="Science inside human Slide 1"></div>
         <div class="slide-item"><img src="science-inside-human_works/2.jpg" alt="Science inside human Slide 2"></div>
         <div class="slide-item"><img src="science-inside-human_works/3.jpg" alt="Science inside human Slide 3"></div>
         <div class="slide-item"><img src="science-inside-human_works/4.jpg" alt="Science inside human Slide 4"></div>
 
         <div class="narrative-block">
-            <h3 class="narrative-title">Atomic Processes & Biological Harmony</h3>
-            <p class="narrative-text">
+            <h3 class="narrative-title lang" data-en="Molecular Dynamics & Visual Language" data-ru="Графика молекулярных процессов">Molecular Dynamics & Visual Language</h3>
+            <p class="narrative-text lang"
+               data-en="Abstract orbits and particle fields translate invisible biological reactions into clear visual forms, showing the connection between atomic physics and human sensations."
+               data-ru="Абстрактные орбитали и&nbsp;точечные поля переводят скрытые биологические реакции в&nbsp;понятный визуальный язык, наглядно связывая микромир с&nbsp;физическими ощущениями человека.">
                 Exploring the subtle chemistry operating within us. Graphic elements translate internal molecular reactions into tangible graphic forms, highlighting the direct connection between atomic activity and human life.
             </p>
         </div>
 
-        <!-- SLIDES 5–8 -->
         <div class="slide-item"><img src="science-inside-human_works/5.jpg" alt="Science inside human Slide 5"></div>
         <div class="slide-item"><img src="science-inside-human_works/6.jpg" alt="Science inside human Slide 6"></div>
         <div class="slide-item"><img src="science-inside-human_works/7.jpg" alt="Science inside human Slide 7"></div>
         <div class="slide-item"><img src="science-inside-human_works/8.jpg" alt="Science inside human Slide 8"></div>
 
         <div class="narrative-block">
-            <h3 class="narrative-title">Augmented Reality Integration & Spatial Motion</h3>
-            <p class="narrative-text">
+            <h3 class="narrative-title lang" data-en="Interactive AR Tracking" data-ru="Взаимодействие через AR">Interactive AR Tracking</h3>
+            <p class="narrative-text lang"
+               data-en="Scanning a&nbsp;printed sheet launches smooth motion graphics on&nbsp;the screen, giving the viewer an&nbsp;intuitive look at&nbsp;how particles move and interact inside the body."
+               data-ru="При наведении смартфона на&nbsp;постер активируется моушн-графика: частицы приходят в&nbsp;движение, позволяя увидеть реакцию в&nbsp;динамике прямо в&nbsp;пространстве перед зрителем.">
                 By scanning each printed poster, AR spatial tracking reveals dynamic motion layers over the static graphics, providing an intuitive visual explanation of microscopic biological events.
             </p>
         </div>
 
-        <!-- SLIDES 9–12 -->
         <div class="slide-item"><img src="science-inside-human_works/9.jpg" alt="Science inside human Slide 9"></div>
         <div class="slide-item"><img src="science-inside-human_works/10.jpg" alt="Science inside human Slide 10"></div>
         <div class="slide-item"><img src="science-inside-human_works/11.jpg" alt="Science inside human Slide 11"></div>
         <div class="slide-item"><img src="science-inside-human_works/12.jpg" alt="Science inside human Slide 12"></div>
 
         <div class="narrative-block">
-            <h3 class="narrative-title">Micro-Cosmic Poster Series</h3>
-            <p class="narrative-text">
+            <h3 class="narrative-title lang" data-en="Visual Contrast & Density" data-ru="Контраст и&nbsp;типографика">Visual Contrast & Density</h3>
+            <p class="narrative-text lang"
+               data-en="High-contrast circular geometries paired with textured stippling create a&nbsp;focused layout that works well both as&nbsp;a&nbsp;standalone poster and as&nbsp;an&nbsp;AR marker."
+               data-ru="Контрастная геометрия и&nbsp;зернистые градиенты собирают лист в&nbsp;выразительную композицию, которая одинаково устойчиво считывается и&nbsp;взглядом, и&nbsp;камерой телефона.">
                 The visual identity pairs high-contrast orbital forms with stippled gradients and glowing energy centers, capturing the feeling of an expansive universe contained within human biology.
             </p>
         </div>
 
-        <!-- SLIDES 13–15 -->
         <div class="slide-item"><img src="science-inside-human_works/13.jpg" alt="Science inside human Slide 13"></div>
         <div class="slide-item"><img src="science-inside-human_works/14.jpg" alt="Science inside human Slide 14"></div>
         <div class="slide-item"><img src="science-inside-human_works/15.jpg" alt="Science inside human Slide 15"></div>
 
     </section>
 
-    <!-- NAVIGATION -->
     <nav class="project-navigation">
         <a href="ten-steps-to-silence.html" class="nav-project-btn">
-            <span class="meta-label">← Previous Project</span>
-            <span>Ten Steps to Silence</span>
+            <span class="meta-label lang" data-en="← Previous Project" data-ru="← Предыдущий проект">← Previous Project</span>
+            <span class="lang" data-en="Posters for Ten Steps to Silence" data-ru="Плакаты для «10 шагов к тишине»">Posters for Ten Steps to Silence</span>
         </a>
         <a href="jetlag-interactive-poster.html" class="nav-project-btn next">
-            <span class="meta-label">Next Project →</span>
-            <span>Interactive poster JET LAG</span>
+            <span class="meta-label lang" data-en="Next Project →" data-ru="Следующий проект →">Next Project →</span>
+            <span class="lang" data-en="Interactive poster JET LAG" data-ru="Интерактивный плакат JET LAG">Interactive poster JET LAG</span>
         </a>
     </nav>
 </main>
 
 <footer>
-    <a href="index.html" class="footer-link">3D Carousel</a>
-    <a href="works.html" class="footer-link">Works / Visual Artifacts</a>
-    <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="footer-link">CV</a>
+    <a href="index.html" class="footer-link lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</a>
+    <a href="works.html" class="footer-link lang" data-en="Works / Visual Artifacts" data-ru="Работы / Визуальные артефакты">Works / Visual Artifacts</a>
+    <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="footer-link lang" data-en="CV" data-ru="Резюме">CV</a>
 </footer>
+
+<script>
+    // --- ПЕРЕКЛЮЧЕНИЕ ЯЗЫКА ---
+    const langButtons = document.querySelectorAll('[data-lang-set]');
+    const translatableElements = document.querySelectorAll('.lang');
+
+    function updateLanguage(lang) {
+        translatableElements.forEach(el => {
+            const text = el.getAttribute(`data-${lang}`);
+            if (text) el.innerHTML = text;
+        });
+
+        langButtons.forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-lang-set') === lang);
+        });
+
+        localStorage.setItem('selected_language', lang);
+        document.documentElement.lang = lang;
+    }
+
+    langButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetLang = btn.getAttribute('data-lang-set');
+            updateLanguage(targetLang);
+        });
+    });
+
+    const initialLang = localStorage.getItem('selected_language') || 'en';
+    updateLanguage(initialLang);
+</script>
 
 </body>
 </html>

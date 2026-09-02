@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,13 +36,68 @@
             pointer-events: none;
         }
 
-        .header-title, .header-subtitle {
+        .header-left {
             pointer-events: auto;
+        }
+
+        .header-title {
             font-size: 24px;
             font-weight: 400;
             letter-spacing: -0.5px;
             color: #111111;
             text-decoration: none;
+            display: inline-block;
+        }
+
+        .header-right {
+            pointer-events: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 8px;
+        }
+
+        .header-subtitle {
+            font-size: 24px;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            color: #111111;
+            text-decoration: none;
+        }
+
+        /* --- LANGUAGE SWITCHER --- */
+        .lang-switch {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            letter-spacing: -0.2px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            padding: 0;
+            font-family: inherit;
+            font-size: 14px;
+            color: #888888;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            color: #111111;
+        }
+
+        .lang-btn.active {
+            color: #111111;
+            font-weight: 500;
+        }
+
+        .lang-divider {
+            color: #CCCCCC;
+            font-size: 12px;
+            user-select: none;
         }
 
         /* --- 3D SCENE --- */
@@ -176,8 +231,17 @@
 <body>
 
     <header>
-        <a href="#" class="header-title">Bazhenova Irina</a>
-        <div class="header-subtitle">Multidisciplinary Designer</div>
+        <div class="header-left">
+            <a href="index.html" class="header-title lang" data-en="Bazhenova Irina" data-ru="Баженова Ирина">Bazhenova Irina</a>
+        </div>
+        <div class="header-right">
+            <div class="header-subtitle lang" data-en="Multidisciplinary Designer" data-ru="Мультидисциплинарный дизайнер">Multidisciplinary Designer</div>
+            <div class="lang-switch">
+                <button type="button" class="lang-btn active" data-lang-set="en">EN</button>
+                <span class="lang-divider">/</span>
+                <button type="button" class="lang-btn" data-lang-set="ru">RU</button>
+            </div>
+        </div>
     </header>
 
     <div class="scene-container" id="sceneContainer">
@@ -233,15 +297,44 @@
 
         </div>
 
-        <div class="drag-instruction" id="dragLabel">Drag to spin</div>
+        <div class="drag-instruction lang" id="dragLabel" data-en="Drag to spin" data-ru="Потяните, чтобы крутить">Drag to spin</div>
     </div>
 
     <footer>
-        <a href="works.html" class="footer-link">Works / Visual Artifacts</a>
-        <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="footer-link">CV</a>
+        <a href="works.html" class="footer-link lang" data-en="Works / Visual Artifacts" data-ru="Работы / Визуальные артефакты">Works / Visual Artifacts</a>
+        <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="footer-link lang" data-en="CV" data-ru="Резюме">CV</a>
     </footer>
 
     <script>
+        // --- ПЕРЕКЛЮЧЕНИЕ ЯЗЫКА ---
+        const langButtons = document.querySelectorAll('[data-lang-set]');
+        const translatableElements = document.querySelectorAll('.lang');
+
+        function updateLanguage(lang) {
+            translatableElements.forEach(el => {
+                const text = el.getAttribute(`data-${lang}`);
+                if (text) el.textContent = text;
+            });
+
+            langButtons.forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-lang-set') === lang);
+            });
+
+            localStorage.setItem('selected_language', lang);
+            document.documentElement.lang = lang;
+        }
+
+        langButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetLang = btn.getAttribute('data-lang-set');
+                updateLanguage(targetLang);
+            });
+        });
+
+        const initialLang = localStorage.getItem('selected_language') || 'en';
+        updateLanguage(initialLang);
+
+        // --- 3D КАРУСЕЛЬ ---
         const carousel = document.getElementById('carousel');
         const container = document.getElementById('sceneContainer');
         const items = document.querySelectorAll('.carousel-item');

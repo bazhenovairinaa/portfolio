@@ -67,7 +67,7 @@
 
         .nav-links {
             display: flex;
-            gap: 40px;
+            gap: 32px;
             align-items: center;
         }
 
@@ -102,6 +102,42 @@
             width: 100%;
         }
 
+        /* --- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ --- */
+        .lang-switch {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            letter-spacing: -0.2px;
+            margin-left: 8px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            padding: 0;
+            font-family: inherit;
+            font-size: 14px;
+            color: #888888;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            color: #111111;
+        }
+
+        .lang-btn.active {
+            color: #111111;
+            font-weight: 500;
+        }
+
+        .lang-divider {
+            color: #CCCCCC;
+            font-size: 12px;
+            user-select: none;
+        }
+
         /* --- MAIN CONTAINER --- */
         main {
             padding: 160px 40px 100px 40px;
@@ -118,6 +154,7 @@
             text-decoration: none;
             margin-bottom: 40px;
             transition: color 0.3s ease;
+            white-space: nowrap;
         }
 
         .back-link:hover {
@@ -134,6 +171,7 @@
             letter-spacing: -1.2px;
             line-height: 1.15;
             margin-bottom: 35px;
+            text-wrap: balance;
         }
 
         .project-meta-grid {
@@ -157,6 +195,7 @@
             font-size: 15px;
             color: #111111;
             font-weight: 400;
+            text-wrap: pretty;
         }
 
         .meta-value.nowrap {
@@ -193,6 +232,7 @@
             font-weight: 400;
             letter-spacing: -0.4px;
             color: #111111;
+            text-wrap: balance;
         }
 
         .brief-text {
@@ -200,6 +240,7 @@
             line-height: 1.65;
             color: #444444;
             font-weight: 300;
+            text-wrap: pretty;
         }
 
         /* CALAMEO BRANDBOOK BANNER */
@@ -226,12 +267,14 @@
             font-size: 16px;
             font-weight: 500;
             color: #111111;
+            text-wrap: balance;
         }
 
         .live-banner-sub {
             font-size: 13px;
             color: #777777;
             font-weight: 300;
+            text-wrap: pretty;
         }
 
         .live-btn {
@@ -245,6 +288,7 @@
             font-size: 14px;
             font-weight: 500;
             border-radius: 2px;
+            white-space: nowrap;
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
@@ -267,6 +311,7 @@
             letter-spacing: -0.3px;
             margin-bottom: 12px;
             color: #111111;
+            text-wrap: balance;
         }
 
         .narrative-text {
@@ -274,6 +319,7 @@
             line-height: 1.7;
             color: #555555;
             font-weight: 300;
+            text-wrap: pretty;
         }
 
         .slides-gallery {
@@ -363,6 +409,7 @@
             .live-project-banner { padding: 20px; flex-direction: column; align-items: flex-start; }
             .narrative-block { padding: 24px; margin: 40px 0; }
             .slides-gallery { gap: 20px; }
+            .nav-links { gap: 20px; }
         }
     </style>
 </head>
@@ -371,39 +418,45 @@
 <header>
     <div class="header-container">
         <a href="index.html" class="header-title">
-            Bazhenova Irina
-            <span class="header-subtitle">Multidisciplinary Designer</span>
+            <span class="lang" data-en="Bazhenova Irina" data-ru="Баженова Ирина">Bazhenova Irina</span>
+            <span class="header-subtitle lang" data-en="Multidisciplinary Designer" data-ru="Мультидисциплинарный дизайнер">Multidisciplinary Designer</span>
         </a>
         <nav class="nav-links">
-            <a href="index.html" class="nav-link">3D Carousel</a>
-            <a href="works.html" class="nav-link active">Works</a>
-            <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link">CV</a>
+            <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
+            <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
+            <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
+            
+            <div class="lang-switch">
+                <button type="button" class="lang-btn active" data-lang-set="en">EN</button>
+                <span class="lang-divider">/</span>
+                <button type="button" class="lang-btn" data-lang-set="ru">RU</button>
+            </div>
         </nav>
     </div>
 </header>
 
 <main>
-    <a href="works.html" class="back-link">← Back to Selected Works</a>
+    <a href="works.html" class="back-link lang" data-en="← Back to Selected Works" data-ru="← Назад ко&nbsp;всем работам">← Back to Selected Works</a>
 
     <div class="project-header">
-        <h1 class="project-title">Identity for the Japan Foundation</h1>
+        <h1 class="project-title lang" data-en="Identity for the Japan Foundation" data-ru="Айдентика Японского фонда">Identity for the Japan Foundation</h1>
         
         <div class="project-meta-grid">
             <div>
-                <div class="meta-label">Client</div>
-                <div class="meta-value nowrap">Japan Foundation / HSE Art and Design School</div>
+                <div class="meta-label lang" data-en="Client" data-ru="Клиент">Client</div>
+                <div class="meta-value nowrap lang" data-en="Japan Foundation / HSE Design School" data-ru="Японский фонд / Школа дизайна НИУ&nbsp;ВШЭ">Japan Foundation / HSE Design School</div>
             </div>
             <div>
-                <div class="meta-label">Year</div>
+                <div class="meta-label lang" data-en="Year" data-ru="Год">Year</div>
                 <div class="meta-value">2025</div>
             </div>
             <div>
-                <div class="meta-label">Category</div>
-                <div class="meta-value">Branding & Identity</div>
+                <div class="meta-label lang" data-en="Category" data-ru="Категория">Category</div>
+                <div class="meta-value lang" data-en="Branding & Identity" data-ru="Брендинг и&nbsp;айдентика">Branding & Identity</div>
             </div>
             <div>
-                <div class="meta-label">Role</div>
-                <div class="meta-value">Art Direction & Rebranding</div>
+                <div class="meta-label lang" data-en="Role" data-ru="Роль">Role</div>
+                <div class="meta-value lang" data-en="Art Direction & Rebranding" data-ru="Арт-дирекшн и&nbsp;ребрендинг">Art Direction & Rebranding</div>
             </div>
         </div>
     </div>
@@ -411,17 +464,21 @@
     <!-- BRIEF & CONCEPT -->
     <section class="project-brief">
         <div class="brief-card">
-            <span class="brief-tag">01 / Cultural Exchange & Mission</span>
-            <h2 class="brief-title">International Cultural Exchange</h2>
-            <p class="brief-text">
+            <span class="brief-tag lang" data-en="01 / Context & Challenge" data-ru="01 / Контекст и&nbsp;задача">01 / Context & Challenge</span>
+            <h2 class="brief-title lang" data-en="Cultural Diplomacy & Modern Language" data-ru="Культурный диалог и&nbsp;современный язык">Cultural Diplomacy & Modern Language</h2>
+            <p class="brief-text lang"
+               data-en="The Japan Foundation promotes Japanese culture, language, and art worldwide. The goal was to&nbsp;redesign the visual identity for an&nbsp;international audience, bringing clarity and unity to&nbsp;diverse educational programs, festivals, and exhibitions."
+               data-ru="Японский фонд занимается международным культурным обменом, продвигая язык, искусство и&nbsp;традиции Японии по&nbsp;всему миру. Задачей было разработать современный визуальный язык для международной аудитории, объединив образовательные программы, фестивали и&nbsp;выставки.">
                 The Japan Foundation is Japan's primary institution dedicated to international cultural exchange. The foundation promotes Japanese arts, language education, and cross-cultural understanding through global educational initiatives and artistic programs.
             </p>
         </div>
 
         <div class="brief-card">
-            <span class="brief-tag">02 / Rebranding & Visual System</span>
-            <h2 class="brief-title">Minimalist Geometry & Spatial Balance</h2>
-            <p class="brief-text">
+            <span class="brief-tag lang" data-en="02 / Concept & Solution" data-ru="02 / Концепция и&nbsp;решение">02 / Concept & Solution</span>
+            <h2 class="brief-title lang" data-en="Modular Grid & Spatial Balance" data-ru="Модульная сетка и&nbsp;пространственный баланс">Modular Grid & Spatial Balance</h2>
+            <p class="brief-text lang"
+               data-en="The new identity combines traditional Japanese restraint with a&nbsp;flexible modular grid. The system adapts smoothly across posters, event publications, merchandise, and environmental graphics, keeping the look clean and consistent."
+               data-ru="Новый фирменный стиль объединяет традиционную японскую сдержанность и&nbsp;гибкую модульную сетку. Система легко масштабируется на&nbsp;афиши, выставочные каталоги, сувенирную продукцию и&nbsp;навигацию, сохраняя графическую чистоту.">
                 A comprehensive visual identity rebranding and brandbook design. The visual system balances traditional Japanese minimalist aesthetics with contemporary graphic systems across posters, publications, event collateral, and spatial applications.
             </p>
         </div>
@@ -430,10 +487,10 @@
     <!-- CALAMEO BRANDBOOK LINK BANNER -->
     <div class="live-project-banner">
         <div class="live-banner-text">
-            <span class="live-banner-title">Read Full Brandbook Online</span>
-            <span class="live-banner-sub">Explore the complete Japan Foundation visual identity brandbook on Calaméo</span>
+            <span class="live-banner-title lang" data-en="Read Full Brandbook Online" data-ru="Полный брендбук онлайн">Read Full Brandbook Online</span>
+            <span class="live-banner-sub lang" data-en="Explore the complete Japan Foundation visual identity brandbook on Calaméo" data-ru="Познакомьтесь с&nbsp;руководством по&nbsp;стилю Японского фонда на&nbsp;платформе Calaméo">Explore the complete Japan Foundation visual identity brandbook on Calaméo</span>
         </div>
-        <a href="https://www.calameo.com/read/007627996bea60e7beb7c" target="_blank" rel="noopener noreferrer" class="live-btn">
+        <a href="https://www.calameo.com/read/007627996bea60e7beb7c" target="_blank" rel="noopener noreferrer" class="live-btn lang" data-en="View Full Brandbook ↗" data-ru="Открыть брендбук ↗">
             View Full Brandbook ↗
         </a>
     </div>
@@ -447,8 +504,10 @@
         <div class="slide-item"><img src="japan-foundation_works/5.jpg" alt="Japan Foundation Slide 5"></div>
 
         <div class="narrative-block">
-            <h3 class="narrative-title">01 / Brandbook & Identity Architecture</h3>
-            <p class="narrative-text">
+            <h3 class="narrative-title lang" data-en="01 / Brandbook & Design Rules" data-ru="01 / Структура стиля и&nbsp;правила">01 / Brandbook & Design Rules</h3>
+            <p class="narrative-text lang"
+               data-en="The brandbook defines typographic hierarchies, color palettes, and logo rules, providing a&nbsp;clear structure for institutional communication."
+               data-ru="Руководство закрепляет правила использования логотипа, цветовую гамму и&nbsp;типографическую иерархию, выстраивая ясную систему для всех коммуникаций фонда.">
                 Establishing a unified typographic grid and modular system. The visual guidelines structure logo usage, color palettes, and typographic hierarchies to reflect cultural clarity and institutional prestige.
             </p>
         </div>
@@ -460,8 +519,10 @@
         <div class="slide-item"><img src="japan-foundation_works/10.jpg" alt="Japan Foundation Slide 10"></div>
 
         <div class="narrative-block">
-            <h3 class="narrative-title">02 / Printed Publications & Event Collateral</h3>
-            <p class="narrative-text">
+            <h3 class="narrative-title lang" data-en="02 / Print & Event Materials" data-ru="02 / Печатные носители и&nbsp;события">02 / Print & Event Materials</h3>
+            <p class="narrative-text lang"
+               data-en="Event posters, exhibition booklets, and programs use generous negative space and balanced layouts to&nbsp;convey the calm character of&nbsp;Japanese aesthetics."
+               data-ru="Афиши, каталоги выставок и&nbsp;программы событий используют свободное пространство листа и&nbsp;выверенную геометрию, отражая сдержанный характер японской эстетики.">
                 Translating Japanese aesthetic principles—ma (negative space) and restrained geometric balance—into event announcements, exhibition catalogs, and cultural festival posters.
             </p>
         </div>
@@ -473,8 +534,10 @@
         <div class="slide-item"><img src="japan-foundation_works/15.jpg" alt="Japan Foundation Slide 15"></div>
 
         <div class="narrative-block">
-            <h3 class="narrative-title">03 / Environmental Touchpoints & Merchandise</h3>
-            <p class="narrative-text">
+            <h3 class="narrative-title lang" data-en="03 / Souvenirs & Spatial Elements" data-ru="03 / Сувенирная продукция и&nbsp;среда">03 / Souvenirs & Spatial Elements</h3>
+            <p class="narrative-text lang"
+               data-en="Stationery, textile bags, and cultural center signage translate the branding into physical objects, creating a&nbsp;unified impression."
+               data-ru="Фирменные блокноты, текстильные шопперы и&nbsp;навигационные таблички переносят стиль в&nbsp;материальную среду, создавая цельный образ фонда.">
                 Extending the identity across branded souvenirs, tote bags, stationery, and spatial signage for cultural centers, unifying digital, print, and physical touchpoints.
             </p>
         </div>
@@ -490,21 +553,51 @@
 
     <nav class="project-navigation">
         <a href="rilla-pet.html" class="nav-project-btn">
-            <span class="meta-label">← Previous Project</span>
-            <span>Bowl holder Rilla Pet</span>
+            <span class="meta-label lang" data-en="← Previous Project" data-ru="← Предыдущий проект">← Previous Project</span>
+            <span class="lang" data-en="Bowl holder Rilla Pet" data-ru="Подставка для мисок Rilla Pet">Bowl holder Rilla Pet</span>
         </a>
         <a href="fixed-expression.html" class="nav-project-btn next">
-            <span class="meta-label">Next Project →</span>
-            <span>Identity for Fixed Expression</span>
+            <span class="meta-label lang" data-en="Next Project →" data-ru="Следующий проект →">Next Project →</span>
+            <span class="lang" data-en="Identity for Fixed Expression" data-ru="Айдентика «Устойчивое выражение»">Identity for Fixed Expression</span>
         </a>
     </nav>
 </main>
 
 <footer>
-    <a href="index.html" class="footer-link">3D Carousel</a>
-    <a href="works.html" class="footer-link">Works / Visual Artifacts</a>
-    <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="footer-link">CV</a>
+    <a href="index.html" class="footer-link lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</a>
+    <a href="works.html" class="footer-link lang" data-en="Works / Visual Artifacts" data-ru="Работы / Визуальные артефакты">Works / Visual Artifacts</a>
+    <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="footer-link lang" data-en="CV" data-ru="Резюме">CV</a>
 </footer>
+
+<script>
+    // --- ПЕРЕКЛЮЧЕНИЕ ЯЗЫКА ---
+    const langButtons = document.querySelectorAll('[data-lang-set]');
+    const translatableElements = document.querySelectorAll('.lang');
+
+    function updateLanguage(lang) {
+        translatableElements.forEach(el => {
+            const text = el.getAttribute(`data-${lang}`);
+            if (text) el.innerHTML = text;
+        });
+
+        langButtons.forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-lang-set') === lang);
+        });
+
+        localStorage.setItem('selected_language', lang);
+        document.documentElement.lang = lang;
+    }
+
+    langButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetLang = btn.getAttribute('data-lang-set');
+            updateLanguage(targetLang);
+        });
+    });
+
+    const initialLang = localStorage.getItem('selected_language') || 'en';
+    updateLanguage(initialLang);
+</script>
 
 </body>
 </html>
