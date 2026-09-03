@@ -64,6 +64,14 @@
             letter-spacing: -0.2px;
         }
 
+        /* --- ПРАВАЯ ЧАСТЬ ШАПКИ --- */
+        .header-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
+        }
+
         .nav-links {
             display: flex;
             gap: 32px;
@@ -106,9 +114,6 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            font-size: 14px;
-            letter-spacing: -0.2px;
-            margin-left: 8px;
         }
 
         .lang-btn {
@@ -116,7 +121,7 @@
             border: none;
             padding: 0;
             font-family: inherit;
-            font-size: 14px;
+            font-size: 13px;
             color: #888888;
             cursor: pointer;
             transition: color 0.2s ease;
@@ -152,6 +157,7 @@
             text-decoration: none;
             margin-bottom: 40px;
             transition: color 0.3s ease;
+            white-space: nowrap;
         }
 
         .back-link:hover {
@@ -168,6 +174,7 @@
             letter-spacing: -1.2px;
             line-height: 1.15;
             margin-bottom: 35px;
+            text-wrap: balance;
         }
 
         .project-meta-grid {
@@ -191,6 +198,7 @@
             font-size: 15px;
             color: #111111;
             font-weight: 400;
+            text-wrap: pretty;
         }
 
         .meta-value.nowrap {
@@ -226,6 +234,7 @@
             font-weight: 400;
             letter-spacing: -0.4px;
             color: #111111;
+            text-wrap: balance;
         }
 
         .brief-text {
@@ -233,6 +242,7 @@
             line-height: 1.65;
             color: #444444;
             font-weight: 300;
+            text-wrap: pretty;
         }
 
         .narrative-block {
@@ -248,6 +258,7 @@
             letter-spacing: -0.3px;
             margin-bottom: 12px;
             color: #111111;
+            text-wrap: balance;
         }
 
         .narrative-text {
@@ -255,6 +266,7 @@
             line-height: 1.7;
             color: #555555;
             font-weight: 300;
+            text-wrap: pretty;
         }
 
         .slides-gallery {
@@ -354,22 +366,23 @@
             <span class="lang" data-en="Bazhenova Irina" data-ru="Баженова Ирина">Bazhenova Irina</span>
             <span class="header-subtitle lang" data-en="Multidisciplinary Designer" data-ru="Мультидисциплинарный дизайнер">Multidisciplinary Designer</span>
         </a>
-        <nav class="nav-links">
-            <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
-            <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
-            <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
-            
+        <div class="header-right">
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
+                <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
+                <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
+            </nav>
             <div class="lang-switch">
                 <button type="button" class="lang-btn active" data-lang-set="en">EN</button>
                 <span class="lang-divider">/</span>
                 <button type="button" class="lang-btn" data-lang-set="ru">RU</button>
             </div>
-        </nav>
+        </div>
     </div>
 </header>
 
 <main>
-    <a href="works.html" class="back-link lang" data-en="← Back to Selected Works" data-ru="← Назад ко всем работам">← Back to Selected Works</a>
+    <a href="works.html" class="back-link lang" data-en="← Back to Selected Works" data-ru="← Назад ко&nbsp;всем работам">← Back to Selected Works</a>
 
     <div class="project-header">
         <h1 class="project-title lang" data-en="Packaging for the Cashmere Theater" data-ru="Упаковка для театра «Кашемир»">Packaging for the Cashmere Theater</h1>
@@ -389,103 +402,50 @@
             </div>
             <div>
                 <div class="meta-label lang" data-en="Role" data-ru="Роль">Role</div>
-                <div class="meta-value lang" data-en="Art Direction, 3D Modeling & Project Lead" data-ru="Арт-дирекшн, 3D-моделирование, лид проекта">Art Direction, 3D Modeling & Project Lead</div>
+                <div class="meta-value lang" data-en="Art Direction, 3D Modeling, Project Lead" data-ru="Арт-дирекшн, 3D-моделирование, лид проекта">Art Direction, 3D Modeling, Project Lead</div>
             </div>
         </div>
     </div>
 
-    <!-- BRIEF & CONCEPT -->
     <section class="project-brief">
         <div class="brief-card">
-            <span class="brief-tag lang" data-en="01 / Context & Challenge" data-ru="01 / Контекст и задача">01 / Context & Challenge</span>
-            <h2 class="brief-title lang" data-en="Design-Tsekh Hackathon" data-ru="Хакатон «Дизайн-цех»">Design-Tsekh Hackathon</h2>
+            <span class="brief-tag lang" data-en="01 / Context & Challenge" data-ru="01 / Контекст и&nbsp;задача">01 / Контекст и задача</span>
+            <h2 class="brief-title lang" data-en="Design Workshop Hackathon" data-ru="Хакатон «Дизайн-цех»">Хакатон «Дизайн-цех»</h2>
             <p class="brief-text lang"
-               data-en="Developed as part of the &ldquo;Design-Tsekh&rdquo; hackathon — an intensive 2-day team sprint. The task was to create an interactive premium gift gastro-box packaging concept for the private Cashmere Theater in Moscow, designed to set the audience's mood for a cultural evening even before the performance begins."
-               data-ru="Разработано в рамках хакатона «Дизайн-цех» — интенсивного двухдневного командного спринта. Задачей было создать интерактивную премиальную подарочную упаковку для гастробокса частного театра «Кашемир» в Москве, настраивающую зрителя на атмосферу спектакля еще до прихода в зал.">
-                Developed as part of the "Design-Tsekh" hackathon — an intensive 2-day team sprint. The task was to create an interactive premium gift gastro-box packaging concept for the private Cashmere Theater in Moscow, designed to set the audience's mood for a cultural evening even before the performance begins.
+               data-en="Developed as part of the Design Workshop hackathon — an intensive 2-day team sprint. The task was to create an interactive premium gift packaging for the gastrobox of the private Cashmere Theater in Moscow, building audience anticipation before the performance even begins."
+               data-ru="Разработано в&nbsp;рамках хакатона «Дизайн-цех» — интенсивного двухдневного командного спринта. Задачей было создать интерактивную премиальную подарочную упаковку для гастробокса частного театра «Кашемир» в&nbsp;Москве, настраивающую зрителя на&nbsp;атмосферу спектакля еще до&nbsp;прихода в&nbsp;зал.">
+                Developed as part of the Design Workshop hackathon — an intensive 2-day team sprint. The task was to create an interactive premium gift packaging for the gastrobox of the private Cashmere Theater in Moscow, building audience anticipation before the performance even begins.
             </p>
         </div>
 
         <div class="brief-card">
-            <span class="brief-tag lang" data-en="02 / Core Concept & Solution" data-ru="02 / Концепция и решение">02 / Core Concept & Solution</span>
-            <h2 class="brief-title lang" data-en="Theater Begins with Anticipation" data-ru="Театр начинается с предвкушения">Theater Begins with Anticipation</h2>
+            <span class="brief-tag lang" data-en="02 / Solution & Concept" data-ru="02 / Решение и&nbsp;концепция">02 / Решение и концепция</span>
+            <h2 class="brief-title lang" data-en="Theater Begins with Anticipation" data-ru="Театр начинается с&nbsp;предвкушения">Театр начинается с предвкушения</h2>
             <p class="brief-text lang"
-               data-en="The packaging is not merely a box, but a carefully curated emotional journey across three sequential stages: <strong>Invitation — Anticipation — Aftertaste</strong>. Through a structured ritual of tactile touchpoints, printed inserts, and gastro-sets, the audience is guided into the production's atmosphere long before stepping into the hall."
-               data-ru="Упаковка представляет собой не просто коробку, а продуманный сценарий погружения из трех последовательных стадий: <strong>Приглашение — Предвкушение — Послевкусие</strong>. Через тактильные контакты, полиграфические вкладыши и гастрономические сеты зритель входит в контекст постановки задолго до первого звонка.">
-                The packaging is not merely a box, but a carefully curated emotional journey across three sequential stages: <strong>Invitation — Anticipation — Aftertaste</strong>. Through a structured ritual of tactile touchpoints, printed inserts, and gastro-sets, the audience is guided into the production's atmosphere long before stepping into the hall.
+               data-en="The packaging is not just a box, but a well-thought-out immersion scenario consisting of three sequential stages: Invitation — Anticipation — Post-performance reflection. Through tactile touchpoints, promotional inserts, and gastronomic sets, the audience enters the context of the production long before the first bell."
+               data-ru="Упаковка представляет собой не&nbsp;просто коробку, а&nbsp;продуманный сценарий погружения из&nbsp;трех последовательных стадий: Приглашение — Предвкушение — Послевкусие. Через тактильные контакты, полиграфические вкладыши и&nbsp;гастрономические сеты зритель входит в&nbsp;контекст постановки задолго до&nbsp;первого звонка.">
+                The packaging is not just a box, but a well-thought-out immersion scenario consisting of three sequential stages: Invitation — Anticipation — Post-performance reflection. Through tactile touchpoints, promotional inserts, and gastronomic sets, the audience enters the context of the production long before the first bell.
             </p>
         </div>
     </section>
 
-    <!-- GALLERY & NARRATIVE BLOCKS -->
     <section class="slides-gallery">
-        
-        <!-- SLIDES 1–3 -->
-        <div class="slide-item"><img src="cashmere_works/1.jpg" alt="Cashmere Theater Title Card"></div>
-        <div class="slide-item"><img src="cashmere_works/2.jpg" alt="Cashmere Theater Cylinder Packaging Mockup"></div>
-        <div class="slide-item"><img src="cashmere_works/3.jpg" alt="Concept Breakdown Stage Card"></div>
-
-        <!-- NARRATIVE BLOCK 1 -->
-        <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="Entrance into Experience & Guided Ritual" data-ru="Погружение в спектакль и сценарий распаковки">Entrance into Experience & Guided Ritual</h3>
-            <p class="narrative-text lang"
-               data-en="The box is designed for the theatergoer an hour before the performance, easing them into the atmosphere of the evening. The preparation begins with an instruction card on the gift bag detailing the route and guidelines. Inside, accompanying brochures placed between trays gradually immerse the guest in the production's mood."
-               data-ru="Бокс рассчитан на распаковку за час до спектакля, плавно настраивая зрителя на вечер. Ритуал начинается с карточки-инструкции на ручке пакета с маршрутом до театра. Внутри слои гастробокса разделены буклетами, которые поэтапно раскрывают настроение предстоящей постановки.">
-                The box is designed for the theatergoer an hour before the performance, easing them into the atmosphere of the evening. The preparation begins with an instruction card on the gift bag detailing the route and guidelines. Inside, accompanying brochures placed between trays gradually immerse the guest in the production's mood.
-            </p>
-        </div>
-
-        <!-- SLIDES 4–7 -->
-        <div class="slide-item"><img src="cashmere_works/4.jpg" alt="Stage I: Invitation Tag Detail"></div>
-        <div class="slide-item"><img src="cashmere_works/5.jpg" alt="Stage II: Anticipation Tube Packaging"></div>
-        <div class="slide-item"><img src="cashmere_works/6.jpg" alt="Theater Cast & Crew Booklet Insertion"></div>
-        <div class="slide-item"><img src="cashmere_works/7.jpg" alt="Gastro-Set Tray Unboxing Sequence"></div>
-
-        <!-- NARRATIVE BLOCK 2 -->
-        <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="Gastro-Sets & Sensory Engagement" data-ru="Гастросеты и мультисенсорное восприятие">Gastro-Sets & Sensory Engagement</h3>
-            <p class="narrative-text lang"
-               data-en="Individual gastro-sets add deeper narrative context, enhancing perception and emotional engagement. The guest's mindset is prepared through a guided ritual combining curated flavors with brief textual prompts. This allows the theater to engage not just with the stage, but directly with the audience's senses."
-               data-ru="Гастрономическое наполнение дополняет сюжет постановки, усиливая эмоциональный отклик через рецепторы вкуса. Вкус каждого сета синхронизирован с короткими текстовыми ремарками, превращая ужин перед спектаклем в интерактивный пролог к действию на сцене.">
-                Individual gastro-sets add deeper narrative context, enhancing perception and emotional engagement. The guest's mindset is prepared through a guided ritual combining curated flavors with brief textual prompts. This allows the theater to engage not just with the stage, but directly with the audience's senses.
-            </p>
-        </div>
-
-        <!-- SLIDES 8–10 -->
-        <div class="slide-item"><img src="cashmere_works/8.jpg" alt="Flavors & Notes Pairing Guide Card"></div>
-        <div class="slide-item"><img src="cashmere_works/9.jpg" alt="Stage III: Aftertaste Tray Top View"></div>
-        <div class="slide-item"><img src="cashmere_works/10.jpg" alt="Aftertaste Discussion Questions Card"></div>
-
-        <!-- NARRATIVE BLOCK 3 -->
-        <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="Room for Growth: Eco-Friendly Cycle" data-ru="Зона роста: экологичный замкнутый цикл">Room for Growth: Eco-Friendly Cycle</h3>
-            <p class="narrative-text lang"
-               data-en="The concept incorporates fully recyclable packaging. After the performance, guests drop the used packaging into a branded recycling container in the foyer. The theater manages the recycling process with clear messaging on the bin: <em>'Thank you — this will be recycled.'</em>"
-               data-ru="Конструкция бокса выполнена из перерабатываемых материалов. После окончания спектакля зритель может оставить пустую упаковку в брендированном контейнере в фойе театра с благодарственной фразой: <em>«Спасибо — это пойдет на переработку»</em>.">
-                The concept incorporates fully recyclable packaging. After the performance, guests drop the used packaging into a branded recycling container in the foyer. The theater manages the recycling process with clear messaging on the bin: <em>"Thank you — this will be recycled."</em>
-            </p>
-        </div>
-
-        <!-- SLIDES 11–17 -->
-        <div class="slide-item"><img src="cashmere_works/11.jpg" alt="Packaging Collection Lineup"></div>
-        <div class="slide-item"><img src="cashmere_works/12.jpg" alt="Material & Construction Details"></div>
-        <div class="slide-item"><img src="cashmere_works/13.jpg" alt="Blueprints and Dimensions Diagram"></div>
-        <div class="slide-item"><img src="cashmere_works/14.jpg" alt="Material Specification Overview"></div>
-        <div class="slide-item"><img src="cashmere_works/15.jpg" alt="Recyclable Materials Breakdown"></div>
-        <div class="slide-item"><img src="cashmere_works/16.jpg" alt="Branded Shopping Bag Lineup"></div>
-        <div class="slide-item"><img src="cashmere_works/17.jpg" alt="Shopping Bag Texture & Handle Close-up"></div>
-
+        <div class="slide-item"><img src="cashmere_works/1.jpg" alt="Cashmere Theater Slide 1"></div>
+        <div class="slide-item"><img src="cashmere_works/2.jpg" alt="Cashmere Theater Slide 2"></div>
+        <div class="slide-item"><img src="cashmere_works/3.jpg" alt="Cashmere Theater Slide 3"></div>
+        <div class="slide-item"><img src="cashmere_works/4.jpg" alt="Cashmere Theater Slide 4"></div>
+        <div class="slide-item"><img src="cashmere_works/5.jpg" alt="Cashmere Theater Slide 5"></div>
+        <div class="slide-item"><img src="cashmere_works/6.jpg" alt="Cashmere Theater Slide 6"></div>
     </section>
 
-    <!-- NAVIGATION -->
     <nav class="project-navigation">
         <a href="itd-workshop.html" class="nav-project-btn">
             <span class="meta-label lang" data-en="← Previous Project" data-ru="← Предыдущий проект">← Previous Project</span>
-            <span class="lang" data-en="Identity for I.T.D. Acting Workshop" data-ru="Айдентика актерской мастерской «И Т.Д.»">Identity for I.T.D. Acting Workshop</span>
+            <span class="lang" data-en="Identity for I.T.D. Acting Workshop" data-ru="Айдентика актерской мастерской «И.Т.Д.»">Identity for I.T.D. Acting Workshop</span>
         </a>
-        <a href="monkey-buffet.html" class="nav-project-btn next">
+        <a href="epistola.html" class="nav-project-btn next">
             <span class="meta-label lang" data-en="Next Project →" data-ru="Следующий проект →">Next Project →</span>
-            <span class="lang" data-en="Identity for Monkey Buffet Festival" data-ru="Айдентика фестиваля Monkey Buffet">Identity for Monkey Buffet Festival</span>
+            <span class="lang" data-en="Typeface & Identity Epistola" data-ru="Шрифт и&nbsp;айдентика Epistola">Typeface & Identity Epistola</span>
         </a>
     </nav>
 </main>

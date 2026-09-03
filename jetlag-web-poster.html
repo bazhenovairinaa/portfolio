@@ -64,6 +64,14 @@
             letter-spacing: -0.2px;
         }
 
+        /* --- ПРАВАЯ ЧАСТЬ ШАПКИ --- */
+        .header-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
+        }
+
         .nav-links {
             display: flex;
             gap: 32px;
@@ -106,9 +114,6 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            font-size: 14px;
-            letter-spacing: -0.2px;
-            margin-left: 8px;
         }
 
         .lang-btn {
@@ -116,7 +121,7 @@
             border: none;
             padding: 0;
             font-family: inherit;
-            font-size: 14px;
+            font-size: 13px;
             color: #777777;
             cursor: pointer;
             transition: color 0.2s ease;
@@ -423,17 +428,18 @@
             <span class="lang" data-en="Bazhenova Irina" data-ru="Баженова Ирина">Bazhenova Irina</span>
             <span class="header-subtitle lang" data-en="Multidisciplinary Designer" data-ru="Мультидисциплинарный дизайнер">Multidisciplinary Designer</span>
         </a>
-        <nav class="nav-links">
-            <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
-            <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
-            <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
-            
+        <div class="header-right">
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
+                <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
+                <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
+            </nav>
             <div class="lang-switch">
                 <button type="button" class="lang-btn active" data-lang-set="en">EN</button>
                 <span class="lang-divider">/</span>
                 <button type="button" class="lang-btn" data-lang-set="ru">RU</button>
             </div>
-        </nav>
+        </div>
     </div>
 </header>
 
@@ -466,22 +472,22 @@
     <!-- BRIEF & CONCEPT -->
     <section class="project-brief">
         <div class="brief-card">
-            <span class="brief-tag lang" data-en="01 / Concept & Narrative" data-ru="01 / Концепция и&nbsp;история">01 / Concept & Narrative</span>
-            <h2 class="brief-title lang" data-en="Cosmic Adaptation Center" data-ru="Центр космической адаптации">Cosmic Adaptation Center</h2>
+            <span class="brief-tag lang" data-en="01 / Context & Task" data-ru="01 / Контекст и&nbsp;задача">01 / Контекст и задача</span>
+            <h2 class="brief-title lang" data-en="Animated Web Poster for Project Atmosphere" data-ru="Анимированный веб-плакат для атмосферы проекта">Анимированный веб-плакат для атмосферы проекта</h2>
             <p class="brief-text lang"
-               data-en="JET LAG is&nbsp;a&nbsp;speculative adaptation center designed for settlers arriving from different planets and galaxies. The web poster serves as&nbsp;an&nbsp;image-driven portal dedicated to&nbsp;integrating beings into a&nbsp;new cosmic environment, making this transition seamless and comforting."
-               data-ru="JET LAG — концептуальный центр адаптации для переселенцев, прибывающих из&nbsp;других планет и&nbsp;галактик. Веб-плакат работает как интерактивный портал, посвященный плавной акклиматизации существ в&nbsp;непривычной космической среде.">
-                JET LAG is a speculative adaptation center designed for settlers arriving from different planets and galaxies. The web poster serves as an image-driven portal dedicated to integrating beings into a new cosmic environment, making this transition seamless and comforting.
+               data-en="The task was to create an animated web poster that immerses the viewer in the atmosphere of the project. JET LAG is a speculative adaptation center designed for settlers arriving from different planets and galaxies."
+               data-ru="Задачей было создать анимационный веб-плакат, погружающий в&nbsp;атмосферу проекта. Веб-плакат JET LAG — это имиджевый постер, который посвящен интегрированию в&nbsp;новое космическое пространство.">
+                The task was to create an animated web poster that immerses the viewer in the atmosphere of the project. JET LAG is a speculative adaptation center designed for settlers arriving from different planets and galaxies.
             </p>
         </div>
 
         <div class="brief-card">
-            <span class="brief-tag lang" data-en="02 / Execution & Technology" data-ru="02 / Реализация и&nbsp;код">02 / Execution & Technology</span>
-            <h2 class="brief-title lang" data-en="Pure HTML & CSS Animation" data-ru="Анимация на&nbsp;чистом HTML и&nbsp;CSS">Pure HTML & CSS Animation</h2>
+            <span class="brief-tag lang" data-en="02 / Solution & Concept" data-ru="02 / Решение и&nbsp;концепция">02 / Решение и концепция</span>
+            <h2 class="brief-title lang" data-en="Seamless Adaptation in New Environment" data-ru="Плавная адаптация в&nbsp;новой среде">Плавная адаптация в новой среде</h2>
             <p class="brief-text lang"
-               data-en="Developed as&nbsp;part of&nbsp;the coursework at&nbsp;the HSE Art and Design School. The entire interactive poster — including all smooth motion paths, fluid particle transitions, and atmospheric light pulses — is&nbsp;built purely on&nbsp;native HTML and CSS without heavy script libraries."
-               data-ru="Проект разработан в&nbsp;рамках учебного курса в&nbsp;Школе дизайна НИУ&nbsp;ВШЭ. Вся анимация веб-плаката — от&nbsp;траекторий движения частиц до&nbsp;световых пульсаций — создана исключительно на&nbsp;чистом HTML и&nbsp;CSS без использования сторонних библиотек.">
-                Developed as part of the coursework at the HSE Art and Design School. The entire interactive poster — including all smooth motion paths, fluid particle transitions, and atmospheric light pulses — is built purely on native HTML and CSS without heavy script libraries.
+               data-en="Adaptation is an essential part of every living organism when encountering new conditions, and the center makes this stage simpler and more comfortable. The web poster serves as an interactive portal dedicated to integrating beings into a new cosmic environment through motion and code."
+               data-ru="Адаптация является неотъемлемой частью каждого живого организма при попадании в&nbsp;новые условия, поэтому центр позволяет сделать этот этап проще и&nbsp;комфортнее. Веб-плакат работает как интерактивный портал, посвященный плавной акклиматизации существ в&nbsp;непривычной космической среде.">
+                Adaptation is an essential part of every living organism when encountering new conditions, and the center makes this stage simpler and more comfortable. The web poster serves as an interactive portal dedicated to integrating beings into a new cosmic environment through motion and code.
             </p>
         </div>
     </section>
@@ -506,7 +512,7 @@
         <div class="narrative-block">
             <h3 class="narrative-title lang" data-en="Visual System & Graphical Language" data-ru="Визуальный язык и&nbsp;графика">Visual System & Graphical Language</h3>
             <p class="narrative-text lang"
-               data-en="The visual system relies on&nbsp;contrasting grain textures, pulsating spheres, and warm luminous nodes along the central axis, visualizing the process of&nbsp;restoring physical balance after interplanetary travel."
+               data-en="The visual system relies on contrasting grain textures, pulsating spheres, and warm luminous nodes along the central axis, visualizing the process of restoring physical balance after interplanetary travel."
                data-ru="Графика строится на&nbsp;контрастной зернистой текстуре, мерцающих сферах и&nbsp;светящихся центрах по&nbsp;главной оси экрана, визуализируя процесс восстановления внутреннего баланса после межзвездных перелетов.">
                 The visual system relies on contrasting grain textures, pulsating spheres, and warm luminous nodes along the central axis, visualizing the process of restoring physical balance after interplanetary travel.
             </p>
@@ -518,7 +524,7 @@
         <div class="narrative-block">
             <h3 class="narrative-title lang" data-en="Keyframe Motion & Rhythm" data-ru="Плавная анимация и&nbsp;ритм">Keyframe Motion & Rhythm</h3>
             <p class="narrative-text lang"
-               data-en="CSS keyframe animations maintain continuous movement and stable performance across screens, visually guiding the viewer through states of&nbsp;disorientation, rest, and final acclimatization."
+               data-en="CSS keyframe animations maintain continuous movement and stable performance across screens, visually guiding the viewer through states of disorientation, rest, and final acclimatization."
                data-ru="Анимация на&nbsp;CSS-keyframes сохраняет плавность хода на&nbsp;экранах с&nbsp;разным разрешением, последовательно проводя зрителя через фазы дезориентации, отдыха и&nbsp;полной адаптации.">
                 CSS keyframe animations maintain continuous movement and stable performance across screens, visually guiding the viewer through states of disorientation, rest, and final acclimatization.
             </p>

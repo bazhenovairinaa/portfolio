@@ -64,6 +64,14 @@
             letter-spacing: -0.2px;
         }
 
+        /* --- ПРАВАЯ ЧАСТЬ ШАПКИ --- */
+        .header-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
+        }
+
         .nav-links {
             display: flex;
             gap: 32px;
@@ -106,9 +114,6 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            font-size: 14px;
-            letter-spacing: -0.2px;
-            margin-left: 8px;
         }
 
         .lang-btn {
@@ -116,7 +121,7 @@
             border: none;
             padding: 0;
             font-family: inherit;
-            font-size: 14px;
+            font-size: 13px;
             color: #888888;
             cursor: pointer;
             transition: color 0.2s ease;
@@ -369,17 +374,18 @@
             <span class="lang" data-en="Bazhenova Irina" data-ru="Баженова Ирина">Bazhenova Irina</span>
             <span class="header-subtitle lang" data-en="Multidisciplinary Designer" data-ru="Мультидисциплинарный дизайнер">Multidisciplinary Designer</span>
         </a>
-        <nav class="nav-links">
-            <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
-            <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
-            <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
-            
+        <div class="header-right">
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
+                <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
+                <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
+            </nav>
             <div class="lang-switch">
                 <button type="button" class="lang-btn active" data-lang-set="en">EN</button>
                 <span class="lang-divider">/</span>
                 <button type="button" class="lang-btn" data-lang-set="ru">RU</button>
             </div>
-        </nav>
+        </div>
     </div>
 </header>
 
@@ -411,29 +417,28 @@
 
     <section class="project-brief">
         <div class="brief-card">
-            <span class="brief-tag lang" data-en="01 / Academic Context & Mechanics" data-ru="01 / Контекст и&nbsp;механика шрифта">01 / Academic Context & Mechanics</span>
+            <span class="brief-tag lang" data-en="01 / Context & Challenge" data-ru="01 / Контекст и&nbsp;задача">01 / Контекст и задача</span>
             <h2 class="brief-title lang" data-en="Custom Typeface & OpenType Code" data-ru="Авторский шрифт и&nbsp;код OpenType">Custom Typeface & OpenType Code</h2>
             <p class="brief-text lang"
-               data-en="Developed as part of a coursework project at the HSE Art and Design School. Embedded with OpenType contextual alternates, the font automatically substitutes repeating glyphs in real-time, recreating the organic variance of handwritten script where no two characters are identical."
-               data-ru="Разработано в&nbsp;рамках курсового проекта в&nbsp;Школе дизайна НИУ&nbsp;ВШЭ. Благодаря встроенным контекстным альтернативам OpenType, шрифт в&nbsp;реальном времени заменяет повторяющиеся глифы, воссоздавая естественную вариативность живого рукописного текста, где нет абсолютно одинаковых знаков.">
-                Developed as part of a coursework project at the HSE Art and Design School. Embedded with OpenType contextual alternates, the font automatically substitutes repeating glyphs in real-time, recreating the organic variance of handwritten script where no two characters are identical.
+               data-en="Developed as part of a typeface design course at the HSE Art and Design School, the task was to master font creation and build a comprehensive identity upon it."
+               data-ru="Проект выполнен в&nbsp;рамках учебного курса по&nbsp;созданию шрифта в&nbsp;Школе дизайна НИУ&nbsp;ВШЭ. Задача заключалась в&nbsp;освоении процесса разработки шрифта и&nbsp;проектировании на&nbsp;его основе целостной айдентики.">
+                Developed as part of a typeface design course at the HSE Art and Design School, the task was to master font creation and build a comprehensive identity upon it.
             </p>
         </div>
 
         <div class="brief-card">
-            <span class="brief-tag lang" data-en="02 / Concept & Festival" data-ru="02 / Концепция и&nbsp;фестиваль">02 / Concept & Festival</span>
+            <span class="brief-tag lang" data-en="02 / Solution & Concept" data-ru="02 / Решение и&nbsp;концепция">02 / Решение и концепция</span>
             <h2 class="brief-title lang" data-en="Epistola — Culture of Letter-Writing" data-ru="Epistola — культура эпистолярного жанра">Epistola — Culture of Letter-Writing</h2>
             <p class="brief-text lang"
-               data-en="&ldquo;Epistola&rdquo; is an intellectual urban festival celebrating handwritten correspondence and the culture of genuine communication. In an era of digital noise and ephemeral messaging, we create a space where words regain weight, intimacy, and tactile presence."
-               data-ru="«Epistola» — интеллектуальный городской фестиваль, посвященный рукописной переписке и&nbsp;культуре искреннего общения. В&nbsp;эпоху цифрового шума и&nbsp;мимолетных сообщений проект создает пространство, где слова возвращают себе вес, интимность и&nbsp;тактильное присутствие.">
-                "Epistola" is an intellectual urban festival celebrating handwritten correspondence and the culture of genuine communication. In an era of digital noise and ephemeral messaging, we create a space where words regain weight, intimacy, and tactile presence.
+               data-en="&ldquo;Epistola&rdquo; is an intellectual urban festival celebrating handwritten correspondence and the culture of genuine communication. In an era of digital noise and ephemeral messaging, we create a space where words regain weight, intimacy, and tactile presence, enhanced by OpenType contextual alternates that recreate the organic variance of handwritten script."
+               data-ru="«Epistola» — интеллектуальный городской фестиваль, посвященный рукописной переписке и&nbsp;культуре искреннего общения. В&nbsp;эпоху цифрового шума и&nbsp;мимолетных сообщений проект создает пространство, где слова возвращают себе вес, интимность и&nbsp;тактильное присутствие, а&nbsp;встроенные контекстные альтернативы OpenType воссоздают естественную вариативность живого рукописного текста.">
+                "Epistola" is an intellectual urban festival celebrating handwritten correspondence and the culture of genuine communication. In an era of digital noise and ephemeral messaging, we create a space where words regain weight, intimacy, and tactile presence, enhanced by OpenType contextual alternates that recreate the organic variance of handwritten script.
             </p>
         </div>
     </section>
 
     <section class="slides-gallery">
         
-        <!-- SECTION 1: TYPE DESIGN & ANATOMY (1.jpg to 14.jpg) -->
         <div class="slide-item"><img src="epistola_works/1.jpg" alt="Epistola Typeface Latin Alphabet"></div>
         <div class="slide-item"><img src="epistola_works/2.jpg" alt="Epistola Type Anatomy Handgloves"></div>
         <div class="slide-item"><img src="epistola_works/3.jpg" alt="Letter A Stroke Analysis"></div>
@@ -449,17 +454,15 @@
         <div class="slide-item"><img src="epistola_works/13.jpg" alt="Numerals Set"></div>
         <div class="slide-item"><img src="epistola_works/14.jpg" alt="Punctuation & Symbols Set"></div>
 
-        <!-- NARRATIVE BLOCK 1: TYPEFACE RATIONALE -->
         <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="Anatomy & Contextual Alternates" data-ru="Анатомия и&nbsp;контекстные альтернативы">Anatomy & Contextual Alternates</h3>
+            <h3 class="narrative-title lang" data-en="Contextual Alternates & Plasticity" data-ru="Контекстные альтернативы и пластика">Контекстные альтернативы и пластика</h3>
             <p class="narrative-text lang"
-               data-en="The letterforms merge structural discipline with the organic flow of ink on paper. Embedded with OpenType contextual alternates code, the font automatically substitutes repeating characters in real-time, recreating the organic variance of authentic handwriting where no two glyphs are identical."
-               data-ru="Пластика знаков объединяет строгую конструктивную основу и&nbsp;плавное движение пера по&nbsp;бумаге. Встроенный код альтернатив OpenType динамически варьирует дублирующиеся символы при наборе, создавая иллюзию живого рукописного почерка без монотонных повторов.">
-                The letterforms merge structural discipline with the organic flow of ink on paper. Embedded with OpenType contextual alternates code, the font automatically substitutes repeating characters in real-time, recreating the organic variance of authentic handwriting where no two glyphs are identical.
+               data-en="The plasticity of the letterforms evokes the smooth flow of ink on paper. Embedded with OpenType contextual alternates code, the font automatically substitutes repeating characters in real-time, recreating the organic variance of authentic handwriting where no two glyphs are identical."
+               data-ru="Пластика знаков напоминает плавное движение пера по&nbsp;бумаге. Встроенный код альтернатив OpenType динамически варьирует дублирующиеся символы при наборе, создавая иллюзию живого рукописного почерка без монотонных повторов.">
+                The plasticity of the letterforms evokes the smooth flow of ink on paper. Embedded with OpenType contextual alternates code, the font automatically substitutes repeating characters in real-time, recreating the organic variance of authentic handwriting where no two glyphs are identical.
             </p>
         </div>
 
-        <!-- SECTION 2: FESTIVAL IDENTITY & URBAN POSTERS (15.jpg to 20.jpg) -->
         <div class="slide-item"><img src="epistola_works/15.jpg" alt="Epistola Logo & Subtitle"></div>
         <div class="slide-item"><img src="epistola_works/16.jpg" alt="Sealing Wax Art City Light Poster"></div>
         <div class="slide-item"><img src="epistola_works/17.jpg" alt="Epistola Fest Architectural Banner"></div>
@@ -467,17 +470,15 @@
         <div class="slide-item"><img src="epistola_works/19.jpg" alt="Exhibition City Display Case"></div>
         <div class="slide-item"><img src="epistola_works/20.jpg" alt="Fest Invitation & Envelope"></div>
 
-        <!-- NARRATIVE BLOCK 2: URBAN SCALE & PUBLIC SPACE -->
         <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="Identity Scale & Architectural Interventions" data-ru="Масштаб айдентики и&nbsp;архитектурные носители">Identity Scale & Architectural Interventions</h3>
+            <h3 class="narrative-title lang" data-en="Graphic Image" data-ru="Графический образ">Графический образ</h3>
             <p class="narrative-text lang"
-               data-en="When scaled up to street furniture, architectural construction hoardings, and billboard posters, the delicate ink-like lines transform into powerful graphic gestures, creating an immediate visual dialogue with urban commuters."
-               data-ru="При переходе на&nbsp;городской масштаб — сити-форматы, строительные баннеры и&nbsp;афишные тумбы — деликатные чернильные штрихи превращаются в&nbsp;мощные графические жесты, вступающие в&nbsp;диалог с&nbsp;пешеходами и&nbsp;архитектурой города.">
-                When scaled up to street furniture, architectural construction hoardings, and billboard posters, the delicate ink-like lines transform into powerful graphic gestures, creating an immediate visual dialogue with urban commuters.
+               data-en="The ink-like strokes are crafted from enlarged glyphs, referencing handwriting and translating into powerful graphic gestures that become an integral part of the identity."
+               data-ru="Чернильные штрихи создаются из&nbsp;увеличенных букв, тем самым отсылая к&nbsp;рукописности и&nbsp;трансформируясь в&nbsp;мощные графические элементы, которые становятся органичной частью всей айдентики.">
+                The ink-like strokes are crafted from enlarged glyphs, referencing handwriting and translating into powerful graphic gestures that become an integral part of the identity.
             </p>
         </div>
 
-        <!-- SECTION 3: EVENT MERCH & WAYFINDING (21.jpg to 26.jpg) -->
         <div class="slide-item"><img src="epistola_works/21.jpg" alt="Festival Entrance Wristbands"></div>
         <div class="slide-item"><img src="epistola_works/22.jpg" alt="The Scriptorium Wayfinding Signage"></div>
         <div class="slide-item"><img src="epistola_works/23.jpg" alt="Festival Staff Lanyard Badge"></div>
@@ -485,7 +486,6 @@
         <div class="slide-item"><img src="epistola_works/25.jpg" alt="Exhibition Stack Booklet"></div>
         <div class="slide-item"><img src="epistola_works/26.jpg" alt="Mailbox Tote Bag Mockup"></div>
 
-        <!-- NARRATIVE BLOCK 3: TACTILE ARTIFACTS & STATIONERY -->
         <div class="narrative-block">
             <h3 class="narrative-title lang" data-en="Tactile Touchpoints & Contemporary Stationery" data-ru="Тактильные точки контакта и&nbsp;канцелярские артефакты">Tactile Touchpoints & Contemporary Stationery</h3>
             <p class="narrative-text lang"
@@ -495,7 +495,6 @@
             </p>
         </div>
 
-        <!-- SECTION 4: PACKAGING, STAMPS & STOREFRONT (27.jpg to 34.jpg) -->
         <div class="slide-item"><img src="epistola_works/27.jpg" alt="First Chapter Book Spread"></div>
         <div class="slide-item"><img src="epistola_works/28.jpg" alt="Custom Ink Bottles Packaging"></div>
         <div class="slide-item"><img src="epistola_works/29.jpg" alt="12 Postcards Kraft Envelope Set"></div>

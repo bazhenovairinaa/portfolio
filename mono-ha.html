@@ -65,6 +65,14 @@
             letter-spacing: -0.2px;
         }
 
+        /* --- ПРАВАЯ ЧАСТЬ ШАПКИ --- */
+        .header-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
+        }
+
         .nav-links {
             display: flex;
             gap: 32px;
@@ -107,9 +115,6 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            font-size: 14px;
-            letter-spacing: -0.2px;
-            margin-left: 8px;
         }
 
         .lang-btn {
@@ -117,7 +122,7 @@
             border: none;
             padding: 0;
             font-family: inherit;
-            font-size: 14px;
+            font-size: 13px;
             color: #888888;
             cursor: pointer;
             transition: color 0.2s ease;
@@ -366,17 +371,18 @@
             <span class="lang" data-en="Bazhenova Irina" data-ru="Баженова Ирина">Bazhenova Irina</span>
             <span class="header-subtitle lang" data-en="Multidisciplinary Designer" data-ru="Мультидисциплинарный дизайнер">Multidisciplinary Designer</span>
         </a>
-        <nav class="nav-links">
-            <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
-            <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
-            <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
-            
+        <div class="header-right">
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
+                <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
+                <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
+            </nav>
             <div class="lang-switch">
                 <button type="button" class="lang-btn active" data-lang-set="en">EN</button>
                 <span class="lang-divider">/</span>
                 <button type="button" class="lang-btn" data-lang-set="ru">RU</button>
             </div>
-        </nav>
+        </div>
     </div>
 </header>
 
@@ -409,21 +415,21 @@
     <!-- BRIEF & CONCEPT -->
     <section class="project-brief">
         <div class="brief-card">
-            <span class="brief-tag lang" data-en="01 / Movement & Philosophy" data-ru="01 / Контекст направления">01 / Movement & Philosophy</span>
-            <h2 class="brief-title lang" data-en="Mono-ha (&ldquo;School of Things&rdquo;)" data-ru="Направление «Моно-ха»">Mono-ha ("School of Things")</h2>
+            <span class="brief-tag lang" data-en="01 / Context & Task" data-ru="01 / Контекст и&nbsp;задача">01 / Context & Task</span>
+            <h2 class="brief-title lang" data-en="Creating a Book" data-ru="Создание книги">Создание книги</h2>
             <p class="brief-text lang"
-               data-en="Mono-ha is&nbsp;an&nbsp;art movement that emerged in&nbsp;Tokyo in&nbsp;the late 1960s. Artists focused on&nbsp;raw materials and space rather than symbolic representation, exploring matter itself and the subtle relationships between objects."
-               data-ru="«Моно-ха» («Школа вещей») — художественное движение, возникшее в&nbsp;Токио в&nbsp;конце 1960-х годов. Художники отказались от&nbsp;изобразительности в&nbsp;пользу необработанных материалов и&nbsp;пространства, исследуя саму материю и&nbsp;ее связи с&nbsp;окружением.">
-                Mono-ha is an art movement that originated in Tokyo in the late 1960s. Artists shifted focus from symbolic content to raw material and space, seeking to explore matter itself and the subtle relationships emerging between these two dimensions.
+               data-en="The task required choosing a theme for a comprehensive visual research project, conducting the in-depth investigation, and subsequently using this gathered material as the foundation to design and publish a book. For this project, I chose the Japanese art movement 'Mono-ha' as the core foundation."
+               data-ru="Задачей проекта было самостоятельно выбрать тему для визуального исследования, провести его, а затем на основе собранного материала спроектировать и создать книгу. В качестве основы для исследования я выбрала японское художественное течение «Моно-ха».">
+                The task required choosing a theme for a comprehensive visual research project, conducting the in-depth investigation, and subsequently using this gathered material as the foundation to design and publish a book. For this project, I chose the Japanese art movement 'Mono-ha' as the core foundation.
             </p>
         </div>
 
         <div class="brief-card">
-            <span class="brief-tag lang" data-en="02 / Editorial Concept" data-ru="02 / Концепция издания">02 / Editorial Concept</span>
-            <h2 class="brief-title lang" data-en="Multi-Page Publication Research" data-ru="Многополосное исследование">Multi-Page Publication Research</h2>
+            <span class="brief-tag lang" data-en="02 / Solution & Concept" data-ru="02 / Решение и&nbsp;концепция">02 / Решение и концепция</span>
+            <h2 class="brief-title lang" data-en="Mono-ha Visual Research" data-ru="Визуальное исследование Моно-ха">Визуальное исследование Моно-ха</h2>
             <p class="brief-text lang"
-               data-en="Created as&nbsp;an&nbsp;editorial project at&nbsp;the HSE Art and Design School. The book investigates the visual and tactile dialogue among wood, stone, and glass, using restrained layout to&nbsp;reflect the meditative character of&nbsp;the movement."
-               data-ru="Издание разработано в&nbsp;рамках курса многополосных публикаций в&nbsp;Школе дизайна НИУ&nbsp;ВШЭ. Книга исследует диалог дерева, камня и&nbsp;стекла, используя сдержанную верстку, которая передает созерцательный характер направления.">
+               data-en="Created as a comprehensive editorial project within the Multi-Page Print Publication course at the HSE Art and Design School. Leading the book design and art direction, the publication investigates the tactile dialogue among wood, stone, and glass, inviting quiet contemplation and an awareness of nature’s self-sufficiency."
+               data-ru="Издание разработано в рамках курса многополосных публикаций в Школе дизайна НИУ ВШЭ. Книга исследует диалог дерева, камня и стекла, используя сдержанную верстку, которая передает созерцательный характер направления.">
                 Created as a comprehensive editorial project within the Multi-Page Print Publication course at the HSE Art and Design School. Leading the book design and art direction, the publication investigates the tactile dialogue among wood, stone, and glass, inviting quiet contemplation and an awareness of nature’s self-sufficiency.
             </p>
         </div>
@@ -445,8 +451,8 @@
         <div class="narrative-block">
             <h3 class="narrative-title lang" data-en="01 / Structure & Principles" data-ru="01 / Структура и&nbsp;принципы">01 / Structure & Principles</h3>
             <p class="narrative-text lang"
-               data-en="The layout structure mirrors the philosophy of&nbsp;the movement: generous white space, balanced typographic scale, and focus on&nbsp;archival imagery."
-               data-ru="Композиция книги опирается на&nbsp;философию движения: обилие воздуха, выверенный масштаб типографики и&nbsp;внимание к&nbsp;архивной фотографии.">
+               data-en="The layout structure mirrors the philosophy of the movement: generous white space, balanced typographic scale, and focus on archival imagery."
+               data-ru="Композиция книги опирается на философию движения: обилие воздуха, выверенный масштаб типографики и внимание к архивной фотографии.">
                 Reimagining editorial structure as an extension of the Mono-ha philosophy. The publication acts as a physical medium where unrefined matter, spatial tension, and human perception meet in quiet dialogue.
             </p>
         </div>
@@ -464,8 +470,8 @@
         <div class="narrative-block">
             <h3 class="narrative-title lang" data-en="02 / Stone Installations" data-ru="02 / Камень и&nbsp;масса">02 / Stone Installations</h3>
             <p class="narrative-text lang"
-               data-en="This chapter documents works with natural boulders, focusing on&nbsp;their weight, balance, and relation to&nbsp;architectural planes."
-               data-ru="Раздел посвящен инсталляциям с&nbsp;необработанным камнем: весу, устойчивости и&nbsp;его взаимодействию с&nbsp;архитектурными плоскостями.">
+               data-en="This chapter documents works with natural boulders, focusing on their weight, balance, and relation to architectural planes."
+               data-ru="Раздел посвящен инсталляциям с необработанным камнем: весу, устойчивости и его взаимодействию с архитектурными плоскостями.">
                 Exploring natural stone in its unformed state—where mass, gravity, and raw tactile texture interact directly with surrounding architectural planes and negative space.
             </p>
         </div>
@@ -484,7 +490,7 @@
             <h3 class="narrative-title lang" data-en="03 / Wood & Organic Textures" data-ru="03 / Дерево и&nbsp;структура">03 / Wood & Organic Textures</h3>
             <p class="narrative-text lang"
                data-en="Spreads detailing wooden beams, logs, and assemblies where natural grain and raw cuts define the visual rhythm."
-               data-ru="Развороты о&nbsp;работе с&nbsp;брусом и&nbsp;бревнами, где естественные волокна и&nbsp;спилы формируют визуальный ритм полосы.">
+               data-ru="Развороты о работе с брусом и бревнами, где естественные волокна и спилы формируют визуальный ритм полосы.">
                 Documenting timber, logs, and wooden structures. Unrefined surfaces and natural grain accentuate the transience, organic warmth, and physical presence of timber.
             </p>
         </div>
@@ -502,8 +508,8 @@
         <div class="narrative-block">
             <h3 class="narrative-title lang" data-en="04 / Glass & Transparency" data-ru="04 / Стекло и&nbsp;прозрачность">04 / Glass & Transparency</h3>
             <p class="narrative-text lang"
-               data-en="Focus on&nbsp;glass as&nbsp;a&nbsp;fragile boundary: light reflections, transparency, and its physical tension when placed against heavy materials."
-               data-ru="Глава о&nbsp;стекле как хрупкой границе: преломления света, прозрачность и&nbsp;напряжение при контакте с&nbsp;тяжелыми материалами.">
+               data-en="Focus on glass as a fragile boundary: light reflections, transparency, and its physical tension when placed against heavy materials."
+               data-ru="Глава о стекле как хрупкой границе: преломления света, прозрачность и напряжение при контакте с тяжелыми материалами.">
                 Investigating glass as a boundary between presence and void. Light reflections, transparency, and fragility create delicate spatial encounters with surrounding matter.
             </p>
         </div>
@@ -522,7 +528,7 @@
             <h3 class="narrative-title lang" data-en="05 / Archive & Bibliography" data-ru="05 / Архив и&nbsp;библиография">05 / Archive & Bibliography</h3>
             <p class="narrative-text lang"
                data-en="Concluding section compiling theoretical texts, exhibition records, and historical documentary photographs."
-               data-ru="Заключительная часть с&nbsp;теоретическими статьями, каталогом выставок и&nbsp;документальными снимками эпохи.">
+               data-ru="Заключительная часть с теоретическими статьями, каталогом выставок и документальными снимками эпохи.">
                 A curated bibliography and visual catalog consolidating historical texts, theoretical essays, and archival documentary photography from the movement's pivotal years.
             </p>
         </div>
@@ -543,7 +549,7 @@
 
 <footer>
     <a href="index.html" class="footer-link lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</a>
-    <a href="works.html" class="footer-link lang" data-en="Works / Visual Artifacts" data-ru="Работы / Визуальные артефакты">Works / Visual Artifacts</a>
+    <a href="works.html" class="footer-link lang" data-en="Works / Visual Artifacts" data-ru="Works / Визуальные артефакты">Works / Visual Artifacts</a>
     <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="footer-link lang" data-en="CV" data-ru="Резюме">CV</a>
 </footer>
 

@@ -140,16 +140,38 @@
             background-color: transparent;
         }
 
+        .carousel-item a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .carousel-item a:hover {
+            transform: scale(1.025) translateZ(15px);
+        }
+
         .carousel-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
-            pointer-events: none;
+            pointer-events: auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: box-shadow 0.4s ease;
+        }
+
+        .carousel-item a:hover img {
+            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.15);
         }
 
         .carousel-item.transparent-png img {
             object-fit: contain;
+            box-shadow: none;
+        }
+
+        .carousel-item.transparent-png a:hover img {
+            box-shadow: none;
         }
 
         .drag-instruction {
@@ -248,51 +270,75 @@
         <div class="carousel-3d" id="carousel">
             
             <div class="carousel-item" data-width="560" data-height="448" data-offset-y="-15">
-                <img src="./work1.jpg" alt="Bazhenova Irina - Work 1">
+                <a href="tsaritsyno.html" title="Merch for the Tsaritsyno Museum-Reserve">
+                    <img src="./work1.jpg" alt="Bazhenova Irina - Tsaritsyno Candles">
+                </a>
             </div>
 
             <div class="carousel-item" data-width="440" data-height="620" data-offset-y="25">
-                <img src="./work2.jpg" alt="Bazhenova Irina - Work 2">
+                <a href="mono-ha.html" title="Book Mono-ha">
+                    <img src="./work2.jpg" alt="Bazhenova Irina - Book Mono-ha">
+                </a>
             </div>
 
             <div class="carousel-item transparent-png" data-width="480" data-height="600" data-offset-y="-5">
-                <img src="./work3.png" alt="Bazhenova Irina - Work 3">
+                <a href="tamburins.html" title="Brand Storefront for Tamburins">
+                    <img src="./work3.png" alt="Bazhenova Irina - Tamburins Storefront">
+                </a>
             </div>
 
             <div class="carousel-item" data-width="440" data-height="620" data-offset-y="-25">
-                <img src="./work5.jpg" alt="Bazhenova Irina - Work 5">
+                <a href="kandinsky.html" title="Posters for Kandinsky">
+                    <img src="./work5.jpg" alt="Bazhenova Irina - Posters for Kandinsky">
+                </a>
             </div>
 
             <div class="carousel-item" data-width="560" data-height="420" data-offset-y="10">
-                <img src="./work6.jpg" alt="Bazhenova Irina - Work 6">
+                <a href="cashmere-theater.html" title="Packaging for the Cashmere Theater">
+                    <img src="./work6.jpg" alt="Bazhenova Irina - Packaging for the Cashmere Theater">
+                </a>
             </div>
 
             <div class="carousel-item" data-width="440" data-height="620" data-offset-y="-15">
-                <img src="./work7.jpg" alt="Bazhenova Irina - Work 7">
+                <a href="itd-workshop.html" title="Identity for I.T.D. Acting Workshop">
+                    <img src="./work7.jpg" alt="Bazhenova Irina - Identity for I.T.D. Acting Workshop">
+                </a>
             </div>
 
             <div class="carousel-item" data-width="560" data-height="316" data-offset-y="20">
-                <img src="./work8.jpg" alt="Bazhenova Irina - Work 8">
+                <a href="epistola.html" title="Typeface and Identity Epistola">
+                    <img src="./work8.jpg" alt="Bazhenova Irina - Epistola Festival">
+                </a>
             </div>
 
             <div class="carousel-item transparent-png" data-width="600" data-height="450" data-offset-y="5">
-                <img src="./work9.png" alt="Bazhenova Irina - Work 9">
+                <a href="jetlag-web-poster.html" title="Web poster JET LAG">
+                    <img src="./work9.png" alt="Bazhenova Irina - Interactive poster JET LAG">
+                </a>
             </div>
 
             <div class="carousel-item" data-width="460" data-height="640" data-offset-y="15">
-                <img src="./work10.jpg" alt="Bazhenova Irina - Work 10">
+                <a href="12-peaks.html" title="Calendar 12 Peaks">
+                    <img src="./work10.jpg" alt="Bazhenova Irina - Calendar 12 Peaks">
+                </a>
             </div>
 
             <div class="carousel-item" data-width="560" data-height="316" data-offset-y="-20">
-                <img src="./work11.jpg" alt="Bazhenova Irina - Work 11">
+                <a href="12-peaks.html" title="Calendar 12 Peaks">
+                    <img src="./work11.jpg" alt="Bazhenova Irina - Calendar 12 Peaks">
+                </a>
             </div>
 
             <div class="carousel-item" data-width="440" data-height="620" data-offset-y="25">
-                <img src="./work12.jpg" alt="Bazhenova Irina - Work 12">
+                <a href="cupnoodles.html" title="Identity for Cupnoodles Museum">
+                    <img src="./work12.jpg" alt="Bazhenova Irina - Identity for Cupnoodles Museum">
+                </a>
             </div>
 
             <div class="carousel-item" data-width="440" data-height="620" data-offset-y="-5">
-                <img src="./work13.jpg" alt="Bazhenova Irina - Work 13">
+                <a href="lamp-kankei.html" title="Lamp Kankei">
+                    <img src="./work13.jpg" alt="Bazhenova Irina - Lamp Kankei">
+                </a>
             </div>
 
         </div>
@@ -301,7 +347,7 @@
     </div>
 
     <footer>
-        <a href="works.html" class="footer-link lang" data-en="Works / Visual Artifacts" data-ru="Работы / Визуальные артефакты">Works / Visual Artifacts</a>
+        <a href="works.html" class="footer-link lang" data-en="Works / Visual Artifacts" data-ru="Works / Visual Artifacts">Works / Visual Artifacts</a>
         <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="footer-link lang" data-en="CV" data-ru="Резюме">CV</a>
     </footer>
 
@@ -351,6 +397,7 @@
         let startRotation = 0;
         let lastX = 0;
         let velocityX = 0;
+        let totalMoved = 0;
 
         function layoutCarousel() {
             const screenWidth = window.innerWidth;
@@ -406,12 +453,14 @@
             startRotation = targetRotation;
             lastX = x;
             velocityX = 0;
+            totalMoved = 0;
             if (dragLabel) dragLabel.style.opacity = '0';
         }
 
         function dragMove(x) {
             if (!isDragging) return;
             const deltaX = x - startX;
+            totalMoved += Math.abs(x - lastX);
             const sensitivity = 0.22;
             targetRotation = startRotation + deltaX * sensitivity;
 
@@ -432,6 +481,18 @@
         container.addEventListener('touchstart', (e) => dragStart(e.touches[0].clientX));
         window.addEventListener('touchmove', (e) => dragMove(e.touches[0].clientX));
         window.addEventListener('touchend', () => dragEnd());
+
+        // Предотвращение перехода по ссылке, если пользователь перетаскивал карусель
+        items.forEach(item => {
+            const link = item.querySelector('a');
+            if (link) {
+                link.addEventListener('click', (e) => {
+                    if (totalMoved > 6) {
+                        e.preventDefault();
+                    }
+                });
+            }
+        });
 
         container.addEventListener('mouseenter', () => {
             autoRotateSpeed = -0.015;

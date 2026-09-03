@@ -65,6 +65,14 @@
             letter-spacing: -0.2px;
         }
 
+        /* --- ПРАВАЯ ЧАСТЬ ШАПКИ --- */
+        .header-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
+        }
+
         .nav-links {
             display: flex;
             gap: 32px;
@@ -107,9 +115,6 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            font-size: 14px;
-            letter-spacing: -0.2px;
-            margin-left: 8px;
         }
 
         .lang-btn {
@@ -117,7 +122,7 @@
             border: none;
             padding: 0;
             font-family: inherit;
-            font-size: 14px;
+            font-size: 13px;
             color: #888888;
             cursor: pointer;
             transition: color 0.2s ease;
@@ -367,17 +372,18 @@
             <span class="lang" data-en="Bazhenova Irina" data-ru="Баженова Ирина">Bazhenova Irina</span>
             <span class="header-subtitle lang" data-en="Multidisciplinary Designer" data-ru="Мультидисциплинарный дизайнер">Multidisciplinary Designer</span>
         </a>
-        <nav class="nav-links">
-            <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
-            <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
-            <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
-            
+        <div class="header-right">
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
+                <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
+                <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
+            </nav>
             <div class="lang-switch">
                 <button type="button" class="lang-btn active" data-lang-set="en">EN</button>
                 <span class="lang-divider">/</span>
                 <button type="button" class="lang-btn" data-lang-set="ru">RU</button>
             </div>
-        </nav>
+        </div>
     </div>
 </header>
 

@@ -23,6 +23,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
+        /* --- ХЕДЕР --- */
         header {
             position: fixed;
             top: 0;
@@ -62,6 +63,14 @@
             color: #777777;
             font-weight: 400;
             letter-spacing: -0.2px;
+        }
+
+        /* --- ПРАВАЯ ЧАСТЬ ШАПКИ --- */
+        .header-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
         }
 
         .nav-links {
@@ -106,9 +115,6 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            font-size: 14px;
-            letter-spacing: -0.2px;
-            margin-left: 8px;
         }
 
         .lang-btn {
@@ -116,7 +122,7 @@
             border: none;
             padding: 0;
             font-family: inherit;
-            font-size: 14px;
+            font-size: 13px;
             color: #888888;
             cursor: pointer;
             transition: color 0.2s ease;
@@ -137,6 +143,7 @@
             user-select: none;
         }
 
+        /* --- ОСНОВНОЙ КОНТЕЙНЕР --- */
         main {
             padding: 160px 40px 100px 40px;
             max-width: 1200px;
@@ -348,17 +355,18 @@
             <span class="lang" data-en="Bazhenova Irina" data-ru="Баженова Ирина">Bazhenova Irina</span>
             <span class="header-subtitle lang" data-en="Multidisciplinary Designer" data-ru="Мультидисциплинарный дизайнер">Multidisciplinary Designer</span>
         </a>
-        <nav class="nav-links">
-            <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
-            <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
-            <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
-            
+        <div class="header-right">
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
+                <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
+                <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
+            </nav>
             <div class="lang-switch">
                 <button type="button" class="lang-btn active" data-lang-set="en">EN</button>
                 <span class="lang-divider">/</span>
                 <button type="button" class="lang-btn" data-lang-set="ru">RU</button>
             </div>
-        </nav>
+        </div>
     </div>
 </header>
 
@@ -390,22 +398,22 @@
 
     <section class="project-brief">
         <div class="brief-card">
-            <span class="brief-tag lang" data-en="01 / Context & Challenge" data-ru="01 / Контекст и&nbsp;задача">01 / Context & Challenge</span>
+            <span class="brief-tag lang" data-en="01 / Context & Challenge" data-ru="01 / Контекст и&nbsp;задача">01 / Контекст и задача</span>
             <h2 class="brief-title lang" data-en="Design Workshop Hackathon" data-ru="Хакатон «Дизайн-цех»">Design Workshop Hackathon</h2>
             <p class="brief-text lang" 
-               data-en="Developed as part of the 10th anniversary Design Workshop hackathon — an intensive 2-day team sprint. The task was to reimagine merchandise for Tsaritsyno Museum-Reserve into a modern, highly wearable collection that avoids standard tourist clichés and resonates with a younger audience."
-               data-ru="Проект разработан в&nbsp;рамках юбилейного 10-го хакатона «Дизайн-цех» — интенсивного двухдневного командного спринта. Задачей было переосмыслить сувенирную продукцию музея-заповедника «Царицыно» в&nbsp;актуальную коллекцию повседневных вещей, избегая туристических клише и&nbsp;привлекая молодую аудиторию.">
-                Developed as part of the 10th anniversary Design Workshop hackathon — an intensive 2-day team sprint. The task was to reimagine merchandise for Tsaritsyno Museum-Reserve into a modern, highly wearable collection that avoids standard tourist clichés and resonates with a younger audience.
+               data-en="Developed as part of the 10th anniversary Design Workshop hackathon — a 2-day team intensive. The task was to reimagine merchandise for Tsaritsyno Museum-Reserve into a modern, highly wearable collection that avoids standard tourist clichés and resonates with a younger audience."
+               data-ru="Проект разработан в&nbsp;рамках юбилейного 10-го хакатона «Дизайн-цех» — командного двухдневного интенсива. Задачей было переосмыслить сувенирную продукцию музея-заповедника «Царицыно» в&nbsp;актуальную коллекцию повседневных вещей, избегая туристических клише и&nbsp;привлекая молодую аудиторию.">
+                Developed as part of the 10th anniversary Design Workshop hackathon — a 2-day team intensive. The task was to reimagine merchandise for Tsaritsyno Museum-Reserve into a modern, highly wearable collection that avoids standard tourist clichés and resonates with a younger audience.
             </p>
         </div>
 
         <div class="brief-card">
-            <span class="brief-tag lang" data-en="02 / The Solution" data-ru="02 / Решение">02 / The Solution</span>
+            <span class="brief-tag lang" data-en="02 / Solution & Concept" data-ru="02 / Решение и&nbsp;концепция">02 / Решение и концепция</span>
             <h2 class="brief-title lang" data-en="Multifaceted Identity" data-ru="Многогранная концепция">Multifaceted Identity</h2>
             <p class="brief-text lang"
-               data-en="Tsaritsyno cannot be reduced to a single symbol; it is an architectural ensemble, a historic royal residence, and a natural sanctuary. We structured the collection across three core facets: Architecture (form & geometry), History (texts, dates, quotes), and Nature (materials, aromas, color palettes)."
-               data-ru="Царицыно невозможно свести к&nbsp;единому образу: это архитектурный ансамбль, историческая царская резиденция и&nbsp;природный парк. Коллекция выстроена вокруг трех направлений: Архитектура (формы и&nbsp;пропорции), История (тексты, даты, цитаты) и&nbsp;Природа (материалы, ароматы, природные оттенки).">
-                Tsaritsyno cannot be reduced to a single symbol; it is an architectural ensemble, a historic royal residence, and a natural sanctuary. We structured the collection across three core facets: Architecture (form & geometry), History (texts, dates, quotes), and Nature (materials, aromas, color palettes).
+               data-en="Tsaritsyno cannot be reduced to a single symbol; it is an architectural ensemble, a historic royal residence, and a natural sanctuary. We structured the collection across three core facets: architecture (form & geometry), history (texts, dates, quotes), and nature (materials, aromas, color palettes)."
+               data-ru="Царицыно невозможно свести к&nbsp;единому образу: это архитектурный ансамбль, историческая царская резиденция и&nbsp;природный парк. Коллекция выстроена вокруг трех направлений: архитектура (формы и&nbsp;пропорции), история (тексты, даты, цитаты) и&nbsp;природа (материалы, ароматы, природные оттенки).">
+                Tsaritsyno cannot be reduced to a single symbol; it is an architectural ensemble, a historic royal residence, and a natural sanctuary. We structured the collection across three core facets: architecture (form & geometry), history (texts, dates, quotes), and nature (materials, aromas, color palettes).
             </p>
         </div>
     </section>
@@ -416,7 +424,7 @@
         <div class="slide-item"><img src="tsaritsyno_works/3.jpg" alt="Tsaritsyno Slide 3"></div>
 
         <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="Architectural Shapes & Natural Materials" data-ru="Архитектурные формы и&nbsp;натуральные материалы">Architectural Shapes & Natural Materials</h3>
+            <h3 class="narrative-title lang" data-en="Architectural Shapes & Natural Materials" data-ru="Архитектурные формы и&nbsp;натуральные материалы">Архитектурные формы и натуральные материалы</h3>
             <p class="narrative-text lang"
                data-en="Decorative candles and ceramic candleholders replicate the distinct neo-gothic architectural silhouettes designed by Vasily Bazhenov. All packaging adopts a trapezoidal form inspired by Tsaritsyno's building geometries, with embossed window openings and quotes from Empress Catherine the Great."
                data-ru="Декоративные свечи и&nbsp;керамические подсвечники повторяют выразительные псевдоготические силуэты построек Василия Баженова. Упаковка получила трапециевидную форму, вдохновленную геометрией царицынских фасадов, с&nbsp;высеченными стрельчатыми окнами и&nbsp;цитатами Екатерины&nbsp;II.">
@@ -430,11 +438,11 @@
         <div class="slide-item"><img src="tsaritsyno_works/7.jpg" alt="Tsaritsyno Slide 7"></div>
 
         <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="Fragrance & Fine Jewelry Collection" data-ru="Коллекция ароматов и&nbsp;лаконичные украшения">Fragrance & Fine Jewelry Collection</h3>
+            <h3 class="narrative-title lang" data-en="Fragrance & Fine Jewelry Collection" data-ru="Коллекция ароматов и&nbsp;лаконичные украшения">Коллекция ароматов и лаконичные украшения</h3>
             <p class="narrative-text lang"
-               data-en="Home diffusers and perfumes encapsulate atmospheric notes like 'Golden Hour in the Park' and 'Orangerie'. Fine metal jewelry pieces draw directly from structural ceiling rosettes and Catherine II's personal seals."
-               data-ru="Интерьерные диффузоры и&nbsp;ароматы передают атмосферу парка: от&nbsp;«Золотого часа» до&nbsp;оранжерейных мотивов. Металлические украшения вдохновлены декоративными потолочными розетками дворцов и&nbsp;личной печатью Екатерины Великой.">
-                Home diffusers and perfumes encapsulate atmospheric notes like "Golden Hour in the Park" and "Orangerie". Fine metal jewelry pieces draw directly from structural ceiling rosettes and Catherine II's personal seals.
+               data-en="Home diffusers and perfumes encapsulate atmospheric notes like 'golden hour in the park' and 'orangerie'. Fine metal jewelry pieces draw directly from structural ceiling rosettes and Catherine II's personal seals."
+               data-ru="Интерьерные диффузоры и&nbsp;ароматы передают атмосферу парка: от&nbsp;«золотого часа» до&nbsp;оранжерейных мотивов. Металлические украшения вдохновлены декоративными потолочными розетками дворцов и&nbsp;личной печатью Екатерины Великой.">
+                Home diffusers and perfumes encapsulate atmospheric notes like "golden hour in the park" and "orangerie". Fine metal jewelry pieces draw directly from structural ceiling rosettes and Catherine II's personal seals.
             </p>
         </div>
 
@@ -445,11 +453,11 @@
         <div class="slide-item"><img src="tsaritsyno_works/12.jpg" alt="Tsaritsyno Slide 12"></div>
 
         <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="Trompe-l'œil Graphic Apparel" data-ru="Одежда с&nbsp;оптической иллюзией trompe-l'œil">Trompe-l'œil Graphic Apparel</h3>
+            <h3 class="narrative-title lang" data-en="Trompe-l'œil Graphic Apparel" data-ru="Одежда с&nbsp;оптической иллюзией trompe-l'œil">Одежда с оптической иллюзией trompe-l'œil</h3>
             <p class="narrative-text lang"
-               data-en="Instead of simple architectural prints, the garment range utilizes a trompe-l'œil optical illusion effect — printing Catherine II's corset and 18th-century officer tunics onto contemporary oversized t-shirts and shirts."
-               data-ru="Вместо прямых фотографических принтов архитектуры линейка одежды использует оптический эффект trompe-l'œil — детали парадных мундиров XVIII&nbsp;века и&nbsp;корсета Екатерины&nbsp;II наносятся на&nbsp;объемные современные футболки и&nbsp;рубашки.">
-                Instead of simple architectural prints, the garment range utilizes a trompe-l'œil optical illusion effect — printing Catherine II's corset and 18th-century officer tunics onto contemporary oversized t-shirts and shirts.
+               data-en="Instead of simple architectural prints, the garment range utilizes a trompe-l'œil optical illusion effect — printing Catherine II's corset and 18th-century officer tunics onto contemporary oversized t-shirts and longslives."
+               data-ru="Вместо прямых фотографических принтов архитектуры линейка одежды использует оптический эффект trompe-l'œil — детали парадных мундиров XVIII&nbsp;века и&nbsp;корсета Екатерины&nbsp;II наносятся на&nbsp;объемные современные футболки и&nbsp;лонгсливы.">
+                Instead of simple architectural prints, the garment range utilizes a trompe-l'œil optical illusion effect — printing Catherine II's corset and 18th-century officer tunics onto contemporary oversized t-shirts and longslives.
             </p>
         </div>
 
@@ -459,7 +467,7 @@
         <div class="slide-item"><img src="tsaritsyno_works/16.jpg" alt="Tsaritsyno Slide 16"></div>
 
         <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="Reimagined Personal Artifacts" data-ru="Переосмысленные артефакты эпохи">Reimagined Personal Artifacts</h3>
+            <h3 class="narrative-title lang" data-en="Reimagined Personal Artifacts" data-ru="Переосмысленные артефакты эпохи">Переосмысленные артефакты эпохи</h3>
             <p class="narrative-text lang"
                data-en="Everyday objects used by Catherine II were reimagined as functional contemporary souvenirs and accessories, suitable for subtle personalized engravings."
                data-ru="Предметы обихода и&nbsp;письменные принадлежности екатерининской эпохи трансформированы в&nbsp;современные функциональные аксессуары с&nbsp;возможностью деликатной гравировки.">

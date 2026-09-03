@@ -23,7 +23,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* --- HEADER --- */
+        /* --- ХЕДЕР --- */
         header {
             position: fixed;
             top: 0;
@@ -63,6 +63,14 @@
             color: #777777;
             font-weight: 400;
             letter-spacing: -0.2px;
+        }
+
+        /* --- ПРАВАЯ ЧАСТЬ ШАПКИ --- */
+        .header-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
         }
 
         .nav-links {
@@ -107,9 +115,6 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            font-size: 14px;
-            letter-spacing: -0.2px;
-            margin-left: 8px;
         }
 
         .lang-btn {
@@ -117,7 +122,7 @@
             border: none;
             padding: 0;
             font-family: inherit;
-            font-size: 14px;
+            font-size: 13px;
             color: #888888;
             cursor: pointer;
             transition: color 0.2s ease;
@@ -138,7 +143,7 @@
             user-select: none;
         }
 
-        /* --- MAIN CONTAINER --- */
+        /* --- ОСНОВНОЙ КОНТЕЙНЕР --- */
         main {
             padding: 160px 40px 100px 40px;
             max-width: 1200px;
@@ -162,16 +167,7 @@
         }
 
         .project-header {
-            margin-bottom: 40px;
-        }
-
-        /* FLEX TITLE ROW WITH HIGHLIGHTER MARKER */
-        .project-title-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-            margin-bottom: 35px;
-            flex-wrap: wrap;
+            margin-bottom: 50px;
         }
 
         .project-title {
@@ -179,31 +175,13 @@
             font-weight: 400;
             letter-spacing: -1.2px;
             line-height: 1.15;
+            margin-bottom: 35px;
             text-wrap: balance;
-        }
-
-        /* EXACT HIGHLIGHTER MARKER LINE STYLE MATCHING SCREENSHOT 2 */
-        .title-award-badge {
-            display: inline-block;
-            font-size: 13px;
-            line-height: 1.2;
-            letter-spacing: -0.2px;
-            font-weight: 400;
-            color: #111111;
-            vertical-align: middle;
-        }
-
-        .title-award-badge span {
-            background: linear-gradient(180deg, transparent 28%, #FFD600 28%, #FFD600 82%, transparent 82%);
-            display: inline;
-            padding: 0 1px;
-            box-decoration-break: clone;
-            -webkit-box-decoration-break: clone;
         }
 
         .project-meta-grid {
             display: grid;
-            grid-template-columns: 1.3fr 0.7fr 1fr 1fr;
+            grid-template-columns: repeat(4, 1fr);
             gap: 30px;
             padding: 25px 0;
             border-top: 1px solid #EEEEEE;
@@ -225,16 +203,11 @@
             text-wrap: pretty;
         }
 
-        .meta-value.nowrap {
-            white-space: nowrap;
-        }
-
-        /* --- BRIEF SECTION --- */
         .project-brief {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 50px;
-            margin: 50px 0 70px 0;
+            margin: 60px 0 70px 0;
             padding: 40px;
             background-color: #FAFAFA;
             border-radius: 4px;
@@ -270,7 +243,6 @@
             text-wrap: pretty;
         }
 
-        /* --- NARRATIVE BLOCKS BETWEEN SLIDES --- */
         .narrative-block {
             margin: 60px 0;
             padding: 35px 40px;
@@ -301,13 +273,6 @@
             gap: 32px;
         }
 
-        .slide-row-2col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
-            width: 100%;
-        }
-
         .slide-item {
             width: 100%;
             background-color: #F8F9FA;
@@ -321,7 +286,14 @@
             display: block;
         }
 
-        /* --- FOOTER NAVIGATION --- */
+        /* --- РЯД С ДВУМЯ КАРТИНКАМИ РЯДОМ --- */
+        .slide-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            width: 100%;
+        }
+
         .project-navigation {
             display: flex;
             justify-content: space-between;
@@ -370,26 +342,16 @@
             opacity: 1;
         }
 
-        @media (max-width: 900px) {
-            .project-meta-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-            .meta-value.nowrap {
-                white-space: normal;
-            }
-        }
-
         @media (max-width: 768px) {
             header { padding: 24px 0; }
             .header-container { padding: 0 24px; }
             main { padding: 120px 24px 60px 24px; }
-            .project-title-wrapper { gap: 12px; }
             .project-title { font-size: 30px; }
+            .project-meta-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
             .project-brief { grid-template-columns: 1fr; gap: 30px; padding: 24px; }
             .narrative-block { padding: 24px; margin: 40px 0; }
             .slides-gallery { gap: 20px; }
-            .slide-row-2col { grid-template-columns: 1fr; gap: 20px; }
+            .slide-row { grid-template-columns: 1fr; gap: 20px; }
             .nav-links { gap: 20px; }
         }
     </style>
@@ -402,17 +364,18 @@
             <span class="lang" data-en="Bazhenova Irina" data-ru="Баженова Ирина">Bazhenova Irina</span>
             <span class="header-subtitle lang" data-en="Multidisciplinary Designer" data-ru="Мультидисциплинарный дизайнер">Multidisciplinary Designer</span>
         </a>
-        <nav class="nav-links">
-            <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
-            <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
-            <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
-            
+        <div class="header-right">
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
+                <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
+                <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
+            </nav>
             <div class="lang-switch">
                 <button type="button" class="lang-btn active" data-lang-set="en">EN</button>
                 <span class="lang-divider">/</span>
                 <button type="button" class="lang-btn" data-lang-set="ru">RU</button>
             </div>
-        </nav>
+        </div>
     </div>
 </header>
 
@@ -420,20 +383,12 @@
     <a href="works.html" class="back-link lang" data-en="← Back to Selected Works" data-ru="← Назад ко&nbsp;всем работам">← Back to Selected Works</a>
 
     <div class="project-header">
-        <div class="project-title-wrapper">
-            <h1 class="project-title lang" data-en="Posters Kandinsky 160" data-ru="Плакаты Кандинский 160">Posters Kandinsky 160</h1>
-            
-            <!-- HIGHLIGHTER MARKER STRIPE -->
-            <div class="title-award-badge">
-                <span class="lang" data-en="Golden Bee International Poster Biennale Finalist:" data-ru="Финалист биеннале «Золотая пчела»:">Golden Bee International Poster Biennale Finalist:</span><br>
-                <span class="lang" data-en="Selected for the official exhibition program in Moscow, Autumn 2026" data-ru="Отобрано в&nbsp;официальную программу выставки в&nbsp;Москве, осень 2026">Selected for the official exhibition program in Moscow, Autumn 2026</span>
-            </div>
-        </div>
+        <h1 class="project-title lang" data-en="Posters Kandinsky 160" data-ru="Плакаты Кандинский 160">Posters Kandinsky 160</h1>
         
         <div class="project-meta-grid">
             <div>
                 <div class="meta-label lang" data-en="Client" data-ru="Клиент">Client</div>
-                <div class="meta-value nowrap lang" data-en="HSE Art and Design School / Poster Lab" data-ru="Школа дизайна НИУ&nbsp;ВШЭ / Лаборатория плаката">HSE Art and Design School / Poster Lab</div>
+                <div class="meta-value lang" data-en="HSE Art and Design School / Poster Lab" data-ru="Школа дизайна НИУ ВШЭ / Лаборатория плаката">Школа дизайна НИУ ВШЭ / Лаборатория плаката</div>
             </div>
             <div>
                 <div class="meta-label lang" data-en="Year" data-ru="Год">Year</div>
@@ -441,69 +396,56 @@
             </div>
             <div>
                 <div class="meta-label lang" data-en="Category" data-ru="Категория">Category</div>
-                <div class="meta-value lang" data-en="Poster & Exhibition Design" data-ru="Плакат и&nbsp;выставочный дизайн">Poster & Exhibition Design</div>
+                <div class="meta-value lang" data-en="Poster & Exhibition Design" data-ru="Плакат и&nbsp;выставочный дизайн">Плакат и выставочный дизайн</div>
             </div>
             <div>
                 <div class="meta-label lang" data-en="Role" data-ru="Роль">Role</div>
-                <div class="meta-value lang" data-en="Graphic Design" data-ru="Графический дизайн">Graphic Design</div>
+                <div class="meta-value lang" data-en="Graphic Design" data-ru="Графический дизайн">Графический дизайн</div>
             </div>
         </div>
     </div>
 
     <section class="project-brief">
         <div class="brief-card">
-            <span class="brief-tag lang" data-en="01 / Context & Competition" data-ru="01 / Контекст и&nbsp;конкурс">01 / Context & Competition</span>
-            <h2 class="brief-title lang" data-en="Wassily Kandinsky 160th Anniversary" data-ru="160 лет Василию Кандинскому">Wassily Kandinsky 160th Anniversary</h2>
-            <p class="brief-text lang"
-               data-en="Created as part of the Poster Lab course at HSE Art and Design School to commemorate the 160th anniversary of Wassily Kandinsky. The posters were designed for the prestigious International Poster Biennale 'Golden Bee' call for entries."
-               data-ru="Проект создан в&nbsp;рамках Лаборатории плаката Школы дизайна НИУ&nbsp;ВШЭ к&nbsp;160-летию со&nbsp;дня рождения Василия Кандинского. Плакаты разработаны для открытого конкурса Международной биеннале плаката «Золотая пчела».">
-                Created as part of the Poster Lab course at HSE Art and Design School to commemorate the 160th anniversary of Wassily Kandinsky. The posters were designed for the prestigious International Poster Biennale "Golden Bee" call for entries.
+            <span class="brief-tag lang" data-en="01 / Context & Challenge" data-ru="01 / Контекст и&nbsp;задача">01 / Контекст и задача</span>
+            <h2 class="brief-title lang" data-en="160 Years of Wassily Kandinsky" data-ru="160 лет Василию Кандинскому">160 лет Василию Кандинскому</h2>
+            <p class="brief-text lang" 
+               data-en="Created as part of the Poster Lab at HSE Art and Design School for the 160th anniversary of Wassily Kandinsky's birth. The task was to create a poster within one of the specific periods of Kandinsky's artistic career, designed for the international poster biennale 'Golden Bee'."
+               data-ru="Проект создан в&nbsp;рамках Лаборатории плаката Школы дизайна НИУ ВШЭ к&nbsp;160-летию со&nbsp;дня рождения Василия Кандинского. Задачей было создать плакат в&nbsp;рамках одного из&nbsp;периодов творчества Кандинского.">
+                Created as part of the Poster Lab at HSE Art and Design School for the 160th anniversary of Wassily Kandinsky's birth. The task was to create a poster within one of the specific periods of Kandinsky's artistic career.
             </p>
         </div>
 
         <div class="brief-card">
-            <span class="brief-tag lang" data-en="02 / Solution & Concept" data-ru="02 / Решение и&nbsp;концепция">02 / Solution & Concept</span>
-            <h2 class="brief-title lang" data-en="Rational Grid vs. Irrational Form" data-ru="Рациональная сетка против иррациональной формы">Rational Grid vs. Irrational Form</h2>
+            <span class="brief-tag lang" data-en="02 / Solution & Concept" data-ru="02 / Решение и&nbsp;концепция">02 / Решение и концепция</span>
+            <h2 class="brief-title lang" data-en="Deformation Under the Influence of Irrational Form" data-ru="Деформация под влиянием иррациональной формы">Деформация под влиянием иррациональной формы</h2>
             <p class="brief-text lang"
-               data-en="The visual logic is rooted in a deconstruction of Kandinsky's late period. A geometric grid serves as a symbol of rational order, which undergoes dramatic physical deformation under the influence of irrational color dynamics, rhythmic lines, and expressive shapes."
+               data-en="The visual logic is based on the deconstruction of Kandinsky's late-period artistic style. A geometric grid serves as a symbol of rational order, which undergoes intense deformation under the influence of irrational color dynamics, rhythmic lines, and expressive forms."
                data-ru="Визуальная логика основана на&nbsp;деконструкции позднего периода творчества Кандинского. Геометрическая сетка выступает символом рационального порядка, который претерпевает сильную деформацию под влиянием иррациональной динамики цвета, ритмичных линий и&nbsp;экспрессивных форм.">
-                The visual logic is rooted in a deconstruction of Kandinsky's late period. A geometric grid serves as a symbol of rational order, which undergoes dramatic physical deformation under the influence of irrational color dynamics, rhythmic lines, and expressive shapes.
+                The visual logic is based on the deconstruction of Kandinsky's late-period artistic style. A geometric grid serves as a symbol of rational order, which undergoes intense deformation under the influence of irrational color dynamics, rhythmic lines, and expressive forms.
             </p>
         </div>
     </section>
 
     <section class="slides-gallery">
-        <!-- Posters 1 & 2 Side-by-Side -->
-        <div class="slide-row-2col">
-            <div class="slide-item"><img src="kandinsky_works/1.jpg" alt="Kandinsky Poster 1"></div>
-            <div class="slide-item"><img src="kandinsky_works/2.jpg" alt="Kandinsky Poster 2"></div>
+        <!-- Первая и вторая картинка рядом на одном экране -->
+        <div class="slide-row">
+            <div class="slide-item"><img src="kandinsky_works/1.jpg" alt="Kandinsky Poster Slide 1"></div>
+            <div class="slide-item"><img src="kandinsky_works/2.jpg" alt="Kandinsky Poster Slide 2"></div>
         </div>
-
-        <!-- Detail Views & Mockups -->
-        <div class="slide-item"><img src="kandinsky_works/3.jpg" alt="Kandinsky Poster Detail View"></div>
-        <div class="slide-item"><img src="kandinsky_works/4.jpg" alt="Kandinsky Poster Urban Mockup"></div>
-
-        <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="Structural Deformation & Musical Synesthesia" data-ru="Структурная деформация и&nbsp;музыкальная синестезия">Structural Deformation & Musical Synesthesia</h3>
-            <p class="narrative-text lang"
-               data-en="The grid structure, initially disciplined and rational, folds and fractures across the canvas. Typography and organic lines interrupt the pattern, creating a graphic score that echoes Kandinsky’s philosophy of visual music: 'Color is the keyboard, the eyes are the hammers, the soul is the piano with many strings.'"
-               data-ru="Структура сетки, изначально строгая и&nbsp;рациональная, изгибается и&nbsp;ломается на&nbsp;плоскости листа. Типографика и&nbsp;пластичные линии вторгаются в&nbsp;паттерн, формируя графическую партитуру в&nbsp;духе синестетической философии Кандинского: «Цвет — это клавиша, глаз — молоточек, душа — многострунный рояль».">
-                The grid structure, initially disciplined and rational, folds and fractures across the canvas. Typography and organic lines interrupt the pattern, creating a graphic score that echoes Kandinsky’s philosophy of visual music: "Color is the keyboard, the eyes are the hammers, the soul is the piano with many strings."
-            </p>
-        </div>
-
-        <div class="slide-item"><img src="kandinsky_works/5.jpg" alt="Kandinsky Poster 2 Detail View"></div>
-        <div class="slide-item"><img src="kandinsky_works/6.jpg" alt="Kandinsky Poster 2 Urban Mockup"></div>
+        <div class="slide-item"><img src="kandinsky_works/3.jpg" alt="Kandinsky Poster Slide 3"></div>
+        <div class="slide-item"><img src="kandinsky_works/4.jpg" alt="Kandinsky Poster Slide 4"></div>
+        <div class="slide-item"><img src="kandinsky_works/5.jpg" alt="Kandinsky Poster Slide 5"></div>
     </section>
 
     <nav class="project-navigation">
         <a href="tsaritsyno.html" class="nav-project-btn">
             <span class="meta-label lang" data-en="← Previous Project" data-ru="← Предыдущий проект">← Previous Project</span>
-            <span class="lang" data-en="Merch for Tsaritsyno" data-ru="Мерч для Царицыно">Merch for Tsaritsyno</span>
+            <span class="lang" data-en="Merch for Tsaritsyno Museum-Reserve" data-ru="Мерч для музея-заповедника «Царицыно»">Merch for Tsaritsyno Museum-Reserve</span>
         </a>
-        <a href="epistola.html" class="nav-project-btn next">
+        <a href="cashmere-theater.html" class="nav-project-btn next">
             <span class="meta-label lang" data-en="Next Project →" data-ru="Следующий проект →">Next Project →</span>
-            <span class="lang" data-en="Typeface & Identity Epistola" data-ru="Шрифт и&nbsp;айдентика Epistola">Typeface & Identity Epistola</span>
+            <span class="lang" data-en="Packaging for the Cashmere Theater" data-ru="Упаковка для театра «Кашемир»">Packaging for the Cashmere Theater</span>
         </a>
     </nav>
 </main>

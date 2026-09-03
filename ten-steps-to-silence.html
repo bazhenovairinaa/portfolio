@@ -1,516 +1,509 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posters for Ten Steps to Silence — Bazhenova Irina</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            user-select: none;
-            -webkit-user-drag: none;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Posters for Ten Steps to Silence — Bazhenova Irina</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-drag: none;
+}
 
-        body, html {
-            width: 100%;
-            min-height: 100%;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: #FFFFFF;
-            color: #111111;
-            scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
-        }
+body, html {
+    width: 100%;
+    min-height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #FFFFFF;
+    color: #111111;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
 
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 35px 0;
-            z-index: 100;
-            background-color: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid #F2F2F2;
-        }
+/* --- HEADER --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid #F2F2F2;
+}
 
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            width: 100%;
-        }
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
 
-        .header-title {
-            font-size: 22px;
-            font-weight: 400;
-            letter-spacing: -0.5px;
-            color: #111111;
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
+.header-title {
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    color: #111111;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
 
-        .header-subtitle {
-            font-size: 13px;
-            color: #777777;
-            font-weight: 400;
-            letter-spacing: -0.2px;
-        }
+.header-subtitle {
+    font-size: 13px;
+    color: #777777;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+}
 
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            align-items: center;
-        }
+/* --- ПРАВАЯ ЧАСТЬ ШАПКИ --- */
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+}
 
-        .nav-link {
-            font-size: 15px;
-            font-weight: 400;
-            color: #111111;
-            text-decoration: none;
-            letter-spacing: -0.2px;
-            position: relative;
-            padding-bottom: 2px;
-            opacity: 0.7;
-            transition: opacity 0.3s ease;
-        }
+.nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
 
-        .nav-link:hover, .nav-link.active {
-            opacity: 1;
-        }
+.nav-link {
+    font-size: 15px;
+    font-weight: 400;
+    color: #111111;
+    text-decoration: none;
+    letter-spacing: -0.2px;
+    position: relative;
+    padding-bottom: 2px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
 
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background-color: #111111;
-            transition: width 0.3s ease;
-        }
+.nav-link:hover, .nav-link.active {
+    opacity: 1;
+}
 
-        .nav-link:hover::after, .nav-link.active::after {
-            width: 100%;
-        }
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #111111;
+    transition: width 0.3s ease;
+}
 
-        /* --- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ --- */
-        .lang-switch {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 14px;
-            letter-spacing: -0.2px;
-            margin-left: 8px;
-        }
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
 
-        .lang-btn {
-            background: none;
-            border: none;
-            padding: 0;
-            font-family: inherit;
-            font-size: 14px;
-            color: #888888;
-            cursor: pointer;
-            transition: color 0.2s ease;
-        }
+/* --- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ --- */
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
 
-        .lang-btn:hover {
-            color: #111111;
-        }
+.lang-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+    font-size: 13px;
+    color: #888888;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
 
-        .lang-btn.active {
-            color: #111111;
-            font-weight: 500;
-        }
+.lang-btn:hover {
+    color: #111111;
+}
 
-        .lang-divider {
-            color: #CCCCCC;
-            font-size: 12px;
-            user-select: none;
-        }
+.lang-btn.active {
+    color: #111111;
+    font-weight: 500;
+}
 
-        main {
-            padding: 160px 40px 100px 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.lang-divider {
+    color: #CCCCCC;
+    font-size: 12px;
+    user-select: none;
+}
 
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-            color: #777777;
-            text-decoration: none;
-            margin-bottom: 40px;
-            transition: color 0.3s ease;
-            white-space: nowrap;
-        }
+/* --- MAIN CONTAINER --- */
+main {
+    padding: 160px 40px 100px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        .back-link:hover {
-            color: #111111;
-        }
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #777777;
+    text-decoration: none;
+    margin-bottom: 40px;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
 
-        .project-header {
-            margin-bottom: 50px;
-        }
+.back-link:hover {
+    color: #111111;
+}
 
-        .project-title {
-            font-size: 42px;
-            font-weight: 400;
-            letter-spacing: -1.2px;
-            line-height: 1.15;
-            margin-bottom: 35px;
-            text-wrap: balance;
-        }
+.project-header {
+    margin-bottom: 50px;
+}
 
-        .project-meta-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            padding: 25px 0;
-            border-top: 1px solid #EEEEEE;
-            border-bottom: 1px solid #EEEEEE;
-        }
+.project-title {
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: -1.2px;
+    line-height: 1.15;
+    margin-bottom: 35px;
+    text-wrap: balance;
+}
 
-        .meta-label {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #888888;
-            margin-bottom: 8px;
-        }
+.project-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 25px 0;
+    border-top: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+}
 
-        .meta-value {
-            font-size: 15px;
-            color: #111111;
-            font-weight: 400;
-            text-wrap: pretty;
-        }
+.meta-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888888;
+    margin-bottom: 8px;
+}
 
-        .meta-value.nowrap {
-            white-space: nowrap;
-        }
+.meta-value {
+    font-size: 15px;
+    color: #111111;
+    font-weight: 400;
+    text-wrap: pretty;
+}
 
-        .project-brief {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            margin: 60px 0 70px 0;
-            padding: 40px;
-            background-color: #FAFAFA;
-            border-radius: 4px;
-        }
+.meta-value.nowrap {
+    white-space: nowrap;
+}
 
-        .brief-card {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
+/* --- BRIEF SECTION --- */
+.project-brief {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin: 60px 0 70px 0;
+    padding: 40px;
+    background-color: #FAFAFA;
+    border-radius: 4px;
+}
 
-        .brief-tag {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            color: #777777;
-            font-weight: 600;
-        }
+.brief-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
 
-        .brief-title {
-            font-size: 20px;
-            font-weight: 400;
-            letter-spacing: -0.4px;
-            color: #111111;
-            text-wrap: balance;
-        }
+.brief-tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #777777;
+    font-weight: 600;
+}
 
-        .brief-text {
-            font-size: 15px;
-            line-height: 1.65;
-            color: #444444;
-            font-weight: 300;
-            text-wrap: pretty;
-        }
+.brief-title {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.4px;
+    color: #111111;
+    text-wrap: balance;
+}
 
-        .narrative-block {
-            margin: 60px 0;
-            padding: 35px 40px;
-            border-left: 2px solid #111111;
-            background-color: #FFFFFF;
-        }
+.brief-text {
+    font-size: 15px;
+    line-height: 1.65;
+    color: #444444;
+    font-weight: 300;
+    text-wrap: pretty;
+}
 
-        .narrative-title {
-            font-size: 18px;
-            font-weight: 500;
-            letter-spacing: -0.3px;
-            margin-bottom: 12px;
-            color: #111111;
-            text-wrap: balance;
-        }
+/* --- NARRATIVE BLOCKS --- */
+.narrative-block {
+    margin: 60px 0;
+    padding: 35px 40px;
+    border-left: 2px solid #111111;
+    background-color: #FFFFFF;
+}
 
-        .narrative-text {
-            font-size: 15px;
-            line-height: 1.7;
-            color: #555555;
-            font-weight: 300;
-            text-wrap: pretty;
-        }
+.narrative-title {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    margin-bottom: 12px;
+    color: #111111;
+    text-wrap: balance;
+}
 
-        .slides-gallery {
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-        }
+.narrative-text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555555;
+    font-weight: 300;
+    text-wrap: pretty;
+}
 
-        .slide-row-2col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
-            width: 100%;
-        }
+.slides-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
 
-        .slide-item {
-            width: 100%;
-            background-color: #F8F9FA;
-            overflow: hidden;
-            border-radius: 2px;
-        }
+.slide-item {
+    width: 100%;
+    background-color: #F8F9FA;
+    overflow: hidden;
+    border-radius: 2px;
+}
 
-        .slide-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
+.slide-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
-        .project-navigation {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 100px;
-            padding-top: 40px;
-            border-top: 1px solid #EEEEEE;
-        }
+/* --- РЯД С ДВУМЯ КАРТИНКАМИ РЯДОМ --- */
+.slide-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    width: 100%;
+}
 
-        .nav-project-btn {
-            text-decoration: none;
-            color: #111111;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            transition: opacity 0.3s ease;
-        }
+/* --- NAVIGATION & FOOTER --- */
+.project-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    padding-top: 40px;
+    border-top: 1px solid #EEEEEE;
+}
 
-        .nav-project-btn:hover {
-            opacity: 0.6;
-        }
+.nav-project-btn {
+    text-decoration: none;
+    color: #111111;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: opacity 0.3s ease;
+}
 
-        .nav-project-btn.next {
-            align-items: flex-end;
-        }
+.nav-project-btn:hover {
+    opacity: 0.6;
+}
 
-        footer {
-            padding: 50px 40px;
-            display: flex;
-            justify-content: center;
-            gap: 60px;
-            align-items: center;
-            border-top: 1px solid #EEEEEE;
-        }
+.nav-project-btn.next {
+    align-items: flex-end;
+}
 
-        .footer-link {
-            font-size: 15px;
-            font-weight: 400;
-            color: #111111;
-            text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
-        }
+footer {
+    padding: 50px 40px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    align-items: center;
+    border-top: 1px solid #EEEEEE;
+}
 
-        .footer-link:hover {
-            opacity: 1;
-        }
+.footer-link {
+    font-size: 15px;
+    font-weight: 400;
+    color: #111111;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
 
-        @media (max-width: 900px) {
-            .project-meta-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-            .meta-value.nowrap {
-                white-space: normal;
-            }
-        }
+.footer-link:hover {
+    opacity: 1;
+}
 
-        @media (max-width: 768px) {
-            header { padding: 24px 0; }
-            .header-container { padding: 0 24px; }
-            main { padding: 120px 24px 60px 24px; }
-            .project-title { font-size: 30px; }
-            .project-brief { grid-template-columns: 1fr; gap: 30px; padding: 24px; }
-            .narrative-block { padding: 24px; margin: 40px 0; }
-            .slides-gallery { gap: 20px; }
-            .slide-row-2col { grid-template-columns: 1fr; gap: 20px; }
-            .nav-links { gap: 20px; }
-        }
-    </style>
+@media (max-width: 900px) {
+    .project-meta-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .meta-value.nowrap {
+        white-space: normal;
+    }
+}
+
+@media (max-width: 768px) {
+    header { padding: 24px 0; }
+    .header-container { padding: 0 24px; }
+    main { padding: 120px 24px 60px 24px; }
+    .project-title { font-size: 30px; }
+    .project-brief { grid-template-columns: 1fr; gap: 30px; padding: 24px; }
+    .narrative-block { padding: 24px; margin: 40px 0; }
+    .slides-gallery { gap: 20px; }
+    .slide-row { grid-template-columns: 1fr; gap: 20px; }
+    .nav-links { gap: 20px; }
+}
+</style>
 </head>
 <body>
 
 <header>
-    <div class="header-container">
-        <a href="index.html" class="header-title">
-            <span class="lang" data-en="Bazhenova Irina" data-ru="Баженова Ирина">Bazhenova Irina</span>
-            <span class="header-subtitle lang" data-en="Multidisciplinary Designer" data-ru="Мультидисциплинарный дизайнер">Multidisciplinary Designer</span>
-        </a>
-        <nav class="nav-links">
-            <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
-            <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
-            <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
-            
-            <div class="lang-switch">
-                <button type="button" class="lang-btn active" data-lang-set="en">EN</button>
-                <span class="lang-divider">/</span>
-                <button type="button" class="lang-btn" data-lang-set="ru">RU</button>
-            </div>
-        </nav>
-    </div>
+<div class="header-container">
+<a href="index.html" class="header-title">
+<span class="lang" data-en="Bazhenova Irina" data-ru="Баженова Ирина">Bazhenova Irina</span>
+<span class="header-subtitle lang" data-en="Multidisciplinary Designer" data-ru="Мультидисциплинарный дизайнер">Multidisciplinary Designer</span>
+</a>
+<div class="header-right">
+<nav class="nav-links">
+<a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
+<a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
+<a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
+</nav>
+<div class="lang-switch">
+<button type="button" class="lang-btn active" data-lang-set="en">EN</button>
+<span class="lang-divider">/</span>
+<button type="button" class="lang-btn" data-lang-set="ru">RU</button>
+</div>
+</div>
+</div>
 </header>
 
 <main>
-    <a href="works.html" class="back-link lang" data-en="← Back to Selected Works" data-ru="← Назад ко&nbsp;всем работам">← Back to Selected Works</a>
+<a href="works.html" class="back-link lang" data-en="← Back to Selected Works" data-ru="← Назад ко&nbsp;всем работам">← Back to Selected Works</a>
 
-    <div class="project-header">
-        <h1 class="project-title lang" data-en="Posters for Ten Steps to Silence" data-ru="Плакаты для «10 шагов к&nbsp;тишине»">Posters for Ten Steps to Silence</h1>
-        
-        <div class="project-meta-grid">
-            <div>
-                <div class="meta-label lang" data-en="Client" data-ru="Клиент">Client</div>
-                <div class="meta-value nowrap lang" data-en="DOM Cultural Center / Poster Lab" data-ru="Культурный центр «ДОМ» / Лаборатория плаката">DOM Cultural Center / Poster Lab</div>
-            </div>
-            <div>
-                <div class="meta-label lang" data-en="Year" data-ru="Год">Year</div>
-                <div class="meta-value">2026</div>
-            </div>
-            <div>
-                <div class="meta-label lang" data-en="Category" data-ru="Категория">Category</div>
-                <div class="meta-value lang" data-en="Poster Design" data-ru="Дизайн плаката">Poster Design</div>
-            </div>
-            <div>
-                <div class="meta-label lang" data-en="Role" data-ru="Роль">Role</div>
-                <div class="meta-value lang" data-en="Graphic Design" data-ru="Графический дизайн">Graphic Design</div>
-            </div>
-        </div>
+<div class="project-header">
+<h1 class="project-title lang" data-en="Posters for Ten Steps to Silence" data-ru="Плакаты для «10 шагов к тишине»">Плакаты для «10 шагов к тишине»</h1>
+<div class="project-meta-grid">
+<div>
+<div class="meta-label lang" data-en="Client" data-ru="Клиент">Client</div>
+<div class="meta-value nowrap lang" data-en="DOM Cultural Center / Poster Lab" data-ru="Культурный центр «ДОМ» / Лаборатория плаката">Культурный центр «ДОМ» / Лаборатория плаката</div>
+</div>
+<div>
+<div class="meta-label lang" data-en="Year" data-ru="Год">Year</div>
+<div class="meta-value">2026</div>
+</div>
+<div>
+<div class="meta-label lang" data-en="Category" data-ru="Категория">Category</div>
+<div class="meta-value lang" data-en="Poster Design" data-ru="Дизайн плаката">Дизайн плаката</div>
+</div>
+<div>
+<div class="meta-label lang" data-en="Role" data-ru="Роль">Role</div>
+<div class="meta-value lang" data-en="Graphic Design" data-ru="Графический дизайн">Графический дизайн</div>
+</div>
+</div>
+</div>
+
+<!-- BRIEF & CONCEPT -->
+<section class="project-brief">
+<div class="brief-card">
+<span class="brief-tag lang" data-en="01 / Context & Task" data-ru="01 / Контекст и&nbsp;задача">01 / Контекст и задача</span>
+<h2 class="brief-title lang" data-en="Debut Album Presentation" data-ru="Презентация дебютного альбома">Презентация дебютного альбома</h2>
+<p class="brief-text lang"
+data-en="The poster series was created for the debut album presentation of the 'Ten steps to silence' band at the DOM Cultural Center. The task was to translate the experimental acoustic music into a concise and contrasting poster format."
+data-ru="Серия плакатов создана для презентации дебютного альбома группы «10 шагов к тишине» в культурном центре «ДОМ». Задача заключалась в том, чтобы перевести звучание экспериментальной акустической музыки в лаконичную и контрастную плакатную форму.">
+The poster series was created for the debut album presentation of the 'Ten steps to silence' band at the DOM Cultural Center. The task was to translate the experimental acoustic music into a concise and contrasting poster format.
+</p>
+</div>
+
+<div class="brief-card">
+<span class="brief-tag lang" data-en="02 / Solution & Concept" data-ru="02 / Решение и&nbsp;концепция">02 / Решение и концепция</span>
+<h2 class="brief-title lang" data-en="Acoustic Texture & Rhythm" data-ru="Акустическая фактура и&nbsp;ритм">Акустическая фактура и ритм</h2>
+<p class="brief-text lang"
+data-en="The visual language relies on granulated noise textures that convey free musical improvisation. Accent contrast elements operate on the principle of sharp drum hits, structuring the rhythm of the composition."
+data-ru="Визуальный язык опирается на гранулированные шумовые текстуры, передающие свободную музыкальную импровизацию. Акцентные контрастные элементы работают по принципу четких ударов барабана, выстраивая ритм композиции.">
+The visual language relies on granulated noise textures that convey free musical improvisation. Accent contrast elements operate on the principle of sharp drum hits, structuring the rhythm of the composition.
+</p>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section class="slides-gallery" id="slidesGallery">
+    <!-- Первые две картинки рядом друг с другом на одном экране -->
+    <div class="slide-row">
+        <div class="slide-item"><img src="ten-steps-to-silence_works/1.jpg" alt="Poster 1"></div>
+        <div class="slide-item"><img src="ten-steps-to-silence_works/2.jpg" alt="Poster 2"></div>
     </div>
+    <!-- Остальные картинки (3, 4, 5, 6) -->
+    <div class="slide-item"><img src="ten-steps-to-silence_works/3.jpg" alt="Poster 3"></div>
+    <div class="slide-item"><img src="ten-steps-to-silence_works/4.jpg" alt="Poster 4"></div>
+    <div class="slide-item"><img src="ten-steps-to-silence_works/5.jpg" alt="Poster 5"></div>
+    <div class="slide-item"><img src="ten-steps-to-silence_works/6.jpg" alt="Poster 6"></div>
+</section>
 
-    <section class="project-brief">
-        <div class="brief-card">
-            <span class="brief-tag lang" data-en="01 / Context & Album Presentation" data-ru="01 / Контекст события">01 / Context & Album Presentation</span>
-            <h2 class="brief-title lang" data-en="Ten Steps to Silence Debut Album" data-ru="Презентация дебютного альбома">Ten Steps to Silence Debut Album</h2>
-            <p class="brief-text lang"
-               data-en="Poster series designed for the debut album presentation of&nbsp;Ten Steps to&nbsp;Silence at&nbsp;the DOM Cultural Center. The graphics translate experimental acoustic sound into a&nbsp;clean, high-contrast visual form."
-               data-ru="Серия плакатов создана для презентации дебютного альбома группы «10&nbsp;шагов к&nbsp;тишине» в&nbsp;культурном центре «ДОМ». Графика переводит звучание экспериментальной акустической музыки в&nbsp;лаконичную и&nbsp;контрастную плакатную форму.">
-                Poster series designed for the debut album presentation of Ten Steps to Silence at the DOM Cultural Center. The graphics translate experimental acoustic sound into a clean, high-contrast visual form.
-            </p>
-        </div>
-
-        <div class="brief-card">
-            <span class="brief-tag lang" data-en="02 / Visual Metaphor & Sound" data-ru="02 / Графическая метафора">02 / Visual Metaphor & Sound</span>
-            <h2 class="brief-title lang" data-en="Acoustic Texture & Percussion Accent" data-ru="Акустическая фактура и&nbsp;ритм">Acoustic Texture & Percussion Accent</h2>
-            <p class="brief-text lang"
-               data-en="The visual system uses granular noise patterns to&nbsp;reflect musical improvisation. Sharp contrasting elements echo the sound of&nbsp;percussion, bringing rhythm and structure to&nbsp;the composition."
-               data-ru="Визуальный язык опирается на&nbsp;гранулированные шумовые текстуры, передающие свободную музыкальную импровизацию. Акцентные контрастные элементы работают по&nbsp;принципу четких ударов барабана, выстраивая ритм композиции.">
-                The visual system uses granular noise patterns to reflect musical improvisation. Sharp contrasting elements echo the sound of percussion, bringing rhythm and structure to the composition.
-            </p>
-        </div>
-    </section>
-
-    <section class="slides-gallery" id="slidesGallery">
-        
-        <!-- SIDE-BY-SIDE POSTERS -->
-        <div class="slide-row-2col">
-            <div class="slide-item"><img src="ten-steps-to-silence_works/1.jpg" alt="Ten Steps to Silence Poster Version 1"></div>
-            <div class="slide-item"><img src="ten-steps-to-silence_works/2.jpg" alt="Ten Steps to Silence Poster Version 2"></div>
-        </div>
-
-        <div class="slide-item"><img src="ten-steps-to-silence_works/3.jpg" alt="Granulated Acoustic Texture Detail View"></div>
-
-        <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="Sound Granulation & Texture" data-ru="Шумовая текстура и&nbsp;детали">Sound Granulation & Texture</h3>
-            <p class="narrative-text lang"
-               data-en="Dense particle textures visualize sound waves and acoustic layers, giving the posters an&nbsp;organic, tactile presence both on&nbsp;paper and on&nbsp;city billboards."
-               data-ru="Плотная точечная фактура визуализирует акустические волны, создавая ощущение материальности и&nbsp;зернистости как на&nbsp;бумаге, так и&nbsp;на&nbsp;городских афишах.">
-                Dense particle textures visualize sound waves and acoustic layers, giving the posters an organic, tactile presence both on paper and on city billboards.
-            </p>
-        </div>
-
-        <div class="slide-item"><img src="ten-steps-to-silence_works/4.jpg" alt="Urban Bus Stop Poster Display"></div>
-        <div class="slide-item"><img src="ten-steps-to-silence_works/5.jpg" alt="Branded Lighters Collection"></div>
-        <div class="slide-item"><img src="ten-steps-to-silence_works/6.jpg" alt="Vinyl Record & Printed Sleeve Packaging"></div>
-
-        <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="Printed Matter & Formats" data-ru="Печатные носители и&nbsp;форматы">Printed Matter & Formats</h3>
-            <p class="narrative-text lang"
-               data-en="The poster aesthetics adapt to&nbsp;physical formats: street displays, album vinyl sleeves, and tour lighters."
-               data-ru="Плакатная стилистика переносится на&nbsp;материальные носители: городские сити-форматы, конверты виниловых пластинок и&nbsp;концертные зажигалки.">
-                The poster aesthetics adapt to physical formats: street displays, album vinyl sleeves, and tour lighters.
-            </p>
-        </div>
-
-    </section>
-
-    <nav class="project-navigation">
-        <a href="mono-ha.html" class="nav-project-btn">
-            <span class="meta-label lang" data-en="← Previous Project" data-ru="← Предыдущий проект">← Previous Project</span>
-            <span class="lang" data-en="Book Mono-ha" data-ru="Книга «Моно-ха»">Book Mono-ha</span>
-        </a>
-        <a href="science-inside-human.html" class="nav-project-btn next">
-            <span class="meta-label lang" data-en="Next Project →" data-ru="Следующий проект →">Next Project →</span>
-            <span class="lang" data-en="AR Motion Science Inside Human" data-ru="AR-моушн «Наука внутри нас»">AR Motion Science Inside Human</span>
-        </a>
-    </nav>
+<!-- NAVIGATION -->
+<nav class="project-navigation">
+<a href="mono-ha.html" class="nav-project-btn">
+<span class="meta-label lang" data-en="← Previous Project" data-ru="← Предыдущий проект">← Previous Project</span>
+<span class="lang" data-en="Book Mono-ha" data-ru="Книга «Моно-ха»">Book Mono-ha</span>
+</a>
+<a href="science-inside-human.html" class="nav-project-btn next">
+<span class="meta-label lang" data-en="Next Project →" data-ru="Следующий проект →">Next Project →</span>
+<span class="lang" data-en="Science Inside Human" data-ru="Science Inside Human">Science Inside Human</span>
+</a>
+</nav>
 </main>
 
 <footer>
-    <a href="index.html" class="footer-link lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</a>
-    <a href="works.html" class="footer-link lang" data-en="Works / Visual Artifacts" data-ru="Работы / Визуальные артефакты">Works / Visual Artifacts</a>
-    <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="footer-link lang" data-en="CV" data-ru="Резюме">CV</a>
+<a href="index.html" class="footer-link lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</a>
+<a href="works.html" class="footer-link lang" data-en="Works / Visual Artifacts" data-ru="Works / Visual Artifacts">Works / Visual Artifacts</a>
+<a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="footer-link lang" data-en="CV" data-ru="Резюме">CV</a>
 </footer>
 
 <script>
-    // --- ПЕРЕКЛЮЧЕНИЕ ЯЗЫКА ---
-    const langButtons = document.querySelectorAll('[data-lang-set]');
-    const translatableElements = document.querySelectorAll('.lang');
+// --- ПЕРЕКЛЮЧЕНИЕ ЯЗЫКА ---
+const langButtons = document.querySelectorAll('[data-lang-set]');
+const translatableElements = document.querySelectorAll('.lang');
 
-    function updateLanguage(lang) {
-        translatableElements.forEach(el => {
-            const text = el.getAttribute(`data-${lang}`);
-            if (text) el.innerHTML = text;
-        });
+function updateLanguage(lang) {
+translatableElements.forEach(el => {
+const text = el.getAttribute(`data-${lang}`);
+if (text) el.innerHTML = text;
+});
 
-        langButtons.forEach(btn => {
-            btn.classList.toggle('active', btn.getAttribute('data-lang-set') === lang);
-        });
+langButtons.forEach(btn => {
+btn.classList.toggle('active', btn.getAttribute('data-lang-set') === lang);
+});
 
-        localStorage.setItem('selected_language', lang);
-        document.documentElement.lang = lang;
-    }
+localStorage.setItem('selected_language', lang);
+document.documentElement.lang = lang;
+}
 
-    langButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const targetLang = btn.getAttribute('data-lang-set');
-            updateLanguage(targetLang);
-        });
-    });
+langButtons.forEach(btn => {
+btn.addEventListener('click', () => {
+const targetLang = btn.getAttribute('data-lang-set');
+updateLanguage(targetLang);
+});
+});
 
-    const initialLang = localStorage.getItem('selected_language') || 'en';
-    updateLanguage(initialLang);
+const initialLang = localStorage.getItem('selected_language') || 'en';
+updateLanguage(initialLang);
 </script>
 
 </body>

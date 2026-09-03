@@ -64,6 +64,14 @@
             letter-spacing: -0.2px;
         }
 
+        /* --- ПРАВАЯ ЧАСТЬ ШАПКИ --- */
+        .header-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
+        }
+
         .nav-links {
             display: flex;
             gap: 32px;
@@ -106,9 +114,6 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            font-size: 14px;
-            letter-spacing: -0.2px;
-            margin-left: 8px;
         }
 
         .lang-btn {
@@ -116,7 +121,7 @@
             border: none;
             padding: 0;
             font-family: inherit;
-            font-size: 14px;
+            font-size: 13px;
             color: #888888;
             cursor: pointer;
             transition: color 0.2s ease;
@@ -361,17 +366,18 @@
             <span class="lang" data-en="Bazhenova Irina" data-ru="Баженова Ирина">Bazhenova Irina</span>
             <span class="header-subtitle lang" data-en="Multidisciplinary Designer" data-ru="Мультидисциплинарный дизайнер">Multidisciplinary Designer</span>
         </a>
-        <nav class="nav-links">
-            <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
-            <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
-            <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
-            
+        <div class="header-right">
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
+                <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
+                <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
+            </nav>
             <div class="lang-switch">
                 <button type="button" class="lang-btn active" data-lang-set="en">EN</button>
                 <span class="lang-divider">/</span>
                 <button type="button" class="lang-btn" data-lang-set="ru">RU</button>
             </div>
-        </nav>
+        </div>
     </div>
 </header>
 
@@ -379,12 +385,12 @@
     <a href="works.html" class="back-link lang" data-en="← Back to Selected Works" data-ru="← Назад ко&nbsp;всем работам">← Back to Selected Works</a>
 
     <div class="project-header">
-        <h1 class="project-title lang" data-en="Identity for the I.T.D. Acting Workshop" data-ru="Айдентика актерской мастерской «И&nbsp;Т.Д.»">Identity for the I.T.D. Acting Workshop</h1>
+        <h1 class="project-title lang" data-en="Identity for the I.T.D. Acting Workshop" data-ru="Айдентика актерской мастерской «И.Т.Д.»">Identity for the I.T.D. Acting Workshop</h1>
         
         <div class="project-meta-grid">
             <div>
                 <div class="meta-label lang" data-en="Client" data-ru="Клиент">Client</div>
-                <div class="meta-value nowrap lang" data-en="I.T.D. Workshop / Museum of Moscow" data-ru="Мастерская «И&nbsp;Т.Д.» / Музей Москвы">I.T.D. Workshop / Museum of Moscow</div>
+                <div class="meta-value nowrap lang" data-en="I.T.D. Workshop / Museum of Moscow" data-ru="Мастерская «И.Т.Д.» / Музей Москвы">I.T.D. Workshop / Museum of Moscow</div>
             </div>
             <div>
                 <div class="meta-label lang" data-en="Year" data-ru="Год">Year</div>
@@ -403,29 +409,28 @@
 
     <section class="project-brief">
         <div class="brief-card">
-            <span class="brief-tag lang" data-en="01 / Context & Audience" data-ru="01 / Контекст и&nbsp;аудитория">01 / Context & Audience</span>
-            <h2 class="brief-title lang" data-en="Studio of Contemporary Theatre for Teenagers" data-ru="Студия современного театра для подростков">Studio of Contemporary Theatre for Teenagers</h2>
+            <span class="brief-tag lang" data-en="01 / Context & Task" data-ru="01 / Контекст и&nbsp;задача">01 / Контекст и задача</span>
+            <h2 class="brief-title lang" data-en="Studio of Contemporary Theatre for Teenagers" data-ru="Студия современного театра для подростков">Студия современного театра для подростков</h2>
             <p class="brief-text lang"
-               data-en="&ldquo;I.T.D. Workshop&rdquo; is&nbsp;a&nbsp;contemporary acting and performance studio created for teenagers aged 14–18 at&nbsp;the Children's Center of&nbsp;the Museum of&nbsp;Moscow. The studio offers an&nbsp;open laboratory space for self-expression, experimental play, and creative discovery."
-               data-ru="«И&nbsp;Т.Д.» — студия современного актерского мастерства и&nbsp;перформанса для подростков 14–18&nbsp;лет в&nbsp;Детском центре Музея Москвы. Проект задуман как открытая лаборатория для искреннего самовыражения, театральных экспериментов и&nbsp;поиска собственного голоса.">
-                "I.T.D. Workshop" is a contemporary acting and performance studio created for teenagers aged 14–18 at the Children's Center of the Museum of Moscow. The studio offers an open laboratory space for self-expression, experimental play, and creative discovery.
+               data-en="&ldquo;I.T.D. Workshop&rdquo; is&nbsp;a&nbsp;contemporary acting and performance studio created for teenagers aged 14–18 at&nbsp;the Children's Center of&nbsp;the Museum of&nbsp;Moscow. The task was to develop a distinct visual identity in the spirit of this workshop."
+               data-ru="«И.Т.Д.» — студия современного актерского мастерства и&nbsp;перформанса для подростков 14–18&nbsp;лет в&nbsp;Детском центре Музея Москвы. Задача заключалась в&nbsp;том, чтобы разработать айдентику в&nbsp;духе этой мастерской.">
+                "I.T.D. Workshop" is a contemporary acting and performance studio created for teenagers aged 14–18 at the Children's Center of the Museum of Moscow. The task was to develop a distinct visual identity in the spirit of this workshop.
             </p>
         </div>
 
         <div class="brief-card">
-            <span class="brief-tag lang" data-en="02 / Design Metaphor & Mechanics" data-ru="02 / Метафора и&nbsp;графический язык">02 / Design Metaphor & Mechanics</span>
-            <h2 class="brief-title lang" data-en="Stage Blocking Diagrams & Spatial Trajectories" data-ru="Режиссерские мизансцены и&nbsp;траектории">Stage Blocking Diagrams & Spatial Trajectories</h2>
+            <span class="brief-tag lang" data-en="02 / Solution & Concept" data-ru="02 / Решение и&nbsp;концепция">02 / Решение и концепция</span>
+            <h2 class="brief-title lang" data-en="Stage Blocking Diagrams & Spatial Trajectories" data-ru="Режиссерские мизансцены и&nbsp;траектории">Режиссерские мизансцены и траектории</h2>
             <p class="brief-text lang"
-               data-en="The visual language translates directorial blocking notations into dynamic graphic layouts. Position points, trajectory vectors, color-coded stage zones, and theatrical cues serve as&nbsp;flexible graphic building blocks across digital media, posters, and merchandise."
-               data-ru="Визуальный язык переводит схемы режиссерских мизансцен в&nbsp;динамичную графическую сетку. Точки позиционирования актеров, векторы перемещения, цветовое зонирование сцены и&nbsp;реплики становятся модульными элементами стиля в&nbsp;digital-среде, афишах и&nbsp;мерче.">
-                The visual language translates directorial blocking notations into dynamic graphic layouts. Position points, trajectory vectors, color-coded stage zones, and theatrical cues serve as flexible graphic building blocks across digital media, posters, and merchandise.
+               data-en="The visual language translates directorial blocking notations into dynamic graphic layouts. Position points, trajectory vectors, color-coded stage zones, and theatrical cues serve as&nbsp;modular elements of the corporate identity."
+               data-ru="Визуальный язык переводит схемы режиссерских мизансцен в&nbsp;динамичную графическую сетку. Точки позиционирования актеров, векторы перемещения, цветовое зонирование сцены и&nbsp;реплики становятся модульными элементами фирменного стиля.">
+                The visual language translates directorial blocking notations into dynamic graphic layouts. Position points, trajectory vectors, color-coded stage zones, and theatrical cues serve as modular elements of the corporate identity.
             </p>
         </div>
     </section>
 
     <section class="slides-gallery">
         
-        <!-- SECTION 1: IDENTITY SYSTEM & CONCEPT (1.jpg to 6.jpg) -->
         <div class="slide-item"><img src="itd-workshop_works/1.jpg" alt="I.T.D. Workshop Intro Title Card"></div>
         <div class="slide-item"><img src="itd-workshop_works/2.jpg" alt="I.T.D. Logotype Wordmark"></div>
         <div class="slide-item"><img src="itd-workshop_works/3.jpg" alt="Vector Trajectory Point Diagram"></div>
@@ -433,9 +438,8 @@
         <div class="slide-item"><img src="itd-workshop_works/5.jpg" alt="Urban Hoarding Multi-Poster Installation"></div>
         <div class="slide-item"><img src="itd-workshop_works/6.jpg" alt="Summer Intensive Street Poster Display"></div>
 
-        <!-- NARRATIVE BLOCK 1: STAGE BLOCKING AS GRAPHIC LANGUAGE -->
         <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="Stage Mis-en-scène & Spatial Trajectories" data-ru="Сценические мизансцены и&nbsp;пространственные траектории">Stage Mis-en-scène & Spatial Trajectories</h3>
+            <h3 class="narrative-title lang" data-en="Stage Mis-en-scène & Spatial Trajectories" data-ru="Сценические мизансцены и&nbsp;пространственные траектории">Сценические мизансцены и пространственные траектории</h3>
             <p class="narrative-text lang"
                data-en="The visual identity translates the physical movement of&nbsp;rehearsals into dynamic graphic layouts. Position points, movement vectors, color-coded stage zones, and director's cues serve as&nbsp;flexible graphic building blocks."
                data-ru="Айдентика превращает физику репетиций в&nbsp;динамичную графику: точки расстановки, траектории перемещения, цветовая разметка сценических планов и&nbsp;ремарки режиссера становятся гибким конструктором визуального стиля.">
@@ -443,7 +447,6 @@
             </p>
         </div>
 
-        <!-- SECTION 2: POSTERS & DIGITAL MEDIA (7.jpg to 12.jpg) -->
         <div class="slide-item"><img src="itd-workshop_works/7.jpg" alt="I.T.D. Printed Canvas Tote Bag"></div>
         <div class="slide-item"><img src="itd-workshop_works/8.jpg" alt="Social Media Announcement Grid Cards"></div>
         <div class="slide-item"><img src="itd-workshop_works/9.jpg" alt="Instagram Profile Interface Layout"></div>
@@ -451,9 +454,8 @@
         <div class="slide-item"><img src="itd-workshop_works/11.jpg" alt="Play Script Cue Postcards Set"></div>
         <div class="slide-item"><img src="itd-workshop_works/12.jpg" alt="Garment Cover Bag & Wooden Hanger"></div>
 
-        <!-- NARRATIVE BLOCK 2: MERCHANDISE & EVERYDAY TOUCHPOINTS -->
         <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="Subtle Theatrical Wit in Everyday Objects" data-ru="Театральная ирония в&nbsp;повседневных вещах">Subtle Theatrical Wit in Everyday Objects</h3>
+            <h3 class="narrative-title lang" data-en="Subtle Theatrical Wit in Everyday Objects" data-ru="Театральная ирония в&nbsp;повседневных вещах">Театральная ирония в повседневных вещах</h3>
             <p class="narrative-text lang"
                data-en="The identity extends into personal items: socks labeled with 'L.' and 'R.' stage indicators, keychains with position marks, and coffee packaging created in&nbsp;collaboration with Surf Coffee."
                data-ru="Айдентика продолжается в&nbsp;мерче и&nbsp;аксессуарах: носках с&nbsp;маркировкой «Л.» и&nbsp;«П.» по&nbsp;принципу левой и&nbsp;правой кулисы, брелоках с&nbsp;метками позиций актеров и&nbsp;кофейных стаканчиках в&nbsp;коллаборации с&nbsp;сетью Surf Coffee.">
@@ -461,7 +463,6 @@
             </p>
         </div>
 
-        <!-- SECTION 3: APPAREL, NEWSPAPER & DRINKWARE (13.jpg to 18.jpg) -->
         <div class="slide-item"><img src="itd-workshop_works/13.jpg" alt="Subway Navigation Billboard Screen"></div>
         <div class="slide-item"><img src="itd-workshop_works/14.jpg" alt="Surf Coffee Collaboration Packaging"></div>
         <div class="slide-item"><img src="itd-workshop_works/15.jpg" alt="Trifold Workshop Program Brochure"></div>
@@ -469,9 +470,8 @@
         <div class="slide-item"><img src="itd-workshop_works/17.jpg" alt="Stage Exit Graphic Sweatshirt"></div>
         <div class="slide-item"><img src="itd-workshop_works/18.jpg" alt="Interactive Sticker & Badge Set"></div>
 
-        <!-- NARRATIVE BLOCK 3: BACKSTAGE & PERFORMANCE EXPERIENCE -->
         <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="The Backstage & Audience Atmosphere" data-ru="Атмосфера закулисья и&nbsp;зрительский опыт">The Backstage & Audience Atmosphere</h3>
+            <h3 class="narrative-title lang" data-en="The Backstage & Audience Atmosphere" data-ru="Атмосфера закулисья и&nbsp;зрительский опыт">Атмосфера закулисья и зрительский опыт</h3>
             <p class="narrative-text lang"
                data-en="Touchpoints frame the theatrical experience — from entrance wristbands and costume garment covers to&nbsp;water bottles printed with 'Intermission' and sweatshirts bearing 'Stage Exit'."
                data-ru="Каждый предмет формирует ощущение причастности к&nbsp;спектаклю: от&nbsp;браслетов на&nbsp;входе и&nbsp;чехлов для костюмов до&nbsp;бутылок для воды с&nbsp;надписью «Антракт» и&nbsp;свитшотов с&nbsp;принтом «Выход на&nbsp;сцену».">
@@ -479,23 +479,12 @@
             </p>
         </div>
 
-        <!-- SECTION 4: STATIONERY & ENVIRONMENT (19.jpg to 24.jpg) -->
         <div class="slide-item"><img src="itd-workshop_works/19.jpg" alt="Broadsheet Newspaper Performance Program"></div>
         <div class="slide-item"><img src="itd-workshop_works/20.jpg" alt="Intermission Thermal Water Bottle"></div>
         <div class="slide-item"><img src="itd-workshop_works/21.jpg" alt="Folder, Notebook & Custom Pencils Set"></div>
         <div class="slide-item"><img src="itd-workshop_works/22.jpg" alt="Smartphone Case Mockups"></div>
         <div class="slide-item"><img src="itd-workshop_works/23.jpg" alt="Padded Laptop Sleeve Bag"></div>
         <div class="slide-item"><img src="itd-workshop_works/24.jpg" alt="Interior Digital Billboard Banner Screen"></div>
-
-        <!-- NARRATIVE BLOCK 4: TACTILE TOUCHPOINTS & EXHIBITION SPACES -->
-        <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="Tactile Touchpoints & Exhibition Spaces" data-ru="Тактильные носители и&nbsp;музейное пространство">Tactile Touchpoints & Exhibition Spaces</h3>
-            <p class="narrative-text lang"
-               data-en="Everyday workshop materials — pencils, folders, phone cases, and laptop sleeves — seamlessly connect with large-scale interior museum screens, linking the studio's daily creative process with public exhibition spaces."
-               data-ru="Рабочие материалы мастерской — карандаши, папки для пьес, чехлы для телефонов и&nbsp;ноутбуков — органично дополняются крупноформатными цифровыми медиаэкранами в&nbsp;залах Музея Москвы, связывая творческий процесс с&nbsp;публичным пространством.">
-                Everyday workshop materials — pencils, folders, phone cases, and laptop sleeves — seamlessly connect with large-scale interior museum screens, linking the studio's daily creative process with public exhibition spaces.
-            </p>
-        </div>
 
     </section>
 

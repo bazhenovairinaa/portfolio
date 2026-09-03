@@ -64,6 +64,14 @@
             letter-spacing: -0.2px;
         }
 
+        /* --- ПРАВАЯ ЧАСТЬ ШАПКИ --- */
+        .header-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
+        }
+
         .nav-links {
             display: flex;
             gap: 32px;
@@ -106,9 +114,6 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            font-size: 14px;
-            letter-spacing: -0.2px;
-            margin-left: 8px;
         }
 
         .lang-btn {
@@ -116,7 +121,7 @@
             border: none;
             padding: 0;
             font-family: inherit;
-            font-size: 14px;
+            font-size: 13px;
             color: #888888;
             cursor: pointer;
             transition: color 0.2s ease;
@@ -361,17 +366,18 @@
             <span class="lang" data-en="Bazhenova Irina" data-ru="Баженова Ирина">Bazhenova Irina</span>
             <span class="header-subtitle lang" data-en="Multidisciplinary Designer" data-ru="Мультидисциплинарный дизайнер">Multidisciplinary Designer</span>
         </a>
-        <nav class="nav-links">
-            <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
-            <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
-            <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
-            
+        <div class="header-right">
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
+                <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
+                <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
+            </nav>
             <div class="lang-switch">
                 <button type="button" class="lang-btn active" data-lang-set="en">EN</button>
                 <span class="lang-divider">/</span>
                 <button type="button" class="lang-btn" data-lang-set="ru">RU</button>
             </div>
-        </nav>
+        </div>
     </div>
 </header>
 
@@ -403,22 +409,22 @@
 
     <section class="project-brief">
         <div class="brief-card">
-            <span class="brief-tag lang" data-en="01 / Concept & Form" data-ru="01 / Концепция и&nbsp;форма">01 / Concept & Form</span>
-            <h2 class="brief-title lang" data-en="Natural and Industrial Balance" data-ru="Диалог природного и&nbsp;технологичного">Natural and Industrial Balance</h2>
+            <span class="brief-tag lang" data-en="01 / Context & Task" data-ru="01 / Контекст и&nbsp;задача">01 / Контекст и задача</span>
+            <h2 class="brief-title lang" data-en="Creating a Lamp" data-ru="Создание светильника">Создание светильника</h2>
             <p class="brief-text lang"
-               data-en="Kankei (关系 / 関係 — связь, отношение) — a&nbsp;table lamp that explores the interaction between raw wood and functional lighting. The project looks at&nbsp;how natural textures and engineered light can live together in&nbsp;one simple object."
-               data-ru="Kankei (关系 / 関係 — связь, отношение) — настольный светильник, исследующий взаимодействие цельного массива дерева и&nbsp;функционального света. Проект показывает, как естественная фактура и&nbsp;технологичные детали могут сосуществовать в&nbsp;одном лаконичном предмете.">
-                Kankei (关系 / 関係 — связь, отношение) — a table lamp that explores the interaction between raw wood and functional lighting. The project looks at how natural textures and engineered light can live together in one simple object.
+               data-en="Developed as part of a project at the HSE Art and Design School, the task was to create a lighting object inspired by anything that felt personally compelling, without rigid guidelines on form or source of inspiration."
+               data-ru="Проект выполнен в&nbsp;Школе дизайна НИУ ВШЭ. Задачей было самостоятельно создать светильник, вдохновившись любым привлекательным для себя образом, идеей или явлением без жестких рамок и&nbsp;ограничений.">
+                Developed as part of a project at the HSE Art and Design School, the task was to create a lighting object inspired by anything that felt personally compelling, without rigid guidelines on form or source of inspiration.
             </p>
         </div>
 
         <div class="brief-card">
-            <span class="brief-tag lang" data-en="02 / Visual Context" data-ru="02 / Философия формы">02 / Visual Context</span>
-            <h2 class="brief-title lang" data-en="Mono-ha Principles" data-ru="Принципы школы «Моно-ха»">Mono-ha Principles</h2>
+            <span class="brief-tag lang" data-en="02 / Solution & Concept" data-ru="02 / Решение и&nbsp;концепция">02 / Решение и концепция</span>
+            <h2 class="brief-title lang" data-en="Mono-ha & Material Interaction" data-ru="Моно-ха. Взаимодействие материалов">Моно-ха. Взаимодействие материалов</h2>
             <p class="brief-text lang"
-               data-en="The project takes inspiration from the Mono-ha movement: focusing on&nbsp;the meeting of&nbsp;different materials, the role of&nbsp;empty space around the object, and the beauty of&nbsp;unprocessed surfaces."
-               data-ru="Форма вдохновлена принципами направления «Моно-ха»: акцент на&nbsp;честности материалов, значимости пустоты вокруг предмета и&nbsp;выразительности необработанных поверхностей.">
-                The project takes inspiration from the Mono-ha movement: focusing on the meeting of different materials, the role of empty space around the object, and the beauty of unprocessed surfaces.
+               data-en="The concept is inspired by the Japanese art movement 'Mono-ha', focusing on the honesty of materials and their interaction with each other, emphasizing the significance of empty space around the object and the expressive beauty of unprocessed surfaces."
+               data-ru="Концепция вдохновлена японским художественным течением «Моно-ха», где идет акцент на&nbsp;честность материалов и&nbsp;взаимодействие их&nbsp;друг с&nbsp;другом, подчеркивая значимость пустоты вокруг предмета и&nbsp;выразительность необработанных поверхностей.">
+                The concept is inspired by the Japanese art movement 'Mono-ha', focusing on the honesty of materials and their interaction with each other, emphasizing the significance of empty space around the object and the expressive beauty of unprocessed surfaces.
             </p>
         </div>
     </section>
@@ -430,9 +436,9 @@
         <div class="slide-item"><img src="lamp-kankei_works/3.jpg" alt="Environmental Reflection & Stone Balance Research Board"></div>
 
         <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="Material Quality and Craft" data-ru="Материал и&nbsp;ручная работа">Material Quality and Craft</h3>
+            <h3 class="narrative-title lang" data-en="Material Quality and Craft" data-ru="Материал и&nbsp;ручная работа">Материал и ручная работа</h3>
             <p class="narrative-text lang"
-               data-en="Instead of&nbsp;decorative masking, the lamp highlights the natural qualities of&nbsp;wood, metal, and light. The prototype was made by&nbsp;hand — from cutting the block to&nbsp;final sanding."
+               data-en="Instead of decorative masking, the lamp highlights the natural qualities of wood, metal, and light. The prototype was made by hand — from cutting the block to final sanding."
                data-ru="Вместо декоративной обработки светильник подчеркивает естественные свойства дерева, металла и&nbsp;света. Прототип полностью собран вручную — от&nbsp;распила бруса до&nbsp;финишной отделки.">
                 Instead of decorative masking, the lamp highlights the natural qualities of wood, metal, and light. The prototype was made by hand — from cutting the block to final sanding.
             </p>
@@ -443,9 +449,9 @@
         <div class="slide-item"><img src="lamp-kankei_works/6.jpg" alt="Form Search Diagram & Final Concept Blueprint"></div>
 
         <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="Wood Selection" data-ru="Выбор породы дерева">Wood Selection</h3>
+            <h3 class="narrative-title lang" data-en="Wood Selection" data-ru="Выбор породы дерева">Выбор породы дерева</h3>
             <p class="narrative-text lang"
-               data-en="Siberian larch was chosen for its density and visible ring pattern. A&nbsp;light stain reveals the depth of&nbsp;the grain while preserving the tactile warmth of&nbsp;the surface."
+               data-en="Siberian larch was chosen for its density and visible ring pattern. A light stain reveals the depth of the grain while preserving the tactile warmth of the surface."
                data-ru="Основой стала сибирская лиственница благодаря плотности и&nbsp;выразительному рисунку годовых колец. Тонирование подчеркнуло глубину волокон, сохранив тактильную фактуру.">
                 Siberian larch was chosen for its density and visible ring pattern. A light stain reveals the depth of the grain while preserving the tactile warmth of the surface.
             </p>
@@ -457,9 +463,9 @@
         <div class="slide-item"><img src="lamp-kankei_works/10.jpg" alt="Material Sourcing and Workshop Selection Process"></div>
 
         <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="Carving Details" data-ru="Обработка и&nbsp;детали">Carving Details</h3>
+            <h3 class="narrative-title lang" data-en="Carving Details" data-ru="Обработка и&nbsp;детали">Обработка и детали</h3>
             <p class="narrative-text lang"
-               data-en="The round openings were cut and finished with hand chisels. Subtle traces of&nbsp;tools were left visible on&nbsp;purpose to&nbsp;give the object an&nbsp;honest, tactile character."
+               data-en="The round openings were cut and finished with hand chisels. Subtle traces of tools were left visible on purpose to give the object an honest, tactile character."
                data-ru="Круглые отверстия в&nbsp;брусе вырезаны и&nbsp;доработаны стамесками вручную. Легкие следы инструмента намеренно оставлены видимыми, подчеркивая живой характер вещи.">
                 The round openings were cut and finished with hand chisels. Subtle traces of tools were left visible on purpose to give the object an honest, tactile character.
             </p>
@@ -473,9 +479,9 @@
         <div class="slide-item"><img src="lamp-kankei_works/16.jpg" alt="Wood Staining Process and Surface Texture Detail"></div>
 
         <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="Internal Light Source" data-ru="Скрытый источник света">Internal Light Source</h3>
+            <h3 class="narrative-title lang" data-en="Internal Light Source" data-ru="Скрытый источник света">Скрытый источник света</h3>
             <p class="narrative-text lang"
-               data-en="A&nbsp;warm LED strip sits hidden inside the carved channel. The light shines downward onto the wooden base, creating soft reflections that highlight the relief of&nbsp;the grain."
+               data-en="A warm LED strip sits hidden inside the carved channel. The light shines downward onto the wooden base, creating soft reflections that highlight the relief of the grain."
                data-ru="Теплая светодиодная лента спрятана во&nbsp;внутреннем пазу. Свет направлен вниз на&nbsp;массив дерева, создавая мягкие тени и&nbsp;проявляя рельеф волокон.">
                 A warm LED strip sits hidden inside the carved channel. The light shines downward onto the wooden base, creating soft reflections that highlight the relief of the grain.
             </p>

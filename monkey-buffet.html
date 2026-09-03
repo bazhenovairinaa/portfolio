@@ -64,6 +64,14 @@
             letter-spacing: -0.2px;
         }
 
+        /* --- ПРАВАЯ ЧАСТЬ ШАПКИ --- */
+        .header-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
+        }
+
         .nav-links {
             display: flex;
             gap: 32px;
@@ -106,9 +114,6 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            font-size: 14px;
-            letter-spacing: -0.2px;
-            margin-left: 8px;
         }
 
         .lang-btn {
@@ -116,7 +121,7 @@
             border: none;
             padding: 0;
             font-family: inherit;
-            font-size: 14px;
+            font-size: 13px;
             color: #888888;
             cursor: pointer;
             transition: color 0.2s ease;
@@ -357,17 +362,18 @@
             <span class="lang" data-en="Bazhenova Irina" data-ru="Баженова Ирина">Bazhenova Irina</span>
             <span class="header-subtitle lang" data-en="Multidisciplinary Designer" data-ru="Мультидисциплинарный дизайнер">Multidisciplinary Designer</span>
         </a>
-        <nav class="nav-links">
-            <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
-            <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
-            <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
-            
+        <div class="header-right">
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link"><span class="lang" data-en="3D Carousel" data-ru="3D Карусель">3D Carousel</span></a>
+                <a href="works.html" class="nav-link active"><span class="lang" data-en="Works" data-ru="Работы">Works</span></a>
+                <a href="Bazhenova_Irina_CV.pdf?v=2" target="_blank" class="nav-link"><span class="lang" data-en="CV" data-ru="Резюме">CV</span></a>
+            </nav>
             <div class="lang-switch">
                 <button type="button" class="lang-btn active" data-lang-set="en">EN</button>
                 <span class="lang-divider">/</span>
                 <button type="button" class="lang-btn" data-lang-set="ru">RU</button>
             </div>
-        </nav>
+        </div>
     </div>
 </header>
 
@@ -400,22 +406,22 @@
     <!-- BRIEF & CONCEPT -->
     <section class="project-brief">
         <div class="brief-card">
-            <span class="brief-tag lang" data-en="01 / Context & Culture" data-ru="01 / Контекст">01 / Context & Culture</span>
+            <span class="brief-tag lang" data-en="01 / Context & Challenge" data-ru="01 / Контекст и&nbsp;задача">01 / Контекст и задача</span>
             <h2 class="brief-title lang" data-en="Annual Festival in Lopburi" data-ru="Ежегодный фестиваль в&nbsp;Лопбури">Annual Festival in Lopburi</h2>
             <p class="brief-text lang"
-               data-en="Monkey Buffet Festival takes place every year on&nbsp;the last Sunday of&nbsp;November in&nbsp;Lopburi, Thailand. Locals set out tables with fruits for the monkeys to&nbsp;thank them for attracting travelers to&nbsp;the town."
-               data-ru="Monkey Buffet Festival проходит каждый год в&nbsp;последнее воскресенье ноября в&nbsp;городе Лопбури (Таиланд). Местные жители накрывают большие столы со&nbsp;свежими фруктами для обезьян в&nbsp;знак благодарности за&nbsp;внимание путешественников к&nbsp;городу.">
-                Monkey Buffet Festival takes place every year on the last Sunday of November in Lopburi, Thailand. Locals set out tables with fruits for the monkeys to thank them for attracting travelers to the town.
+               data-en="Monkey Buffet Festival takes place every year on&nbsp;the last Sunday of&nbsp;November in&nbsp;Lopburi, Thailand. Locals set out tables with fruits for the monkeys to&nbsp;thank them for attracting travelers to&nbsp;the town. The task was to develop a memorable visual identity for this festival that captures its vibrant character and playful atmosphere."
+               data-ru="Monkey Buffet Festival проходит каждый год в&nbsp;последнее воскресенье ноября в&nbsp;городе Лопбури (Таиланд). Местные жители накрывают большие столы со&nbsp;свежими фруктами для обезьян в&nbsp;знак благодарности за&nbsp;внимание путешественников к&nbsp;городу. Задачей было разработать запоминающуюся айдентику, которая раскрывает яркий характер фестиваля через пластичные формы и&nbsp;игривый визуальный язык.">
+                Monkey Buffet Festival takes place every year on the last Sunday of November in Lopburi, Thailand. Locals set out tables with fruits for the monkeys to thank them for attracting travelers to the town. The task was to develop a memorable visual identity for this festival that captures its vibrant character and playful atmosphere.
             </p>
         </div>
 
         <div class="brief-card">
-            <span class="brief-tag lang" data-en="02 / Core Concept & Solution" data-ru="02 / Концепция и&nbsp;решение">02 / Core Concept & Solution</span>
-            <h2 class="brief-title lang" data-en="Visual Metaphor & Dynamic System" data-ru="Визуальная метафора и&nbsp;графика">Visual Metaphor & Dynamic System</h2>
+            <span class="brief-tag lang" data-en="02 / Solution & Concept" data-ru="02 / Решение и&nbsp;концепция">02 / Решение и концепция</span>
+            <h2 class="brief-title lang" data-en="Monkey Fun and Fruit Abundance" data-ru="Веселье обезьян и&nbsp;изобилие фруктов">Веселье обезьян и изобилие фруктов</h2>
             <p class="brief-text lang"
-               data-en="The visual identity is&nbsp;based on&nbsp;simple fruit shapes and character graphics. The key graphic element is&nbsp;a&nbsp;curious monkey looking for treats, combined with bright tropical colors and clean layouts."
-               data-ru="Айдентика построена на&nbsp;простых формах тропических фруктов и&nbsp;графике персонажа. Ключевым элементом стала обезьяна, с&nbsp;любопытством высматривающая угощения, в&nbsp;сочетании с&nbsp;яркой палитрой и&nbsp;легкой версткой.">
-                The visual identity is based on simple fruit shapes and character graphics. The key graphic element is a curious monkey looking for treats, combined with bright tropical colors and clean layouts.
+               data-en="The visual identity is&nbsp;built on&nbsp;organic fruit silhouettes and expressive character graphics. Through soft contours, vibrant tropical colors, and dynamic layouts, the design comes alive, transforming local traditions into a cohesive, immersive brand experience."
+               data-ru="Айдентика строится на&nbsp;органических силуэтах тропических фруктов и&nbsp;выразительной графике персонажа. За&nbsp;счет мягких контуров, сочной палитры и&nbsp;динамичной верстки дизайн оживает, превращая локальную традицию в&nbsp;целостный и&nbsp;эмоциональный бренд-опыт.">
+                The visual identity is built on organic fruit silhouettes and expressive character graphics. Through soft contours, vibrant tropical colors, and dynamic layouts, the design comes alive, transforming local traditions into a cohesive, immersive brand experience.
             </p>
         </div>
     </section>
@@ -427,60 +433,28 @@
         <div class="slide-item"><img src="monkey-buffet_works/2.jpg" alt="Monkey Buffet Festival Logo Mark on Dark Green"></div>
         <div class="slide-item"><img src="monkey-buffet_works/3.jpg" alt="Minimalist Monkey Silhouette Symbol on Soft Pink"></div>
 
+        <!-- NARRATIVE BLOCK: DESIGN CONCEPT & INTERACTION -->
         <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="Logo & Graphic Language" data-ru="Знак и&nbsp;графический язык">Logo & Graphic Language</h3>
+            <h3 class="narrative-title lang" data-en="Plasticity and Visual Language" data-ru="Пластика и&nbsp;визуальный язык">Пластика и визуальный язык</h3>
             <p class="narrative-text lang"
-               data-en="The brand system combines rounded organic contours with simple typography. The logo mark subtly brings together a&nbsp;silhouette of&nbsp;a&nbsp;monkey and the shape of&nbsp;tropical fruits, making it&nbsp;easy to&nbsp;recognize and adapt across materials."
-               data-ru="Графический язык объединяет мягкие округлые контуры и&nbsp;спокойную типографику. Знак одновременно читается как силуэт обезьяны и&nbsp;форма фрукта, благодаря чему легко запоминается и&nbsp;масштабируется на&nbsp;любые носители.">
-                The brand system combines rounded organic contours with simple typography. The logo mark subtly brings together a silhouette of a monkey and the shape of tropical fruits, making it easy to recognize and adapt across materials.
+               data-en="The visual language scales dynamically across the entire project space, using organic fruit shapes and playful character interactions to build an engaging, cohesive brand environment that brings the festival's festive energy to life."
+               data-ru="Визуальный язык динамично раскрывается по&nbsp;всей среде проекта, используя текучие формы фруктов и&nbsp;игровые взаимодействия персонажа, чтобы сформировать единую живую атмосферу фестиваля.">
+                The visual language scales dynamically across the entire project space, using organic fruit shapes and playful character interactions to build an engaging, cohesive brand environment that brings the festival's festive energy to life.
             </p>
         </div>
 
-        <!-- SECTION 2: URBAN INSTALLATIONS & PACKAGING (4–7) -->
+        <!-- REMAINING SLIDES (4–19) -->
         <div class="slide-item"><img src="monkey-buffet_works/4.jpg" alt="Urban Street Entrance Banner in Lopburi Market"></div>
         <div class="slide-item"><img src="monkey-buffet_works/5.jpg" alt="Natural Fruit Lemonade Can Packaging in Ice Box"></div>
         <div class="slide-item"><img src="monkey-buffet_works/6.jpg" alt="Social Media Campaign and Event Announcement Triptych"></div>
         <div class="slide-item"><img src="monkey-buffet_works/7.jpg" alt="Park Outdoor Billboard Installation with Macaque"></div>
-
-        <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="City Presence & Packaging" data-ru="Городская среда и&nbsp;упаковка">City Presence & Packaging</h3>
-            <p class="narrative-text lang"
-               data-en="The style works cleanly across city touchpoints: street entrance banners, billboards in&nbsp;local parks, social media announcements, and canned fruit drinks made for visitors."
-               data-ru="Стиль хорошо ложится на&nbsp;городские носители: уличные растяжки над рынками, билборды в&nbsp;парках, анонсы в&nbsp;соцсетях и&nbsp;банки освежающих фруктовых напитков для гостей фестиваля.">
-                The style works cleanly across city touchpoints: street entrance banners, billboards in local parks, social media announcements, and canned fruit drinks made for visitors.
-            </p>
-        </div>
-
-        <!-- SECTION 3: LIFESTYLE MERCH & CULTURAL PLAYFULNESS (8–10) -->
         <div class="slide-item"><img src="monkey-buffet_works/8.jpg" alt="Sunburn Graphic Tan Lines Brand Gesture on Beach Towel"></div>
         <div class="slide-item"><img src="monkey-buffet_works/9.jpg" alt="How to Communicate with Monkeys Guidebook"></div>
         <div class="slide-item"><img src="monkey-buffet_works/10.jpg" alt="Branded Olive Green T-Shirt Back Graphic Print"></div>
-
-        <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="Merchandise & Printed Matter" data-ru="Мерч и&nbsp;полиграфия">Merchandise & Printed Matter</h3>
-            <p class="narrative-text lang"
-               data-en="The line of&nbsp;items includes simple apparel, temporary sunscreen stencil stickers for sunbathing, and a&nbsp;small booklet with tips on&nbsp;how to&nbsp;interact with monkeys safely."
-               data-ru="В&nbsp;линейку предметов вошли базовая оливковая футболка, наклейки-трафареты для загара и&nbsp;небольшая памятка с&nbsp;простыми советами о&nbsp;том, как вести себя рядом с&nbsp;обезьянами.">
-                The line of items includes simple apparel, temporary sunscreen stencil stickers for sunbathing, and a small booklet with tips on how to interact with monkeys safely.
-            </p>
-        </div>
-
-        <!-- SECTION 4: TACTILE ACCESSORIES & PACKAGING (11–14) -->
         <div class="slide-item"><img src="monkey-buffet_works/11.jpg" alt="Acrylic Fruit Charms and Cloud Logo Keychains"></div>
         <div class="slide-item"><img src="monkey-buffet_works/12.jpg" alt="Embroidered Pink Cap with Monkey Silhouette in Agave Garden"></div>
         <div class="slide-item"><img src="monkey-buffet_works/13.jpg" alt="Tropical Beach Towel with Sunbathing Macaque and Starfruit Bikini"></div>
         <div class="slide-item"><img src="monkey-buffet_works/14.jpg" alt="Cardboard Shipping Box with Custom Fruit Sticker Label"></div>
-
-        <div class="narrative-block">
-            <h3 class="narrative-title lang" data-en="Accessories & Souvenirs" data-ru="Аксессуары и&nbsp;сувениры">Accessories & Souvenirs</h3>
-            <p class="narrative-text lang"
-               data-en="Small brand objects complement the collection: glossy acrylic keychains, embroidered caps, beach towels, and packaging stickers for delivery boxes."
-               data-ru="Коллекцию дополняют повседневные мелочи: полупрозрачные акриловые брелоки, кепки с&nbsp;лаконичной вышивкой, пляжные полотенца и&nbsp;упаковочные стикеры для коробок.">
-                Small brand objects complement the collection: glossy acrylic keychains, embroidered caps, beach towels, and packaging stickers for delivery boxes.
-            </p>
-        </div>
-
-        <!-- SECTION 5: NATURAL ENVIRONMENT & PUBLIC TRANSIT (15–19) -->
         <div class="slide-item"><img src="monkey-buffet_works/15.jpg" alt="Roadside Outdoor Billboard with Live Macaques Gathering"></div>
         <div class="slide-item"><img src="monkey-buffet_works/16.jpg" alt="Monkey Tail Holding Mangoes with Custom Fruit Sticker Badges"></div>
         <div class="slide-item"><img src="monkey-buffet_works/17.jpg" alt="Carved Coconut Shell with Debossed Typography and Spiral Fur Detail"></div>
